@@ -1,0 +1,12 @@
+{
+  "lang": "en",
+  "level": "B2",
+  "date": "2026-09-17",
+  "topic": "status meeting",
+  "track": "work",
+  "kind": "story",
+  "voices": {"front": "en-us-f", "back": "ru-f"},
+  "phrases": 10,
+  "spiral_from": [],
+  "source": "agent 2026-09-17"
+}

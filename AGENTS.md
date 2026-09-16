@@ -22,6 +22,11 @@
 ## Structure
 - `scripts/` — CLI (voicedeck.py), веб-сервер (app.py), страница (web/index.html)
 - `VoiceDeck.bat` — запуск интерфейса в один клик (Windows)
+- `library/<lang>/<date>-<slug>/` — юниты: meta.json, story.txt, dialog.txt,
+  phrases.txt (ядро, фраза<TAB>перевод), cards.tsv, audio/ (коммитится), anki.tsv
+- `library/_template/` — шаблоны юнита; `library/en|de/` — треки
+- meta.json: lang, level, date, topic, track, kind, voices{front,back},
+  phrases (число), spiral_from (повторы из прошлых юнитов), source
 - `out/` — сгенерированные mp3 (игнорируется git)
 - `docs/` — только CONTEXT.md и DECISIONS.md
 
