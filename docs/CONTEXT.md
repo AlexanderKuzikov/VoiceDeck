@@ -1,27 +1,26 @@
 # VoiceDeck — CONTEXT
 
-> Последнее обновление: 2026-09-16 07:30
+> Последнее обновление: 2026-09-16 08:00
 
 ## Статус
 | Компонент | Статус | Версия/Заметка |
 |-----------|--------|----------------|
-| Документация | done | README, AGENTS, CONTEXT, DECISIONS |
-| Движок | decided | Microsoft Neural через edge-tts, облако |
-| Эталонные голоса | open | прослушать Jenny/Sonia + Katja/Conrad/Seraphina |
-| Скрипты | todo | say.py, batch, диалоги |
-| Формат выхода | open | mp3 в папку vs CSV под Anki |
+| Документация | done | README, AGENTS, CONTEXT, DECISIONS, MIT |
+| Движок | done | edge-tts, живой прогон из РФ без VPN |
+| CLI | done | say/batch/dialog/cards/voices/selfcheck |
+| Эталонные голоса | done | Jenny/Sonia + Katja/Conrad по умолчанию |
+| Smoke-набор | done | out/smoke: фраза, пачка, диалог, карточки |
 
 ## Open-проблемы
 | # | Priority | Описание |
 |---|----------|----------|
-| 1 | high | Прослушать и зафиксировать эталонные голоса EN и DE |
-| 2 | high | Решить: edge-tts free как база vs Azure Speech HD с ключом |
-| 3 | medium | Формат выхода: просто mp3 или сразу сборка под Anki |
-| 4 | low | Выбрать лицензию |
+| 1 | medium | Вживую прослушать эталоны и подтвердить голоса под свой слух |
 
 ## Журнал работ
 | Дата | Изменение |
 |------|-----------|
+| 2026-09-16 | CLI voicedeck.py: say/batch/dialog/cards/voices/selfcheck + живой smoke-прогон |
+| 2026-09-16 | Лицензия MIT |
 | 2026-09-16 | Каркас проекта: документация, git, remote |
 
 ## Структура проекта

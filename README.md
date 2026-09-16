@@ -1,6 +1,6 @@
 <p align="center">
   <a href="#"><img alt="Python" src="https://img.shields.io/badge/Python-3.13-3776AB?logo=python&logoColor=white"></a>
-  <a href="#"><img alt="License" src="https://img.shields.io/badge/License-TBD-lightgrey.svg"></a>
+  <a href="LICENSE"><img alt="License" src="https://img.shields.io/badge/License-MIT-green.svg"></a>
 </p>
 
 <h1 align="center">VoiceDeck</h1>
@@ -21,7 +21,10 @@
 git clone https://github.com/AlexanderKuzikov/VoiceDeck.git
 cd VoiceDeck
 pip install edge-tts
-python scripts/say.py --voice de-DE-KatjaNeural --text "Guten Morgen!"
+python scripts/voicedeck.py say "Guten Morgen!" --voice de-f
+python scripts/voicedeck.py batch phrases.txt --voice en-us-f --deck unit1
+python scripts/voicedeck.py dialog dialog.txt --cast "Anna=de-f,Ben=de-m"
+python scripts/voicedeck.py cards cards.tsv --voice en-gb-f --back-voice ru-f
 ```
 
 ## Документация
@@ -31,8 +34,8 @@ python scripts/say.py --voice de-DE-KatjaNeural --text "Guten Morgen!"
 
 ## Статус
 
-**v0.1.0** — Каркас и документация, скриптов пока нет.
+**v0.1.0** — CLI работает: фраза, пачка, диалог, карточки. Проверено живым прогоном.
 
 ## Лицензия
 
-Не выбрана — см. open-проблемы в контексте проекта.
+[MIT](LICENSE) © Alexander Kuzikov

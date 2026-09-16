@@ -2,10 +2,14 @@
 
 ## Commands
 - install: `pip install edge-tts`
-- voices: `edge-tts --list-voices`
-- say: `python scripts/say.py --voice <VoiceName> --text "<text>"`
+- selfcheck: `python scripts/voicedeck.py selfcheck` (проверки без сети)
+- voices: `python scripts/voicedeck.py voices [--live] [--lang de-DE]`
+- say: `python scripts/voicedeck.py say "<text>" --voice <preset>`
+- batch: `python scripts/voicedeck.py batch phrases.txt --voice en-us-f --deck unit1`
+- dialog: `python scripts/voicedeck.py dialog dialog.txt --cast "Anna=de-f,Ben=de-m"`
+- cards: `python scripts/voicedeck.py cards cards.tsv --voice en-gb-f --back-voice ru-f`
 - python: `python` (3.13 по факту окружения), не `python3`
-- test/lint/build: пока нет, добавить при появлении кода
+- test/lint/build: selfcheck вместо тестов; фреймворков нет
 
 ## Conventions
 - Коммиты прямо в `main`, без веток и PR. Сообщение — повелительное наклонение, ≤ 72 символов, русский или английский
