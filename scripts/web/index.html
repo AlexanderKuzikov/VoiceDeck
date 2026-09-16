@@ -4,6 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>VoiceDeck — учим языки на слух</title>
+<link rel="icon" href="data:,">
 <script>try{document.documentElement.dataset.theme=localStorage.getItem('vd-theme')||'light'}catch(e){}</script>
 <style>
 :root{
@@ -223,7 +224,7 @@ async function loadVoices(){
   const fill=(sel,def)=>{sel.innerHTML="";Object.keys(groups).forEach(g=>{const o=document.createElement("optgroup");o.label=g;groups[g].forEach(v=>{const op=document.createElement("option");op.value=v.id;op.textContent=v.label;if(v.id===def)op.selected=true;o.appendChild(op)});sel.appendChild(o)})};
   fill($("ph-voice"),"de-f");fill($("ba-voice"),"en-us-f");fill($("ca-voice"),"en-gb-f");
   const back=$("ca-back");back.innerHTML='<option value="">без озвучки</option>';
-  Object.keys(groups).forEach(g=>{const o=document.createElement("optgroup");o.label=g;groups[g].forEach(v=>{const op=document.createElement("option");op.value=v.id;op.textContent=v.label;if(v.id==="ru-f")op.selected=true;o.appendChild(o)})});back.appendChild(o)});
+  Object.keys(groups).forEach(g=>{const o=document.createElement("optgroup");o.label=g;groups[g].forEach(v=>{const op=document.createElement("option");op.value=v.id;op.textContent=v.label;if(v.id==="ru-f")op.selected=true;o.appendChild(op)});back.appendChild(o)});
 }
 
 // --- фраза ---
