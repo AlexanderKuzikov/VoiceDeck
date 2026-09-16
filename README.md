@@ -21,11 +21,11 @@
 git clone https://github.com/AlexanderKuzikov/VoiceDeck.git
 cd VoiceDeck
 pip install edge-tts
-python scripts/voicedeck.py say "Guten Morgen!" --voice de-f
-python scripts/voicedeck.py batch phrases.txt --voice en-us-f --deck unit1
-python scripts/voicedeck.py dialog dialog.txt --cast "Anna=de-f,Ben=de-m"
-python scripts/voicedeck.py cards cards.tsv --voice en-gb-f --back-voice ru-f
+VoiceDeck.bat
+# или: python scripts/app.py  -> страница в браузере
 ```
+
+Интерфейс: четыре вкладки — фраза (подсветка слов, shadowing), пачка, диалог, карточки с тренажёром. Терминал для учёбы не нужен, CLI остался для пачек и скриптов.
 
 ## Документация
 

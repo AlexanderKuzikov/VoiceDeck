@@ -8,6 +8,8 @@
 - batch: `python scripts/voicedeck.py batch phrases.txt --voice en-us-f --deck unit1`
 - dialog: `python scripts/voicedeck.py dialog dialog.txt --cast "Anna=de-f,Ben=de-m"`
 - cards: `python scripts/voicedeck.py cards cards.tsv --voice en-gb-f --back-voice ru-f`
+- web: `python scripts/app.py [--port 8765]` (интерфейс учёбы) или `VoiceDeck.bat`
+- web files: `scripts/app.py` (сервер, только stdlib) + `scripts/web/index.html` (vanilla, без CDN)
 - python: `python` (3.13 по факту окружения), не `python3`
 - test/lint/build: selfcheck вместо тестов; фреймворков нет
 
@@ -18,7 +20,8 @@
 - Язык общения: русский, технические термины — как есть (EN)
 
 ## Structure
-- `scripts/` — CLI-автоматизация (say, batch, диалоги)
+- `scripts/` — CLI (voicedeck.py), веб-сервер (app.py), страница (web/index.html)
+- `VoiceDeck.bat` — запуск интерфейса в один клик (Windows)
 - `out/` — сгенерированные mp3 (игнорируется git)
 - `docs/` — только CONTEXT.md и DECISIONS.md
 
