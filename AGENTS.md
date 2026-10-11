@@ -24,6 +24,8 @@
 - `VoiceDeck.bat` — запуск интерфейса в один клик (Windows)
 - `library/<lang>/<date>-<slug>/` — юниты: meta.json, story.txt, dialog.txt,
   phrases.txt (ядро, фраза<TAB>перевод), cards.tsv, audio/ (коммитится), anki.tsv
+- `library/vocab/<lang>-<level>.tsv` — словарь уровня: word, pos, ru, phrase, phrase_ru (таб).
+  pos: verb|noun|adj|adv|func|num. `#` в начале строки — комментарий. Слово без фразы не живёт
 - `library/_template/` — шаблоны юнита; `library/en|de/` — треки
 - meta.json: lang, level, date, topic, track, kind, voices{front,back},
   phrases (число), spiral_from (повторы из прошлых юнитов), source

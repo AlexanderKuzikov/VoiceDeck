@@ -1,0 +1,558 @@
+# EN-A1: ядро уровня, 552 строки (NGSL 1.2 ранги 1-500 + 52 supplementary)
+# Источник слов и частот: New General Service List 1.2, Browne, Culligan, Phillips (2013-2023), CC BY-SA 4.0
+# Переводы, части речи и учебные фразы: VoiceDeck, MIT
+# Формат: word \t pos(verb|noun|adj|adv|func|num) \t ru \t phrase \t phrase_ru
+# may встречается дважды осознанно: модальный глагол и месяц May
+word	pos	ru	phrase	phrase_ru
+the	func	этот, тот	The cat sleeps on the sofa	Кот спит на диване
+be	verb	быть	They are kind people	Они добрые люди
+and	func	и	I like tea and coffee	Я люблю чай и кофе
+of	func	из, от	I drink a cup of tea	Я пью чашку чая
+to	func	к, в	I go to school every day	Я хожу в школу каждый день
+a	func	один, какой-то	I see a red car	Я вижу красную машину
+in	func	в, внутри	The keys are in my bag	Ключи в моей сумке
+have	verb	иметь	I have two cats	У меня две кошки
+it	func	это, оно	It rains every afternoon	Дождь идёт каждый день днём
+you	func	ты, вы	You smile every morning	Ты улыбаешься каждое утро
+he	func	он	He drinks black coffee	Он пьёт чёрный кофе
+for	func	для, за	This gift is for you	Этот подарок для тебя
+they	func	они	They play football on Sundays	Они играют в футбол по воскресеньям
+not	func	не	I do not eat meat	Я не ем мясо
+that	func	тот, что	That bus goes downtown	Тот автобус едет в центр
+we	func	мы	We cook dinner together	Мы готовим ужин вместе
+on	func	на	The book lies on the table	Книга лежит на столе
+with	func	с, вместе с	I drink coffee with milk	Я пью кофе с молоком
+this	func	этот	This soup tastes great	Этот суп очень вкусный
+I	func	я	I walk to work	Я хожу на работу пешком
+do	verb	делать	I do my homework daily	Я делаю домашнее задание каждый день
+as	func	как, в качестве	He works as a driver	Он работает водителем
+at	func	в, на	We meet at noon	Мы встречаемся в полдень
+she	func	она	She reads bedtime stories	Она читает сказки на ночь
+but	func	но, а	I like tea but hate coffee	Я люблю чай, но ненавижу кофе
+from	func	из, от	She comes from Spain	Она родом из Испании
+by	func	на, возле	I go to school by bus	Я езжу в школу на автобусе
+will	verb	буду	I will help you tomorrow	Я помогу тебе завтра
+or	func	или	Do you want tea or coffee	Ты хочешь чай или кофе
+say	verb	говорить, сказать	I say hello to neighbors	Я говорю соседям привет
+go	verb	идти, ехать	We go swimming on Fridays	Мы ходим плавать по пятницам
+so	func	так, поэтому	It rains so we stay home	Идёт дождь, поэтому мы сидим дома
+all	func	весь, все	We eat all the pizza	Мы съедаем всю пиццу
+if	func	если	I smile if you smile	Я улыбаюсь, если ты улыбаешься
+one	num	один	One cat sleeps here	Одна кошка спит здесь
+would	verb	бы	I would like some tea	Я бы хотел немного чая
+about	func	о, про	We talk about films	Мы говорим о фильмах
+can	verb	мочь, уметь	I can swim fast	Я умею быстро плавать
+which	func	который, какой	Which bus goes downtown	Какой автобус едет в центр
+there	func	там	There is milk in the fridge	В холодильнике есть молоко
+know	verb	знать	I know this song	Я знаю эту песню
+more	func	больше, ещё	I want more soup	Я хочу ещё супа
+get	verb	получать	I get letters every week	Я получаю письма каждую неделю
+who	func	кто, который	Who cooks in your house	Кто готовит в твоём доме
+like	verb	любить, нравиться	I like warm bread	Я люблю тёплый хлеб
+when	func	когда	When do you wake up	Когда ты просыпаешься
+think	verb	думать	I think about you	Я думаю о тебе
+make	verb	делать, готовить	I make breakfast daily	Я готовлю завтрак каждый день
+time	noun	время	We have no time today	У нас сегодня нет времени
+see	verb	видеть	I see birds in the park	Я вижу птиц в парке
+what	func	что, какой	What do you eat	Что ты ешь
+up	func	вверх	I get up early	Я встаю рано
+some	func	немного, некоторые	I need some eggs	Мне нужно немного яиц
+other	adj	другой	I want the other apple	Я хочу другое яблоко
+out	func	снаружи, наружу	We eat out on Fridays	Мы ужинаем вне дома по пятницам
+good	adj	хороший	This cake tastes good	Этот торт вкусный
+people	noun	люди	Good people help neighbors	Хорошие люди помогают соседям
+year	noun	год	I travel every year	Я путешествую каждый год
+take	verb	брать, взять	I take the bus daily	Я каждый день езжу на автобусе
+no	func	нет, никакой	We have no milk	У нас нет молока
+well	adv	хорошо	She sings very well	Она поёт очень хорошо
+because	func	потому что	I stay home because I am sick	Я сижу дома, потому что болею
+very	adv	очень	This soup is very hot	Этот суп очень горячий
+just	adv	только, просто	I just need five minutes	Мне нужно всего пять минут
+come	verb	приходить	They come home late	Они приходят домой поздно
+could	verb	мог, мог бы	Could you open the window	Ты не мог бы открыть окно
+work	verb	работать	I work in a bank	Я работаю в банке
+use	verb	использовать	I use my phone daily	Я пользуюсь телефоном каждый день
+than	func	чем	Tea is better than coffee	Чай лучше, чем кофе
+now	adv	сейчас	I am busy now	Я сейчас занят
+then	adv	затем, потом	We eat then we rest	Мы едим, а потом отдыхаем
+also	adv	тоже, также	I also like jam	Я тоже люблю джем
+into	func	в, внутрь	She walks into the room	Она входит в комнату
+only	adv	только	I drink only green tea	Я пью только зелёный чай
+look	verb	смотреть, выглядеть	You look tired today	Ты выглядишь усталым сегодня
+want	verb	хотеть	I want hot soup	Я хочу горячий суп
+give	verb	давать	I give bread to birds	Я даю хлеб птицам
+first	adj	первый	I take the first bus	Я сажусь на первый автобус
+new	adj	новый	I love my new bike	Я люблю свой новый велосипед
+way	noun	путь, дорога	I know the way home	Я знаю дорогу домой
+find	verb	находить	I always find my keys	Я всегда нахожу свои ключи
+over	func	над, через	The plane flies over the city	Самолёт летит над городом
+any	func	любой, сколько-нибудь	Do you have any milk	У тебя есть молоко
+after	func	после	We walk after dinner	Мы гуляем после ужина
+day	noun	день	I smile every day	Я улыбаюсь каждый день
+where	func	где, куда	Where do you live	Где ты живёшь
+thing	noun	вещь	This thing works well	Эта штука хорошо работает
+most	func	большинство, самый	Most kids love ice cream	Большинство детей любят мороженое
+should	verb	следует, стоит	You should drink warm milk	Тебе стоит выпить тёплого молока
+need	verb	нуждаться, нужно	I need warm socks	Мне нужны тёплые носки
+much	func	много	I love you very much	Я очень тебя люблю
+right	adj	правый, правильный	You are right today	Ты сегодня прав
+how	func	как	How do you cook soup	Как ты варишь суп
+back	adv	назад, обратно	I come back late	Я возвращаюсь поздно
+mean	verb	иметь в виду	What do you mean	Что ты имеешь в виду
+even	adv	даже	Even kids love this song	Даже дети любят эту песню
+may	verb	можно, мочь	May I sit here	Можно мне сесть здесь
+here	adv	здесь	I sit here daily	Я сижу здесь каждый день
+many	func	многие, много	Many kids play here	Многие дети играют здесь
+such	func	такой	I love such warm evenings	Я люблю такие тёплые вечера
+last	adj	последний, прошлый	The last bus leaves at ten	Последний автобус уходит в десять
+child	noun	ребёнок	The child plays in the yard	Ребёнок играет во дворе
+tell	verb	говорить, рассказывать	They tell funny stories	Они рассказывают смешные истории
+really	adv	действительно, очень	I really like this song	Мне очень нравится эта песня
+call	verb	звонить, звать	I call my mom every day	Я звоню маме каждый день
+before	func	до, перед	I eat breakfast before school	Я завтракаю перед школой
+company	noun	компания	She works for a big company	Она работает в большой компании
+through	func	через, сквозь	We walk through the park	Мы идём через парк
+down	adv	вниз, внизу	He sits down next to me	Он садится рядом со мной
+show	verb	показывать	She shows me her photos	Она показывает мне свои фотографии
+life	noun	жизнь	City life moves fast	Городская жизнь движется быстро
+man	noun	мужчина, человек	The man sells fresh bread	Мужчина продаёт свежий хлеб
+change	verb	менять, меняться	I change trains in the center	Я пересаживаюсь в центре
+place	noun	место	This place feels like home	Это место как дом
+long	adj	длинный, долгий	We take a long walk	Мы идём на долгую прогулку
+between	func	между	The shop sits between two banks	Магазин находится между двумя банками
+feel	verb	чувствовать	I feel tired after work	Я чувствую усталость после работы
+too	adv	тоже, слишком	I want coffee too	Я тоже хочу кофе
+still	adv	всё ещё	She still lives with parents	Она всё ещё живёт с родителями
+problem	noun	проблема	We fix the problem together	Мы решаем проблему вместе
+write	verb	писать	I write notes by hand	Я пишу заметки от руки
+same	adj	тот же, одинаковый	We start work at the same time	Мы начинаем работу в одно и то же время
+lot	noun	много, множество	A lot of kids play here	Много детей играет здесь
+great	adj	отличный, замечательный	You cook a great breakfast	Ты готовишь отличный завтрак
+try	verb	пытаться, пробовать	I try new food on trips	Я пробую новую еду в поездках
+leave	verb	уходить, оставлять	They leave home at eight	Они выходят из дома в восемь
+number	noun	номер, число	I save your number in my phone	Я сохраняю твой номер в телефоне
+both	func	оба	Both kids like milk	Оба ребёнка любят молоко
+own	verb	владеть, иметь	I own an old bike	У меня есть старый велосипед
+part	noun	часть	This part looks new	Эта часть выглядит новой
+point	noun	точка, место	The meeting point is here	Место встречи здесь
+little	adj	маленький	A little dog barks loudly	Маленькая собака громко лает
+help	verb	помогать	Friends help each other always	Друзья всегда помогают друг другу
+ask	verb	спрашивать, просить	I ask simple questions	Я задаю простые вопросы
+meet	verb	встречать, знакомиться	We meet friends on Fridays	Мы встречаемся с друзьями по пятницам
+start	verb	начинать	Classes start at nine	Занятия начинаются в девять
+talk	verb	говорить, разговаривать	We talk over breakfast	Мы разговариваем за завтраком
+something	func	что-то, что-нибудь	I want something sweet	Я хочу что-нибудь сладкое
+put	verb	класть, ставить	I put keys on the shelf	Я кладу ключи на полку
+another	adj	другой, ещё один	She wants another cookie now	Она хочет ещё одно печенье сейчас
+become	verb	становиться	Mornings become cold in October	По утрам в октябре становится холодно
+interest	noun	интерес	Books spark my interest	Книги вызывают у меня интерес
+country	noun	страна	My country grows tasty apples	Моя страна выращивает вкусные яблоки
+old	adj	старый	My grandpa tells old tales	Мой дедушка рассказывает старые сказки
+each	func	каждый	Each ticket costs five euros	Каждый билет стоит пять евро
+school	noun	школа	Kids walk to school together	Дети идут в школу вместе
+late	adj	поздний, опаздывающий	The bus runs late today	Автобус сегодня опаздывает
+high	adj	высокий	Birds fly over high roofs	Птицы летают над высокими крышами
+different	adj	другой, разный	We speak different languages	Мы говорим на разных языках
+off	adv	выключенный, прочь	He turns off the light at night	Он выключает свет на ночь
+next	adj	следующий	The next train comes soon	Следующий поезд приходит скоро
+end	noun	конец	I love the happy end	Мне нравится счастливый конец
+live	verb	жить	We live near the river	Мы живём у реки
+why	func	почему	Why do you wake up early	Почему ты встаёшь рано
+while	func	пока	I cook while he rests	Я готовлю, пока он отдыхает
+world	noun	мир	The whole world watches football	Весь мир смотрит футбол
+week	noun	неделя	We shop once a week	Мы делаем покупки раз в неделю
+play	verb	играть	Kids play football after school	Дети играют в футбол после школы
+might	verb	мочь, возможно	I might join you later	Возможно, я присоединюсь позже
+must	verb	должен	You must wear warm boots	Ты должен носить тёплые ботинки
+home	noun	дом	We eat dinner at home	Мы ужинаем дома
+never	adv	никогда	I never drink black coffee	Я никогда не пью чёрный кофе
+include	verb	включать	The price includes breakfast	Цена включает завтрак
+course	noun	курс	I take an evening course	Я хожу на вечерний курс
+house	noun	дом	Our house stands by the lake	Наш дом стоит у озера
+report	noun	отчёт, доклад	She reads the weekly report	Она читает еженедельный отчёт
+group	noun	группа	Our group meets on Mondays	Наша группа встречается по понедельникам
+case	noun	случай, чемодан	I carry a small black case	Я ношу маленький чёрный чемодан
+woman	noun	женщина	The woman bakes fresh pies	Женщина печёт свежие пироги
+around	adv	вокруг	We look around together	Мы осматриваемся вместе
+book	noun	книга	I read a thick book	Я читаю толстую книгу
+family	noun	семья	My family gathers on Sundays	Моя семья собирается по воскресеньям
+seem	verb	казаться	You seem tired today	Ты выглядишь уставшим сегодня
+let	verb	позволять, пускать	They let kids play outside	Они разрешают детям играть на улице
+again	adv	снова	He calls again in the evening	Он звонит снова вечером
+kind	noun	вид, тип	What kind of tea do you like	Какой чай тебе нравится
+keep	verb	держать, хранить	I keep cash in a drawer	Я держу наличные в ящике
+hear	verb	слышать	I hear birds each morning	Я слышу птиц каждое утро
+system	noun	система	The ticket system works well	Система билетов работает хорошо
+every	func	каждый	Every bus stops here	Каждый автобус останавливается здесь
+question	noun	вопрос	She asks a short question	Она задаёт короткий вопрос
+during	func	во время	They talk during lunch	Они разговаривают во время обеда
+always	adv	всегда	Dad always reads at night	Папа всегда читает на ночь
+big	adj	большой	A big dog guards our house	Большая собака охраняет наш дом
+set	verb	ставить, устанавливать	I set the table for dinner	Я накрываю на стол к ужину
+small	adj	маленький	We rent a small flat	Мы снимаем маленькую квартиру
+study	verb	учиться, изучать	They study English together	Они вместе учат английский
+follow	verb	следовать	The dog follows me home	Собака идёт за мной домой
+begin	verb	начинать	Lessons begin after lunch	Уроки начинаются после обеда
+important	adj	важный	Rest is very important	Отдых очень важен
+since	func	с, поскольку	I stay home since I feel sick	Я остаюсь дома, потому что болею
+run	verb	бегать	She runs every morning	Она бегает каждое утро
+under	func	под	The cat sleeps under the table	Кот спит под столом
+turn	verb	поворачивать	She turns left at the bank	Она поворачивает налево у банка
+few	adj	несколько, мало	A few friends visit us	Несколько друзей навещают нас
+bring	verb	приносить	He brings snacks for friends	Он приносит закуски для друзей
+early	adj	ранний	I catch an early train	Я сажусь на ранний поезд
+hand	noun	рука	The baby holds my hand	Малыш держит меня за руку
+state	noun	состояние, штат	Texas is a big state	Техас — большой штат
+move	verb	двигаться, переезжать	We move house in spring	Мы переезжаем весной
+money	noun	деньги	I save money every week	Я коплю деньги каждую неделю
+fact	noun	факт	This fact surprises my friends	Этот факт удивляет моих друзей
+however	adv	однако, но	I like tea, however I drink coffee	Я люблю чай, однако пью кофе
+area	noun	район, территория	Our area has a big park	В нашем районе есть большой парк
+provide	verb	обеспечивать, предоставлять	They provide free breakfast here	Они предоставляют здесь бесплатный завтрак
+name	noun	имя, название	I write my name here	Я пишу сюда свое имя
+read	verb	читать	I read news every morning	Я читаю новости каждое утро
+friend	noun	друг	My friend lives near me	Мой друг живет рядом со мной
+month	noun	месяц	I pay rent every month	Я плачу за квартиру каждый месяц
+large	adj	большой	They have a large garden	У них большой сад
+business	noun	бизнес, дело	His business opens at nine	Его бизнес открывается в девять
+without	func	без	I drink tea without sugar	Я пью чай без сахара
+information	noun	информация	I need information about trains	Мне нужна информация о поездах
+open	verb	открывать	I open the window in the morning	Я открываю окно утром
+order	verb	заказывать	I order pizza on Fridays	Я заказываю пиццу по пятницам
+government	noun	правительство	The government builds new schools	Правительство строит новые школы
+word	noun	слово	I learn one new word daily	Я учу одно новое слово ежедневно
+issue	noun	проблема, вопрос	We discuss this issue together	Мы вместе обсуждаем этот вопрос
+market	noun	рынок, магазин	I buy apples at the market	Я покупаю яблоки на рынке
+pay	verb	платить	I pay for lunch today	Я плачу за обед сегодня
+build	verb	строить	They build houses near the river	Они строят дома у реки
+hold	verb	держать	I hold my ticket tightly	Я крепко держу свой билет
+service	noun	сервис, обслуживание	This hotel has great service	В этом отеле отличный сервис
+against	func	против	We play against our neighbours	Мы играем против наших соседей
+believe	verb	верить, считать	I believe every word	Я верю каждому слову
+second	num	второй	I take the second bus	Я сажусь на второй автобус
+though	func	хотя, однако	Though it rains, we walk	Хотя идет дождь, мы гуляем
+yes	func	да	Yes, I want black coffee	Да, я хочу черный кофе
+love	verb	любить	I love Sunday breakfasts with Dad	Я люблю воскресные завтраки с папой
+increase	verb	увеличивать, расти	Prices increase every winter	Цены растут каждую зиму
+job	noun	работа	My job starts at eight	Моя работа начинается в восемь
+plan	noun	план	Our plan works very well	Наш план отлично работает
+result	noun	результат	The result makes us happy	Результат нас радует
+away	adv	прочь, далеко	My school is far away	Моя школа далеко
+example	noun	пример	This example helps me a lot	Этот пример мне очень помогает
+happen	verb	случаться, происходить	Good things happen every day	Хорошее случается каждый день
+offer	verb	предлагать	They offer fresh bread daily	Они ежедневно предлагают свежий хлеб
+young	adj	молодой	My young brother plays football	Мой младший брат играет в футбол
+close	verb	закрывать	We close the shop at six	Мы закрываем магазин в шесть
+program	noun	программа	This program teaches English songs	Эта программа учит английским песням
+lead	verb	вести, возглавлять	She leads our school team	Она возглавляет нашу школьную команду
+buy	verb	покупать	I buy bread every morning	Я покупаю хлеб каждое утро
+understand	verb	понимать	I understand basic English now	Я уже понимаю базовый английский
+thank	verb	благодарить	I thank my teacher warmly	Я тепло благодарю свою учительницу
+far	adv	далеко	My granny lives far away	Моя бабушка живет далеко
+today	adv	сегодня	We play football today	Мы сегодня играем в футбол
+hour	noun	час	Lunch lasts one hour here	Обед здесь длится один час
+student	noun	студент, ученик	Every student loves Friday lessons	Каждый ученик любит уроки по пятницам
+face	noun	лицо	She washes her face daily	Она ежедневно умывает лицо
+hope	verb	надеяться	I hope for sunny weather	Я надеюсь на солнечную погоду
+idea	noun	идея	Your idea sounds great	Твоя идея звучит отлично
+cost	verb	стоить	These shoes cost very little	Эти туфли стоят очень дешево
+less	adv	меньше	I sleep less in summer	Летом я сплю меньше
+room	noun	комната	My room looks very cosy	Моя комната выглядит очень уютно
+until	func	до, пока не	I work until six daily	Я работаю до шести ежедневно
+reason	noun	причина	I know the real reason	Я знаю настоящую причину
+form	noun	форма, бланк	I fill in this form	Я заполняю этот бланк
+spend	verb	тратить, проводить	We spend evenings together	Мы проводим вечера вместе
+head	noun	голова	My head hurts after noise	У меня болит голова после шума
+car	noun	машина	My car starts every time	Моя машина заводится всегда
+learn	verb	учить, узнавать	I learn English every evening	Я учу английский каждый вечер
+level	noun	уровень	My level grows every month	Мой уровень растет каждый месяц
+person	noun	человек	Every person needs good friends	Каждому человеку нужны хорошие друзья
+experience	noun	опыт	This trip gives great experience	Эта поездка дает отличный опыт
+once	adv	однажды, один раз	I swim once a week	Я плаваю раз в неделю
+member	noun	участник, член	I am a club member	Я член клуба
+enough	adv	достаточно	I sleep enough on weekends	По выходным я сплю достаточно
+bad	adj	плохой	Bad weather spoils our picnic	Плохая погода портит наш пикник
+city	noun	город	Our city loves night lights	Наш город любит ночные огни
+night	noun	ночь	Stars shine at night	Звезды светят ночью
+able	adj	способный	I am able to swim	Я умею плавать
+support	verb	поддерживать	I support my local team	Я поддерживаю свою местную команду
+whether	func	ли	I ask whether you come	Я спрашиваю, придешь ли ты
+line	noun	линия, очередь	We stand in this line	Мы стоим в этой очереди
+present	adj	настоящий, нынешний	The present moment feels perfect	Настоящий момент прекрасен
+side	noun	сторона	My house stands on this side	Мой дом стоит на этой стороне
+quite	adv	довольно, вполне	This soup tastes quite good	Этот суп довольно вкусный
+although	func	хотя	Although I am tired, I cook	Хотя я устал, я готовлю
+sure	adj	уверенный	I am sure about this	Я уверен в этом
+term	noun	срок, термин	I learn one new term daily	Я учу один новый термин ежедневно
+least	adv	меньше всего	I like Mondays least	Понедельники я люблю меньше всего
+age	noun	возраст	Age brings warm wisdom	Возраст приносит теплую мудрость
+low	adj	низкий	Low prices attract big crowds	Низкие цены привлекают толпы
+speak	verb	говорить	I speak English at work	Я говорю по-английски на работе
+within	func	внутри, в пределах	We finish it within a day	Мы заканчиваем это за день
+process	noun	процесс	This process takes three days	Этот процесс занимает три дня
+public	adj	общественный, публичный	We meet in a public park	Мы встречаемся в общественном парке
+often	adv	часто	We often walk after dinner	Мы часто гуляем после ужина
+train	noun	поезд	Our train leaves at seven	Наш поезд уходит в семь
+possible	adj	возможный	Fresh air makes everything possible	Свежий воздух делает все возможным
+actually	adv	на самом деле	I actually like cold mornings	Мне на самом деле нравятся холодные утра
+rather	adv	скорее, довольно	I drink tea rather than coffee	Я пью чай, а не кофе
+view	noun	вид	Our window has a sea view	Из нашего окна вид на море
+together	adv	вместе	We cook dinner together daily	Мы ежедневно готовим ужин вместе
+consider	verb	считать, рассматривать	I consider this a good price	Я считаю это хорошей ценой
+price	noun	цена	This price looks very good	Эта цена выглядит очень хорошо
+parent	noun	родитель	Every parent loves morning hugs	Каждый родитель любит утренние объятия
+hard	adj	тяжелый, трудный	This task feels very hard	Эта задача кажется очень трудной
+party	noun	вечеринка	We plan a small party	Мы планируем маленькую вечеринку
+local	adj	местный	I love our local market	Я люблю наш местный рынок
+control	verb	контролировать	I control music with my phone	Я управляю музыкой с телефона
+already	adv	уже	I already know this story	Я уже знаю эту историю
+concern	noun	беспокойство, тревога	This news brings real concern	Эта новость вызывает настоящую тревогу
+product	noun	продукт, товар	This product costs ten dollars	Этот товар стоит десять долларов
+lose	verb	терять	I often lose my keys	Я часто теряю свои ключи
+story	noun	история, рассказ	She tells a funny story	Она рассказывает смешную историю
+almost	adv	почти	Dinner is almost ready	Ужин почти готов
+continue	verb	продолжать	We continue our walk after lunch	Мы продолжаем прогулку после обеда
+stand	verb	стоять	We stand near the door	Мы стоим у двери
+whole	adj	целый	He eats a whole pizza	Он съедает целую пиццу
+yet	adv	пока, ещё	The shop is not open yet	Магазин пока не открыт
+rate	noun	тариф, оценка	This hotel has a good rate	У этого отеля хороший тариф
+care	verb	заботиться	She cares for her mother	Она заботится о своей маме
+expect	verb	ожидать	I expect a letter today	Я жду письмо сегодня
+effect	noun	эффект, влияние	Coffee has a strong effect	Кофе оказывает сильный эффект
+sort	noun	вид, тип	What sort of music do you like	Какую музыку ты любишь
+ever	adv	когда-либо	Do you ever drink black tea	Ты когда-нибудь пьешь черный чай
+anything	func	что-нибудь	Do you want anything to drink	Хочешь что-нибудь выпить
+cause	verb	вызывать, причинять	Smoking causes bad health	Курение вредит здоровью
+fall	verb	падать	Leaves fall in autumn	Листья падают осенью
+deal	noun	сделка	This deal saves us money	Эта сделка экономит нам деньги
+water	noun	вода	I drink clean water daily	Я пью чистую воду каждый день
+send	verb	отправлять	I send photos to my mother	Я отправляю фото маме
+allow	verb	разрешать	They allow dogs in this park	Они разрешают собак в этом парке
+soon	adv	скоро	Spring comes very soon	Весна приходит очень скоро
+watch	verb	смотреть	We watch films on Friday	Мы смотрим фильмы по пятницам
+base	noun	база, основа	Our office is our base	Наш офис - наша база
+probably	adv	вероятно	She is probably at home	Она, вероятно, дома
+suggest	verb	предлагать	I suggest a walk in town	Я предлагаю прогулку по городу
+past	func	мимо, после	We walk past the school	Мы идем мимо школы
+power	noun	электричество, сила	The storm cuts the power	Шторм отключает электричество
+test	noun	тест, проверка	Our class has a test today	У нашего класса сегодня тест
+visit	verb	навещать, посещать	We visit grandma every Sunday	Мы навещаем бабушку каждое воскресенье
+center	noun	центр	The shop is in the center	Магазин находится в центре
+grow	verb	расти, выращивать	Tomatoes grow well here	Помидоры хорошо растут здесь
+nothing	func	ничего	Nothing is in the box	В коробке ничего нет
+return	verb	возвращать, возвращаться	I return books to the library	Я возвращаю книги в библиотеку
+mother	noun	мама	My mother cooks tasty food	Моя мама готовит вкусную еду
+walk	verb	гулять, идти пешком	I walk to work daily	Я хожу на работу пешком каждый день
+matter	noun	дело, вопрос	This is a small matter	Это мелкий вопрос
+mind	noun	ум, сознание	A calm mind sleeps well	Спокойный ум хорошо спит
+value	noun	ценность	This ring has real value	Это кольцо имеет настоящую ценность
+office	noun	офис	She works in a small office	Она работает в маленьком офисе
+record	noun	запись	I keep a record of sales	Я веду учет продаж
+stay	verb	оставаться	I stay at home tonight	Я остаюсь дома сегодня вечером
+force	noun	сила	The wind has great force	Ветер обладает огромной силой
+stop	verb	останавливаться, переставать	Buses stop here every minute	Автобусы останавливаются здесь каждую минуту
+several	adj	несколько	Several friends visit us today	Несколько друзей навещают нас сегодня
+light	noun	свет	The lamp gives warm light	Лампа дает теплый свет
+develop	verb	развивать	Children develop new skills daily	Дети ежедневно развивают новые навыки
+remember	verb	помнить	I remember your eye color	Я помню цвет твоих глаз
+bit	noun	кусочек	I want a bit of cake	Я хочу кусочек торта
+share	verb	делиться	We share food with friends	Мы делимся едой с друзьями
+real	adj	настоящий	This is a real story	Это настоящая история
+answer	verb	отвечать	She answers letters fast	Она быстро отвечает на письма
+sit	verb	сидеть	We sit near the window	Мы сидим у окна
+figure	noun	цифра, фигура	This figure shows our sales	Эта цифра показывает наши продажи
+letter	noun	письмо	I get a letter from Anna	Я получаю письмо от Анны
+decide	verb	решать	We decide everything together	Мы все решаем вместе
+language	noun	язык	English is a world language	Английский - мировой язык
+subject	noun	предмет, тема	History is my favourite subject	История - мой любимый предмет
+class	noun	класс, урок	Our class starts at nine	Наш урок начинается в девять
+development	noun	развитие	The town shows fast development	Город показывает быстрое развитие
+town	noun	город	My town has a big park	В моем городе есть большой парк
+half	num	половина	Half the cake is for you	Половина торта для тебя
+minute	noun	минута	The pause lasts one minute	Пауза длится одну минуту
+food	noun	еда	This food tastes very fresh	Эта еда очень свежая на вкус
+break	verb	ломать, нарушать	I never break my promises	Я никогда не нарушаю обещания
+clear	adj	ясный, понятный	The sky is bright and clear	Небо яркое и ясное
+future	noun	будущее	Our future looks very bright	Наше будущее выглядит очень светлым
+either	func	тоже, либо	I do not like tea either	Мне тоже не нравится чай
+ago	adv	назад	We met two years ago	Мы познакомились два года назад
+per	func	в, за	Apples cost two dollars per kilo	Яблоки стоят два доллара за кило
+remain	verb	оставаться	Some tickets remain for tonight	На вечер еще остаются билеты
+top	noun	верх, вершина	The book is on the top	Книга лежит наверху
+among	func	среди	She sits among good friends	Она сидит среди хороших друзей
+win	verb	побеждать	Our team wins every game	Наша команда выигрывает каждую игру
+color	noun	цвет	Red is my favourite color	Красный - мой любимый цвет
+involve	verb	вовлекать, включать	This job involves long walks	Эта работа включает долгие прогулки
+reach	verb	достигать, доставать	I reach the top shelf	Я достаю до верхней полки
+social	adj	социальный, общественный	We like small social events	Мы любим небольшие общественные мероприятия
+period	noun	период	Spring is a warm period	Весна - теплый период
+across	func	через, напротив	The bank is across the street	Банк находится через дорогу
+note	noun	записка, заметка	I leave a note for you	Я оставляю тебе записку
+history	noun	история	Our town has old history	У нашего города давняя история
+create	verb	создавать	She creates nice music clips	Она создает классные музыкальные клипы
+drive	verb	вести машину	He drives to work daily	Он ездит на работу каждый день
+along	func	вдоль	We walk along the river	Мы гуляем вдоль реки
+type	noun	тип	What type of game is it	Что это за тип игры
+sound	noun	звук	I hear a strange sound	Я слышу странный звук
+eye	noun	глаз	Dust gets in my eye	Пыль попадает мне в глаз
+music	noun	музыка	This music sounds very soft	Эта музыка звучит очень мягко
+game	noun	игра	This game needs two players	Для этой игры нужны два игрока
+political	adj	политический	We avoid political topics at dinner	Мы избегаем политических тем за ужином
+free	adj	бесплатный, свободный	Entry is free on Sundays	Вход бесплатный по воскресеньям
+receive	verb	получать	I receive letters every week	Я получаю письма каждую неделю
+moment	noun	момент	I wait a short moment	Я жду совсем немного
+sale	noun	распродажа, продажа	This shop has a big sale	В этом магазине большая распродажа
+policy	noun	политика, правила	Our office has clear policy	В нашем офисе понятные правила
+further	adv	дальше	He walks a bit further daily	Он ежедневно проходит чуть дальше
+body	noun	тело	Exercise is good for the body	Зарядка полезна для тела
+require	verb	требовать	This job requires special skills	Эта работа требует особых навыков
+wait	verb	ждать	I wait for the bus daily	Я каждый день жду автобус
+general	adj	общий	This is our general rule	Это наше общее правило
+appear	verb	появляться	Stars appear in the sky	Звёзды появляются на небе
+toward	func	к, в сторону	She walks toward the bright door	Она идёт к яркой двери
+team	noun	команда	Our team wins every game	Наша команда выигрывает каждую игру
+easy	adj	лёгкий, простой	This test is very easy	Этот тест очень лёгкий
+individual	adj	отдельный, личный	Each guest gets an individual plate	Каждый гость получает отдельную тарелку
+full	adj	полный	My cup is always full	Моя чашка всегда полная
+black	adj	чёрный	The black cat sleeps outside	Чёрный кот спит на улице
+sense	noun	смысл, чувство	This story makes no sense	В этой истории нет смысла
+perhaps	adv	возможно, может быть	Perhaps he knows the answer	Возможно, он знает ответ
+add	verb	добавлять	I add milk to my tea	Я добавляю молоко в чай
+rule	noun	правило	We follow one simple rule	Мы следуем одному простому правилу
+pass	verb	передавать, проходить	We pass the park on foot	Мы проходим мимо парка пешком
+produce	verb	производить	This farm produces fresh milk	Эта ферма производит свежее молоко
+sell	verb	продавать	They sell fresh bread here	Они продают здесь свежий хлеб
+short	adj	короткий	We watch a short film	Мы смотрим короткий фильм
+agree	verb	соглашаться	I agree with you fully	Я полностью с тобой согласен
+law	noun	закон	The law protects every child	Закон защищает каждого ребёнка
+everything	func	всё	Everything looks perfect today	Сегодня всё выглядит идеально
+research	noun	исследование	New research helps sick kids	Новые исследования помогают больным детям
+cover	verb	накрывать, закрывать	She covers the baby warmly	Она тепло укрывает малыша
+paper	noun	бумага	I write my notes on paper	Я пишу заметки на бумаге
+position	noun	позиция, положение	He plays a new position	Он играет на новой позиции
+near	func	около, рядом	We live near a quiet park	Мы живём рядом с тихим парком
+human	noun	человек	Every human needs clean water	Каждому человеку нужна чистая вода
+computer	noun	компьютер	My computer runs very fast	Мой компьютер работает очень быстро
+situation	noun	ситуация	The situation looks quite good	Ситуация выглядит довольно хорошо
+staff	noun	персонал, сотрудники	Our staff smiles every morning	Наш персонал улыбается каждое утро
+activity	noun	занятие, активность	Football is my favourite activity	Футбол — моё любимое занятие
+film	noun	фильм	We watch a funny film	Мы смотрим смешной фильм
+morning	noun	утро	I drink tea every morning	Я пью чай каждое утро
+war	noun	война	War brings only pain	Война приносит только боль
+account	noun	счёт, аккаунт	I check my bank account	Я проверяю свой банковский счёт
+shop	noun	магазин	This shop opens at nine	Этот магазин открывается в девять
+major	adj	главный, основной	Traffic is a major problem	Дорожное движение — главная проблема
+someone	func	кто-то	Someone knocks on the door	Кто-то стучится в дверь
+above	func	над, выше	The lamp hangs above the table	Лампа висит над столом
+design	noun	дизайн, проект	I love the clean design	Мне нравится этот лаконичный дизайн
+event	noun	событие	This event starts at noon	Это событие начинается в полдень
+special	adj	особенный, особый	Today is a special day	Сегодня особенный день
+sometimes	adv	иногда	We sometimes walk to school	Мы иногда ходим в школу пешком
+condition	noun	условие, состояние	This bike is in great condition	Этот велосипед в отличном состоянии
+carry	verb	нести, носить	I carry my lunch daily	Я каждый день ношу обед с собой
+choose	verb	выбирать	We choose fresh fruit daily	Мы каждый день выбираем свежие фрукты
+father	noun	отец, папа	My father drives a bus	Мой папа водит автобус
+decision	noun	решение	We make a quick decision	Мы быстро принимаем решение
+table	noun	стол	Dinner waits on the table	Ужин ждёт на столе
+certain	adj	уверенный, определённый	I am certain about the date	Я уверен насчёт даты
+forward	adv	вперёд	We move forward every day	Мы движемся вперёд каждый день
+main	adj	главный	The main door stays open	Главная дверь всегда открыта
+die	verb	умирать	Flowers die without water	Цветы гибнут без воды
+bear	noun	медведь	I see a big brown bear	Я вижу большого бурого медведя
+cut	verb	резать	I cut bread with care	Я аккуратно режу хлеб
+describe	verb	описывать	She describes her new house	Она описывает свой новый дом
+himself	func	себя, сам	He cooks dinner himself daily	Он каждый день сам готовит ужин
+available	adj	доступный, свободный	This table is always available	Этот столик всегда свободен
+especially	adv	особенно	I love soup especially in winter	Я люблю суп, особенно зимой
+strong	adj	сильный	My father is very strong	Мой папа очень сильный
+rise	verb	подниматься, вставать	The sun rises very early	Солнце встаёт очень рано
+girl	noun	девочка	The little girl laughs loudly	Маленькая девочка громко смеётся
+maybe	adv	может быть, возможно	Maybe she likes sweet tea	Может быть, она любит сладкий чай
+community	noun	сообщество, община	Our community meets each Sunday	Наше сообщество встречается каждое воскресенье
+else	adv	ещё	I want nothing else today	Мне сегодня больше ничего не нужно
+particular	adj	особый, конкретный	I love this particular song	Я люблю именно эту песню
+role	noun	роль	She plays a key role	Она играет ключевую роль
+join	verb	присоединяться	They join our club monthly	Они каждый месяц вступают в наш клуб
+difficult	adj	трудный, сложный	This rule is very difficult	Это правило очень трудное
+please	func	пожалуйста	I always say please and thanks	Я всегда говорю пожалуйста и спасибо
+detail	noun	деталь, подробность	I love every small detail	Мне нравится каждая мелкая деталь
+difference	noun	разница, различие	I see no real difference	Я не вижу настоящей разницы
+action	noun	действие	Every action brings results	Каждое действие приносит результат
+health	noun	здоровье	Sleep is good for health	Сон полезен для здоровья
+eat	verb	есть, кушать	We eat dinner together daily	Мы каждый день ужинаем вместе
+step	noun	шаг	I hear every step upstairs	Я слышу каждый шаг наверху
+true	adj	верный, настоящий	This story is always true	Эта история всегда правдива
+phone	noun	телефон	My phone rings all day	Мой телефон звонит весь день
+themselves	func	себя, сами	They warm themselves by the fire	Они греются у костра
+draw	verb	рисовать	I draw my house daily	Я каждый день рисую свой дом
+white	adj	белый	The white door looks great	Белая дверь выглядит отлично
+date	noun	дата, свидание	What date is it today	Какое сегодня число
+practice	noun	практика, тренировка	Daily practice brings quick progress	Ежедневная практика даёт быстрый прогресс
+model	noun	модель	This is a new model	Это новая модель
+raise	verb	поднимать	We raise our hands high	Мы высоко поднимаем руки
+customer	noun	клиент, покупатель	Each customer gets a smile	Каждый клиент получает улыбку
+front	adj	передний	We paint the front door white	Мы красим входную дверь в белый цвет
+explain	verb	объяснять	The teacher explains each rule	Учитель объясняет каждое правило
+door	noun	дверь	The door opens with a key	Дверь открывается ключом
+outside	adv	снаружи, на улице	The kids play outside all day	Дети играют на улице весь день
+behind	func	за, позади	The kids hide behind the door	Дети прячутся за дверью
+economic	adj	экономический	New jobs help the economic situation	Новые рабочие места улучшают экономическую ситуацию
+site	noun	место, сайт	This site looks very clean	Этот сайт выглядит очень аккуратно
+approach	verb	приближаться, подходить	We approach the old town	Мы подходим к старому городу
+teacher	noun	учитель	Our teacher tells fun stories	Наш учитель рассказывает весёлые истории
+land	noun	земля	This land grows good wheat	Эта земля даёт хорошую пшеницу
+charge	verb	заряжать	I charge my phone each night	Я заряжаю телефон каждый вечер
+finally	adv	наконец	We finally sit and rest	Мы наконец садимся и отдыхаем
+sign	noun	знак, вывеска	A red sign stops the cars	Красный знак останавливает машины
+monday	noun	понедельник	We meet on Monday	Мы встречаемся в понедельник
+tuesday	noun	вторник	I work on Tuesday	Я работаю во вторник
+wednesday	noun	среда	We play football on Wednesday	Мы играем в футбол в среду
+thursday	noun	четверг	She visits us on Thursday	Она навещает нас в четверг
+friday	noun	пятница	They rest on Friday	Они отдыхают в пятницу
+saturday	noun	суббота	We shop on Saturday	Мы ходим за покупками в субботу
+sunday	noun	воскресенье	We sleep late on Sunday	Мы спим допоздна в воскресенье
+january	noun	январь	It snows in January	В январе идет снег
+february	noun	февраль	It is cold in February	В феврале холодно
+march	noun	март	It rains in March	В марте идет дождь
+april	noun	апрель	Flowers bloom in April	Цветы цветут в апреле
+may	noun	май	It is warm in May	В мае тепло
+june	noun	июнь	We swim in June	Мы купаемся в июне
+july	noun	июль	It is hot in July	В июле жарко
+august	noun	август	We travel in August	В августе мы путешествуем
+september	noun	сентябрь	School starts in September	Занятия начинаются в сентябре
+october	noun	октябрь	Leaves fall in October	В октябре падают листья
+november	noun	ноябрь	It rains in November	В ноябре идет дождь
+december	noun	декабрь	It snows in December	В декабре идет снег
+two	num	два	I have two cats	У меня два кота
+three	num	три	We need three chairs	Нам нужны три стула
+four	num	четыре	She has four pens	У нее четыре ручки
+five	num	пять	I get up at five	Я встаю в пять
+six	num	шесть	We eat at six	Мы едим в шесть
+seven	num	семь	The shop opens at seven	Магазин открывается в семь
+eight	num	восемь	I work eight hours	Я работаю восемь часов
+nine	num	девять	She sleeps nine hours	Она спит девять часов
+ten	num	десять	It costs ten dollars	Это стоит десять долларов
+eleven	num	одиннадцать	The bus comes at eleven	Автобус приходит в одиннадцать
+twelve	num	двенадцать	We meet at twelve	Мы встречаемся в двенадцать
+thirteen	num	тринадцать	I see thirteen birds	Я вижу тринадцать птиц
+fourteen	num	четырнадцать	He is fourteen years old	Ему четырнадцать лет
+fifteen	num	пятнадцать	It costs fifteen dollars	Это стоит пятнадцать долларов
+sixteen	num	шестнадцать	She is sixteen years old	Ей шестнадцать лет
+seventeen	num	семнадцать	I have seventeen books	У меня семнадцать книг
+eighteen	num	восемнадцать	He is eighteen years old	Ему восемнадцать лет
+nineteen	num	девятнадцать	We need nineteen chairs	Нам нужно девятнадцать стульев
+twenty	num	двадцать	It costs twenty dollars	Это стоит двадцать долларов
+thirty	num	тридцать	She is thirty years old	Ей тридцать лет
+forty	num	сорок	It costs forty dollars	Это стоит сорок долларов
+fifty	num	пятьдесят	He has fifty coins	У него пятьдесят монет
+sixty	num	шестьдесят	The film lasts sixty minutes	Фильм длится шестьдесят минут
+seventy	num	семьдесят	She is seventy years old	Ей семьдесят лет
+eighty	num	восемьдесят	It costs eighty dollars	Это стоит восемьдесят долларов
+ninety	num	девяносто	The road is ninety kilometers long	Дорога длиной девяносто километров
+hundred	num	сто	It costs a hundred dollars	Это стоит сто долларов
+thousand	num	тысяча	The bag costs a thousand dollars	Сумка стоит тысячу долларов
+million	num	миллион	A million people live here	Здесь живет миллион человек
+billion	num	миллиард	A billion stars shine above	На небе светит миллиард звезд
+trillion	num	триллион	I cannot count a trillion stars	Я не могу сосчитать триллион звезд
+quadrillion	num	квадриллион	A quadrillion is a huge number	Квадриллион - это огромное число
+quintillion	num	квинтиллион	A quintillion is a huge number	Квинтиллион - это огромное число
