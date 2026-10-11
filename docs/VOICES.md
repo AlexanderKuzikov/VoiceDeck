@@ -4,6 +4,32 @@
 > Всего: 322 голосов.
 > Полное имя для CLI: колонка ShortName, напр. `de-AT-IngridNeural`.
 > Пресеты VoiceDeck: de-f/de-m, en-us-f/m, en-gb-f/m, ru-f/m (`voices` в CLI).
+> Жирным в приоритетной таблице — голоса пресетов.
+
+## Приоритетные: английский, немецкий, русский
+
+| Язык | Акцент | Женские | Мужские |
+|---|---|---|---|
+| Английский | австралийский (en-AU) | Natasha | WilliamMultilingual |
+| Английский | канадский (en-CA) | Clara | Liam |
+| Английский | британский (en-GB) | Libby, Maisie, **Sonia** | **Ryan**, Thomas |
+| Английский | гонконгский (en-HK) | Yan | Sam |
+| Английский | ирландский (en-IE) | Emily | Connor |
+| Английский | индийский (en-IN) | Neerja, NeerjaExpressive | Prabhat |
+| Английский | кенийский (en-KE) | Asilia | Chilemba |
+| Английский | нигерийский (en-NG) | Ezinne | Abeo |
+| Английский | новозеландский (en-NZ) | Molly | Mitchell |
+| Английский | филиппинский (en-PH) | Rosa | James |
+| Английский | сингапурский (en-SG) | Luna | Wayne |
+| Английский | танзанийский (en-TZ) | Imani | Elimu |
+| Английский | американский (en-US) | Ana, **Aria**, Ava, AvaMultilingual, Emma, EmmaMultilingual, **Jenny**, Michelle | Andrew, AndrewMultilingual, Brian, BrianMultilingual, Christopher, Eric, **Guy**, Roger, Steffan |
+| Английский | южноафриканский (en-ZA) | Leah | Luke |
+| Немецкий | австрийский (de-AT) | Ingrid | Jonas |
+| Немецкий | швейцарский (de-CH) | Leni | Jan |
+| Немецкий | стандартный (Германия) (de-DE) | Amala, **Katja**, **SeraphinaMultilingual** | **Conrad**, **FlorianMultilingual**, Killian |
+| Русский | русский (ru-RU) | **Svetlana** | **Dmitry** |
+
+## Все голоса
 
 | Локаль | Голос | Пол | ShortName |
 |---|---|---|---|

@@ -17,7 +17,8 @@ html[data-theme="dark"]{--bg:#1e2228;--surface:#2a2f3a;--surface-2:#343b48;--bor
 body{margin:0;background:var(--bg);color:var(--text);font:14px/1.45 "Segoe UI",system-ui,Roboto,Arial,sans-serif}
 header{display:flex;align-items:center;gap:12px;padding:12px 24px;background:var(--surface);border-bottom:1px solid var(--border)}
 header h1{font-size:20px;margin:0}header .sub{color:var(--text-2);font-size:13px}header .sp{flex:1}
-main{max-width:860px;margin:0 auto;padding:16px}
+main{max-width:960px;margin:0 auto;padding:16px}
+h2{font-size:16px;margin:20px 0 8px}
 input[type=text]{width:100%;font:inherit;color:var(--text);background:var(--surface);border:1px solid var(--border-strong);border-radius:var(--r-s);padding:8px}
 .meta{color:var(--text-2);font-size:13px;margin:12px 0}
 table{width:100%;border-collapse:collapse;background:var(--surface);border:1px solid var(--border);border-radius:var(--r-m);overflow:hidden;box-shadow:var(--shadow-s)}
@@ -33,6 +34,30 @@ button.ghost{background:var(--surface-2);color:var(--text);border:1px solid var(
 <header><h1>Голоса</h1><span class="sub">Microsoft Neural · 322 шт · 2026-10-11</span><span class="sp"></span>
 <button class="ghost" id="theme">Тема</button></header>
 <main>
+<h2>Приоритетные: английский, немецкий, русский</h2>
+<div class="meta">Жирным — голоса пресетов VoiceDeck.</div>
+<table><thead><tr><th>Язык</th><th>Акцент</th><th>Женские</th><th>Мужские</th></tr></thead>
+<tbody>
+<tr><td>Английский</td><td>австралийский (en-AU)</td><td>Natasha</td><td>WilliamMultilingual</td></tr>
+<tr><td>Английский</td><td>канадский (en-CA)</td><td>Clara</td><td>Liam</td></tr>
+<tr><td>Английский</td><td>британский (en-GB)</td><td>Libby, Maisie, <b>Sonia</b></td><td><b>Ryan</b>, Thomas</td></tr>
+<tr><td>Английский</td><td>гонконгский (en-HK)</td><td>Yan</td><td>Sam</td></tr>
+<tr><td>Английский</td><td>ирландский (en-IE)</td><td>Emily</td><td>Connor</td></tr>
+<tr><td>Английский</td><td>индийский (en-IN)</td><td>Neerja, NeerjaExpressive</td><td>Prabhat</td></tr>
+<tr><td>Английский</td><td>кенийский (en-KE)</td><td>Asilia</td><td>Chilemba</td></tr>
+<tr><td>Английский</td><td>нигерийский (en-NG)</td><td>Ezinne</td><td>Abeo</td></tr>
+<tr><td>Английский</td><td>новозеландский (en-NZ)</td><td>Molly</td><td>Mitchell</td></tr>
+<tr><td>Английский</td><td>филиппинский (en-PH)</td><td>Rosa</td><td>James</td></tr>
+<tr><td>Английский</td><td>сингапурский (en-SG)</td><td>Luna</td><td>Wayne</td></tr>
+<tr><td>Английский</td><td>танзанийский (en-TZ)</td><td>Imani</td><td>Elimu</td></tr>
+<tr><td>Английский</td><td>американский (en-US)</td><td>Ana, <b>Aria</b>, Ava, AvaMultilingual, Emma, EmmaMultilingual, <b>Jenny</b>, Michelle</td><td>Andrew, AndrewMultilingual, Brian, BrianMultilingual, Christopher, Eric, <b>Guy</b>, Roger, Steffan</td></tr>
+<tr><td>Английский</td><td>южноафриканский (en-ZA)</td><td>Leah</td><td>Luke</td></tr>
+<tr><td>Немецкий</td><td>австрийский (de-AT)</td><td>Ingrid</td><td>Jonas</td></tr>
+<tr><td>Немецкий</td><td>швейцарский (de-CH)</td><td>Leni</td><td>Jan</td></tr>
+<tr><td>Немецкий</td><td>стандартный (Германия) (de-DE)</td><td>Amala, <b>Katja</b>, <b>SeraphinaMultilingual</b></td><td><b>Conrad</b>, <b>FlorianMultilingual</b>, Killian</td></tr>
+<tr><td>Русский</td><td>русский (ru-RU)</td><td><b>Svetlana</b></td><td><b>Dmitry</b></td></tr>
+</tbody></table>
+<h2>Все голоса</h2>
 <input type="text" id="q" placeholder="Фильтр: de-DE, Katja, Conrad…">
 <div class="meta" id="count"></div>
 <table><thead><tr><th>Локаль</th><th>Голос</th><th>Пол</th><th>ShortName</th></tr></thead>
