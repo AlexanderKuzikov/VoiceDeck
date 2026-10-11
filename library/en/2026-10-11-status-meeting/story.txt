@@ -1,0 +1,17 @@
+# TITLE: Monday Status Meeting
+# LEVEL: B2
+# HOW: 180-250 слов для EN-истории; живая речь, не учебник.
+# HOW: 8-10 целевых фраз из phrases.txt встречаются в тексте естественно.
+# HOW: DE первые 2 недели — без story, только phrases (словарный запас).
+
+Monday, 9 a.m. Our team meets for the weekly status meeting. Anna looks at us and says, "Let's get started. Max, give us a quick update on the payment module."
+
+Max nods. "We're on track. The main flow works, but I'm stuck on the refund case. The bank answers too slowly, so I asked Lena for help."
+
+"Good," Anna says. "Lena, could you give him a hand with the bank letters? We need it by Friday, the client is waiting."
+
+Lena agrees. Then Pete raises his hand. "The mobile layout breaks on small screens. I can fix it today, but I need the new icons."
+
+Anna writes it down. "Okay, that's one of today's action items: icons for Pete. Anything else? No? Let's take this offline after the call — Pete, stay for five minutes."
+
+At the end she smiles. "Thanks, everyone. We slipped last week, but now we're back on track. Please keep me in the loop if anything blocks you. See you on Wednesday!"

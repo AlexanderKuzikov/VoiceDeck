@@ -1,0 +1,12 @@
+# FORMAT: фраза<TAB>перевод. Ядро юнита: EN 8-10, DE 3-5.
+# HOW: чанки, не одиночные слова. 2-3 фразы — повтор из прошлых юнитов (спираль).
+Let's get started.	Давайте начнём.
+A quick update on the payment module.	Коротко о том, как дела с платёжным модулем.
+We're on track.	Мы идём по графику.
+I'm stuck on the refund case.	Я застрял на возвратах.
+Could you give me a hand with the bank letters?	Можешь помочь мне с письмами в банк?
+We need it by Friday.	Нужно к пятнице.
+Let's take this offline.	Давайте обсудим это отдельно.
+Action items for today.	Задачи к выполнению на сегодня.
+Keep me in the loop.	Держи меня в курсе.
+We're back on track.	Мы снова в графике.
