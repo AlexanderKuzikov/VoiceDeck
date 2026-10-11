@@ -1,0 +1,6 @@
+# FORMAT: фраза<TAB>перевод. Ядро юнита: EN 8-10, DE 3-5.
+Einen Kaffee, bitte!	Кофе, пожалуйста!
+Die Speisekarte, bitte!	Меню, пожалуйста!
+Das schmeckt sehr gut!	Очень вкусно!
+Zahlen, bitte!	Счёт, пожалуйста!
+Danke, es war sehr gut!	Спасибо, всё было очень вкусно!

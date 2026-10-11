@@ -1,0 +1,12 @@
+{
+  "lang": "de",
+  "level": "A1",
+  "date": "2026-10-11",
+  "topic": "cafe",
+  "track": "revival",
+  "kind": "pack",
+  "voices": {"front": "de-f", "back": "ru-f"},
+  "phrases": 5,
+  "spiral_from": ["2026-10-11-begruessung"],
+  "source": "hq 2026-10-11, task 0007"
+}
