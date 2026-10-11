@@ -1,0 +1,803 @@
+# DE-A1: ядро уровня (Wortliste Goethe-Zertifikat A1 / Start Deutsch 1 + Wortgruppen)
+# Источник слов: Goethe-Institut e.V., Wortliste Start Deutsch 1 (© Goethe-Institut)
+# Переводы, части речи и учебные фразы: VoiceDeck, MIT
+# Формат: word \t pos(verb|noun|adj|adv|func|num) \t ru \t phrase \t phrase_ru
+# Существительные — с артиклем; sie/Sie — разные строки осознанно (она/они vs Вы)
+word	pos	ru	phrase	phrase_ru
+ab	func	с, начиная с	Der Bus fährt ab acht.	Автобус идёт с восьми.
+aber	func	но, а	Ich bleibe zu Hause, aber du gehst.	Я остаюсь дома, а ты идёшь.
+abfahren	verb	отправляться, отъезжать	Der Zug fährt um neun ab.	Поезд отправляется в девять.
+die Abfahrt	noun	отправление, отъезд	Die Abfahrt ist um neun Uhr.	Отправление в девять часов.
+abgeben	verb	сдавать, отдавать	Gib bitte den Schlüssel ab.	Сдай, пожалуйста, ключ.
+abholen	verb	забирать	Ich hole dich um sechs ab.	Я заберу тебя в шесть.
+der Absender	noun	отправитель	Der Absender steht links oben.	Отправитель указан слева вверху.
+Achtung	noun	внимание, осторожно	Achtung, die Treppe ist nass!	Осторожно, лестница мокрая!
+die Adresse	noun	адрес	Wie ist deine Adresse?	Какой у тебя адрес?
+alle	func	все	Alle Plätze sind frei.	Все места свободны.
+allein	adj	один, в одиночку	Sie wohnt allein in Berlin.	Она живёт одна в Берлине.
+also	func	итак, значит	Also, wir treffen uns morgen!	Итак, встречаемся завтра!
+alt	adj	старый	Wie alt bist du?	Сколько тебе лет?
+das Alter	noun	возраст	Darf ich nach deinem Alter fragen?	Могу я спросить о твоём возрасте?
+an	func	на, у, к	Das Bild hängt an der Wand.	Картина висит на стене.
+anbieten	verb	предлагать	Ich biete dir einen Kaffee an.	Я предлагаю тебе кофе.
+das Angebot	noun	предложение	Das Angebot ist sehr günstig.	Это предложение очень выгодное.
+anderer	adj	другой	Nimm einen anderen Apfel!	Возьми другое яблоко!
+anfangen	verb	начинать	Der Film fängt um acht an.	Фильм начинается в восемь.
+der Anfang	noun	начало	Der Anfang war sehr spannend.	Начало было очень увлекательным.
+anklicken	verb	кликать, нажимать	Klick bitte diesen Link an.	Кликни, пожалуйста, по этой ссылке.
+ankommen	verb	прибывать	Wir kommen um zehn an.	Мы прибываем в десять.
+die Ankunft	noun	прибытие	Die Ankunft ist um zehn Uhr.	Прибытие в десять часов.
+ankreuzen	verb	отмечать крестиком	Kreuze die richtige Antwort an.	Отметь крестиком правильный ответ.
+anmachen	verb	включать	Mach bitte das Licht an.	Включи, пожалуйста, свет.
+sich anmelden	verb	регистрироваться, записываться	Ich melde mich zum Kurs an.	Я записываюсь на курс.
+die Anmeldung	noun	регистрация, запись	Die Anmeldung ist im Erdgeschoss.	Регистрация на первом этаже.
+die Anrede	noun	обращение	Die Anrede lautet Sehr geehrte Frau Schmidt.	Обращение: «Уважаемая госпожа Шмидт».
+anrufen	verb	звонить	Ruf mich heute Abend an.	Позвони мне сегодня вечером.
+der Anruf	noun	звонок	Ich erwarte einen wichtigen Anruf.	Я жду важный звонок.
+der Anrufbeantworter	noun	автоответчик	Sprich bitte auf den Anrufbeantworter.	Наговори, пожалуйста, на автоответчик.
+die Ansage	noun	объявление	Hörst du die Ansage am Bahnhof?	Ты слышишь объявление на вокзале?
+der Anschluss	noun	пересадка, подключение	Der Anschluss nach Hamburg wartet nicht.	Пересадка на Гамбург не ждёт.
+an sein	verb	быть включённым	Das Licht ist an.	Свет включён.
+antworten	verb	отвечать	Antworte bitte kurz auf die Mail.	Ответь, пожалуйста, коротко на письмо.
+die Antwort	noun	ответ	Deine Antwort freut mich sehr.	Твой ответ меня очень радует.
+die Anzeige	noun	объявление в газете	Ich lese die Anzeige in der Zeitung.	Я читаю объявление в газете.
+sich anziehen	verb	одеваться	Zieh dich bitte warm an.	Оденься, пожалуйста, тепло.
+das Apartment	noun	квартира	Das Apartment liegt im Zentrum.	Квартира находится в центре.
+der Apfel	noun	яблоко	Der Apfel schmeckt süß und frisch.	Яблоко сладкое и свежее.
+der Appetit	noun	аппетит	Guten Appetit beim Mittagessen!	Приятного аппетита за обедом!
+arbeiten	verb	работать	Ich arbeite jeden Tag acht Stunden.	Я работаю каждый день по восемь часов.
+die Arbeit	noun	работа	Die Arbeit beginnt um neun Uhr.	Работа начинается в девять.
+arbeitslos	adj	безработный	Er ist seit Mai arbeitslos.	Он без работы с мая.
+der Arbeitsplatz	noun	рабочее место	Mein Arbeitsplatz ist hell und ruhig.	Моё рабочее место светлое и тихое.
+der Arm	noun	рука	Sein Arm tut nach dem Sport weh.	У него после спорта болит рука.
+der Arzt	noun	врач	Der Arzt hilft dir schnell.	Врач быстро тебе поможет.
+auch	adv	тоже, также	Ich trinke auch einen Kaffee.	Я тоже выпью кофе.
+auf	func	на	Das Buch liegt auf dem Tisch.	Книга лежит на столе.
+die Aufgabe	noun	задание	Die Aufgabe ist leicht und kurz.	Задание лёгкое и короткое.
+aufhören	verb	прекращать	Hör bitte mit dem Lärm auf.	Прекрати, пожалуйста, шуметь.
+auf sein	verb	быть открытым	Die Tür ist schon auf.	Дверь уже открыта.
+aufstehen	verb	вставать	Ich stehe um sechs Uhr auf.	Я встаю в шесть часов.
+der Aufzug	noun	лифт	Der Aufzug fährt bis oben.	Лифт едет на самый верх.
+das Auge	noun	глаз	Mein Auge juckt seit gestern.	У меня со вчерашнего дня чешется глаз.
+aus	func	из	Ich komme aus Russland.	Я из России.
+der Ausflug	noun	поездка, экскурсия	Der Ausflug nach Potsdam war schön.	Поездка в Потсдам была отличной.
+ausfüllen	verb	заполнять	Fülle bitte das Formular komplett aus.	Заполни, пожалуйста, формуляр полностью.
+der Ausgang	noun	выход	Der Ausgang ist hinten links.	Выход сзади слева.
+die Auskunft	noun	справка, информация	Die Auskunft hilft dir gern weiter.	Справочная с радостью тебе поможет.
+das Ausland	noun	заграница	Er reist gern ins Ausland.	Он любит ездить за границу.
+der Ausländer	noun	иностранец	Der Ausländer spricht gut Deutsch.	Иностранец хорошо говорит по-немецки.
+ausländisch	adj	иностранный	Sie liest gern ausländische Zeitungen.	Она любит читать иностранные газеты.
+ausmachen	verb	выключать	Mach bitte das Radio aus.	Выключи, пожалуйста, радио.
+die Aussage	noun	высказывание	Die Aussage ist kurz und klar.	Высказывание короткое и ясное.
+aussehen	verb	выглядеть	Du siehst heute müde aus.	Ты сегодня выглядишь усталым.
+aus sein	verb	быть выключенным	Das Licht ist aus.	Свет выключен.
+aussteigen	verb	выходить из транспорта	Wir steigen am Zoo aus.	Мы выходим у зоопарка.
+der Ausweis	noun	удостоверение личности	Zeig bitte deinen Ausweis an der Kasse.	Покажи, пожалуйста, удостоверение на кассе.
+sich ausziehen	verb	раздеваться	Er zieht sich schnell aus.	Он быстро раздевается.
+das Auto	noun	машина	Das Auto parkt vor dem Haus.	Машина стоит перед домом.
+die Autobahn	noun	автобан	Die Autobahn nach Berlin ist frei.	Автобан на Берлин свободен.
+der Automat	noun	автомат	Der Automat nimmt nur Münzen.	Автомат принимает только монеты.
+automatisch	adj	автоматический	Die Tür öffnet automatisch.	Дверь открывается автоматически.
+das Baby	noun	младенец	Das Baby schläft schon fest.	Малыш уже крепко спит.
+die Bäckerei	noun	пекарня	Die Bäckerei öffnet um sieben Uhr.	Пекарня открывается в семь.
+das Bad	noun	ванная	Das Bad ist klein aber hell.	Ванная маленькая, но светлая.
+baden	verb	купаться	Wir baden gern im See.	Мы любим купаться в озере.
+die Bahn	noun	поезд, железная дорога	Die Bahn kommt pünktlich an.	Поезд прибывает вовремя.
+der Bahnhof	noun	вокзал	Der Bahnhof liegt im Zentrum.	Вокзал находится в центре.
+der Bahnsteig	noun	платформа	Der Bahnsteig zwei ist rechts.	Вторая платформа справа.
+bald	adv	скоро	Bis bald, wir sehen uns!	До скорого, увидимся!
+der Balkon	noun	балкон	Der Balkon ist groß und sonnig.	Балкон большой и солнечный.
+die Banane	noun	банан	Die Banane liegt im Korb.	Банан лежит в корзине.
+die Bank	noun	банк	Die Bank öffnet um neun Uhr.	Банк открывается в девять.
+bar	adj	наличными	Ich zahle bar an der Kasse.	Я плачу наличными на кассе.
+der Bauch	noun	живот	Mein Bauch tut nach dem Essen weh.	У меня после еды болит живот.
+der Baum	noun	дерево	Der Baum steht im Garten.	Дерево стоит в саду.
+der Beamte	noun	служащий, чиновник	Der Beamte hilft Ihnen gern weiter.	Служащий с радостью вам поможет.
+bedeuten	verb	означать	Was bedeutet dieses Wort auf Russisch?	Что значит это слово по-русски?
+beginnen	verb	начинаться	Der Unterricht beginnt um acht Uhr.	Урок начинается в восемь.
+bei	func	у, при	Ich bin heute bei meiner Mutter.	Я сегодня у мамы.
+beide	func	оба	Beide Kinder spielen im Garten.	Оба ребёнка играют в саду.
+das Bein	noun	нога	Mein Bein tut nach dem Lauf weh.	У меня после пробежки болит нога.
+das Beispiel	noun	пример	Das Beispiel ist sehr einfach.	Пример очень простой.
+zum Beispiel	adv	например	Ich mag Obst, zum Beispiel Äpfel.	Я люблю фрукты, например яблоки.
+bekannt	adj	известный, знакомый	Der Schauspieler ist sehr bekannt.	Этот актёр очень известный.
+der Bekannte	noun	знакомый	Ein Bekannter holt mich ab.	Знакомый меня заберёт.
+bekommen	verb	получать	Ich bekomme eine Mail aus Berlin.	Я получаю письмо из Берлина.
+benutzen	verb	использовать	Darf ich dein Handy benutzen?	Можно мне воспользоваться твоим телефоном?
+der Beruf	noun	профессия	Was ist dein Beruf?	Какая у тебя профессия?
+besetzt	adj	занят	Die Leitung ist gerade besetzt.	Линия сейчас занята.
+besichtigen	verb	осматривать	Wir besichtigen morgen das Schloss.	Завтра мы осмотрим замок.
+besser	adj	лучше	Der Kaffee schmeckt heute besser.	Кофе сегодня вкуснее.
+am besten	adv	лучше всего	Ruf mich am besten morgen an.	Лучше всего позвони мне завтра.
+bestellen	verb	заказывать	Ich bestelle eine Pizza für uns.	Я заказываю пиццу для нас.
+besuchen	verb	посещать, навещать	Wir besuchen Oma am Sonntag.	Мы навещаем бабушку в воскресенье.
+das Bett	noun	кровать	Das Bett steht am Fenster.	Кровать стоит у окна.
+bezahlen	verb	платить	Ich bezahle mit Karte oder bar.	Я плачу картой или наличными.
+das Bier	noun	пиво	Ein Bier kostet drei Euro.	Пиво стоит три евро.
+das Bild	noun	картина, фото	Das Bild hängt über dem Sofa.	Картина висит над диваном.
+billig	adj	дешёвый	Die Äpfel sind heute billig.	Яблоки сегодня дешёвые.
+die Birne	noun	груша	Die Birne schmeckt süß und saftig.	Груша сладкая и сочная.
+bis	func	до	Der Zug fährt bis Hamburg.	Поезд идёт до Гамбурга.
+bisschen	adv	немного, немножко	Ich spreche ein bisschen Deutsch.	Я немного говорю по-немецки.
+bitte	func	пожалуйста	Ein Kaffee bitte zum Mitnehmen.	Один кофе с собой, пожалуйста.
+die Bitte	noun	просьба	Ich habe eine Bitte an dich.	У меня к тебе просьба.
+bitten	verb	просить	Ich bitte dich um Hilfe.	Я прошу тебя о помощи.
+bitter	adj	горький	Der Kaffee schmeckt bitter ohne Zucker.	Кофе без сахара горький.
+bleiben	verb	оставаться	Bleib bitte kurz hier sitzen.	Останься, пожалуйста, ненадолго здесь.
+der Bleistift	noun	карандаш	Der Bleistift liegt auf dem Tisch.	Карандаш лежит на столе.
+der Blick	noun	взгляд, вид	Der Blick vom Balkon ist schön.	Вид с балкона красивый.
+die Blume	noun	цветок	Die Blume blüht im Garten.	Цветок цветёт в саду.
+der Bogen	noun	лист бумаги	Ein Bogen Papier liegt dort.	Там лежит лист бумаги.
+böse	adj	злой, сердитый	Bist du böse auf mich?	Ты на меня сердишься?
+brauchen	verb	нуждаться, нужно	Ich brauche morgen deine Hilfe.	Завтра мне нужна твоя помощь.
+breit	adj	широкий	Die Straße ist breit und hell.	Улица широкая и светлая.
+der Brief	noun	письмо	Der Brief kommt aus Berlin.	Письмо из Берлина.
+die Briefmarke	noun	марка	Die Briefmarke klebt links oben.	Марка клеится слева вверху.
+bringen	verb	приносить	Bringst du mir bitte Milch mit?	Принесёшь мне, пожалуйста, молока?
+das Brot	noun	хлеб	Das Brot ist frisch und warm.	Хлеб свежий и тёплый.
+das Brötchen	noun	булочка	Ein Brötchen kostet einen Euro.	Булочка стоит один евро.
+der Bruder	noun	брат	Mein Bruder wohnt in München.	Мой брат живёт в Мюнхене.
+das Buch	noun	книга	Das Buch liegt auf dem Tisch.	Книга лежит на столе.
+der Buchstabe	noun	буква	Der Buchstabe fehlt im Wort.	В слове не хватает буквы.
+buchstabieren	verb	произносить по буквам	Buchstabiere bitte deinen Namen langsam.	Продиктуй, пожалуйста, имя по буквам медленно.
+der Bus	noun	автобус	Der Bus fährt alle zehn Minuten.	Автобус ходит каждые десять минут.
+die Butter	noun	сливочное масло	Die Butter liegt im Kühlschrank.	Масло лежит в холодильнике.
+das Café	noun	кафе	Das Café öffnet schon um acht.	Кафе открывается уже в восемь.
+die CD	noun	компакт-диск	Die CD liegt im Regal.	Диск лежит на полке.
+der Chef	noun	шеф, начальник	Mein Chef kommt erst mittags.	Мой шеф придёт только к обеду.
+circa	adv	примерно, около	Der Zug kommt circa zehn Minuten später.	Поезд придёт примерно на десять минут позже.
+der Computer	noun	компьютер	Der Computer steht im Büro.	Компьютер стоит в офисе.
+da	adv	там, здесь	Ist Lisa schon da?	Лиза уже здесь?
+die Dame	noun	дама	Guten Tag, meine Dame!	Добрый день, сударыня!
+daneben	adv	рядом	Das Kino ist gleich daneben.	Кинотеатр прямо рядом.
+danken	verb	благодарить	Ich danke dir für die Hilfe.	Благодарю тебя за помощь.
+der Dank	noun	благодарность	Vielen Dank für deine Hilfe!	Большое спасибо за помощь!
+danke	func	спасибо	Danke, mir geht es gut.	Спасибо, у меня всё хорошо.
+dann	adv	потом, тогда	Zuerst essen wir, dann gehen wir.	Сначала поедим, потом пойдём.
+das Datum	noun	дата	Welches Datum haben wir heute?	Какое у нас сегодня число?
+dauern	verb	длиться	Die Fahrt dauert zwanzig Minuten.	Поездка длится двадцать минут.
+dein	func	твой	Ist das dein Fahrrad?	Это твой велосипед?
+denn	func	ведь, же	Warum lernst du denn Deutsch?	Почему ты учишь немецкий?
+der/die/das	func	определённые артикли	Der, die oder das?	Der, die или das?
+dich	func	тебя	Ich rufe dich heute Abend an.	Я позвоню тебе сегодня вечером.
+dieser	func	этот	Dieser Käse schmeckt sehr gut.	Этот сыр очень вкусный.
+dir	func	тебе	Geht es dir gut?	У тебя всё хорошо?
+die Disco	noun	дискотека	Gehen wir am Samstag in die Disco?	Пойдём в субботу на дискотеку?
+der Doktor	noun	врач, доктор	Der Doktor ist heute da.	Врач сегодня на месте.
+das Doppelzimmer	noun	двухместный номер	Wir buchen ein Doppelzimmer mit Bad.	Мы бронируем двухместный номер с ванной.
+das Dorf	noun	деревня	Meine Oma wohnt in einem Dorf.	Моя бабушка живёт в деревне.
+dort	adv	там	Dort wohnt mein Freund Peter.	Там живёт мой друг Петер.
+draußen	adv	на улице, снаружи	Die Kinder spielen schon draußen.	Дети уже играют на улице.
+drucken	verb	печатать	Kannst du das Formular bitte drucken?	Распечатай, пожалуйста, этот бланк.
+der Drucker	noun	принтер	Der Drucker steht neben dem Computer.	Принтер стоит рядом с компьютером.
+drücken	verb	нажимать	Drück bitte auf den grünen Knopf.	Нажми, пожалуйста, на зелёную кнопку.
+durch	func	через, сквозь	Wir gehen durch den Park nach Hause.	Мы идём домой через парк.
+die Durchsage	noun	объявление по громкой связи	Hast du die Durchsage am Bahnhof gehört?	Ты слышал объявление на вокзале?
+dürfen	verb	мочь, иметь разрешение	Darf ich hier sitzen?	Можно мне сесть здесь?
+der Durst	noun	жажда	Ich habe großen Durst nach dem Sport.	После спорта у меня сильная жажда.
+sich duschen	verb	принимать душ	Ich dusche mich jeden Morgen kalt.	Каждое утро я принимаю холодный душ.
+die Dusche	noun	душ	Die Dusche im Hotel ist sehr klein.	Душ в отеле очень маленький.
+die Ecke	noun	угол	Die Apotheke ist um die Ecke.	Аптека за углом.
+die Ehefrau/der Ehemann	noun	супруга / супруг	Meine Ehefrau arbeitet als Ärztin.	Моя жена работает врачом.
+das Ei	noun	яйцо	Zum Frühstück esse ich ein Ei.	На завтрак я ем яйцо.
+eilig	adj	срочный, спешный	Ich habe es eilig zum Bahnhof.	Я спешу на вокзал.
+ein	func	неопределённый артикль, один	Ich hätte gern ein Wasser bitte.	Мне воду, пожалуйста.
+einfach	adj	простой	Das ist eine einfache Aufgabe.	Это простое задание.
+der Eingang	noun	вход	Der Eingang ist hinten links.	Вход сзади слева.
+einkaufen	verb	делать покупки	Am Samstag kaufen wir zusammen ein.	В субботу мы вместе идём за покупками.
+einladen	verb	приглашать	Wir laden dich zum Geburtstag ein.	Мы приглашаем тебя на день рождения.
+die Einladung	noun	приглашение	Danke für die Einladung zum Fest!	Спасибо за приглашение на праздник!
+einmal	adv	однажды, один раз	Ich war nur einmal in Berlin.	Я был в Берлине только один раз.
+einsteigen	verb	садиться в транспорт	Bitte hinten in den Bus einsteigen!	Садитесь в автобус сзади, пожалуйста!
+der Eintritt	noun	входной билет, плата за вход	Der Eintritt ins Museum kostet fünf Euro.	Вход в музей стоит пять евро.
+das Einzelzimmer	noun	одноместный номер	Ich nehme ein Einzelzimmer für zwei Nächte.	Я беру одноместный номер на две ночи.
+die Eltern	noun	родители	Meine Eltern wohnen in Hamburg.	Мои родители живут в Гамбурге.
+die E-Mail	noun	электронное письмо	Schick mir bitte eine E-Mail!	Пришли мне письмо, пожалуйста!
+der Empfänger	noun	получатель	Der Empfänger steht oben rechts.	Получатель указан справа вверху.
+empfehlen	verb	рекомендовать	Ich empfehle dir dieses Restaurant.	Рекомендую тебе этот ресторан.
+enden	verb	заканчиваться	Der Film endet um zehn Uhr.	Фильм заканчивается в десять часов.
+das Ende	noun	конец	Am Ende essen wir Eis.	В конце мы едим мороженое.
+entschuldigen	verb	извиняться	Entschuldigen Sie bitte die Verspätung!	Извините, пожалуйста, за опоздание!
+die Entschuldigung	noun	извинение	Bitte um Entschuldigung für den Lärm!	Прошу прощения за шум!
+er	func	он	Er wohnt in München.	Он живёт в Мюнхене.
+das Ergebnis	noun	результат	Das Ergebnis ist sehr gut.	Результат очень хороший.
+erklären	verb	объяснять	Kannst du das bitte erklären?	Можешь это объяснить, пожалуйста?
+erlauben	verb	разрешать	Hier ist Rauchen nicht erlaubt.	Здесь курить запрещено.
+der Erwachsene	noun	взрослый	Ein Erwachsener zahlt zehn Euro.	Взрослый платит десять евро.
+erzählen	verb	рассказывать	Erzähl mir bitte von deiner Reise!	Расскажи мне о своей поездке!
+es	func	оно, это	Es regnet heute in Berlin.	Сегодня в Берлине дождь.
+essen	verb	есть, кушать	Wir essen zusammen zu Mittag.	Мы вместе обедаем.
+das Essen	noun	еда	Das Essen schmeckt wunderbar.	Еда очень вкусная.
+euer	func	ваш (мн. ч.)	Ist das euer Auto?	Это ваша машина?
+fahren	verb	ехать	Wir fahren morgen nach Hamburg.	Мы завтра едем в Гамбург.
+der Fahrer	noun	водитель	Der Fahrer wartet vor dem Hotel.	Водитель ждёт перед отелем.
+die Fahrkarte	noun	билет на проезд	Eine Fahrkarte nach Berlin, bitte!	Один билет до Берлина, пожалуйста!
+das Fahrrad	noun	велосипед	Mein Fahrrad steht im Keller.	Мой велосипед стоит в подвале.
+falsch	adj	неправильный, неверный	Die Antwort ist leider falsch.	Ответ, к сожалению, неверный.
+die Familie	noun	семья	Meine Familie ist sehr groß.	Моя семья очень большая.
+der Familienname	noun	фамилия	Bitte schreiben Sie Ihren Familiennamen!	Напишите, пожалуйста, вашу фамилию!
+der Familienstand	noun	семейное положение	Wie ist Ihr Familienstand bitte?	Каково ваше семейное положение?
+die Farbe	noun	цвет	Welche Farbe magst du lieber?	Какой цвет тебе больше нравится?
+das Fax	noun	факс	Schick das Fax bitte heute noch!	Отправь факс, пожалуйста, ещё сегодня!
+Feierabend/Feiertag	noun	конец рабочего дня / праздничный день	Am Feiertag bleibt das Geschäft geschlossen.	В праздник магазин закрыт.
+feiern	verb	праздновать	Wir feiern heute meinen Geburtstag.	Мы сегодня празднуем мой день рождения.
+fehlen	verb	отсутствовать, не хватать	Du fehlst uns sehr!	Нам тебя очень не хватает!
+der Fehler	noun	ошибка	In diesem Satz ist ein Fehler.	В этом предложении есть ошибка.
+fernsehen	verb	смотреть телевизор	Abends sehen wir oft fern.	Вечерами мы часто смотрим телевизор.
+fertig	adj	готовый	Das Essen ist schon fertig.	Еда уже готова.
+das Feuer	noun	огонь	Vorsicht, das Feuer ist heiß!	Осторожно, огонь горячий!
+das Fieber	noun	температура, жар	Das Kind hat hohes Fieber.	У ребёнка высокая температура.
+der Film	noun	фильм	Der Film beginnt um acht Uhr.	Фильм начинается в восемь часов.
+finden	verb	находить	Ich finde meinen Schlüssel nicht.	Я не нахожу свой ключ.
+die Firma	noun	фирма	Mein Bruder arbeitet in einer Firma.	Мой брат работает в фирме.
+der Fisch	noun	рыба	Isst du gern frischen Fisch?	Ты любишь свежую рыбу?
+die Flasche	noun	бутылка	Eine Flasche Wasser, bitte!	Бутылку воды, пожалуйста!
+das Fleisch	noun	мясо	Ich esse kein Fleisch am Freitag.	Я не ем мясо по пятницам.
+fliegen	verb	лететь	Wir fliegen im Sommer nach Spanien.	Летом мы летим в Испанию.
+abfliegen	verb	вылетать	Unser Flugzeug fliegt um sechs ab.	Наш самолёт вылетает в шесть.
+der Abflug	noun	вылет	Der Abflug ist um sieben Uhr.	Вылет в семь часов.
+der Flughafen	noun	аэропорт	Der Flughafen ist sehr groß.	Аэропорт очень большой.
+das Flugzeug	noun	самолёт	Das Flugzeug landet pünktlich in Berlin.	Самолёт приземляется в Берлине вовремя.
+das Formular	noun	бланк	Bitte füllen Sie dieses Formular aus!	Заполните, пожалуйста, этот бланк!
+das Foto	noun	фото	Zeig mir bitte deine Fotos!	Покажи мне свои фото, пожалуйста!
+fragen	verb	спрашивать	Darf ich dich etwas fragen?	Можно тебя кое-что спросить?
+die Frage	noun	вопрос	Ich habe eine kurze Frage.	У меня короткий вопрос.
+die Frau	noun	женщина, госпожа	Die Frau spricht sehr gut Deutsch.	Эта женщина очень хорошо говорит по-немецки.
+frei	adj	свободный	Ist dieser Platz noch frei?	Это место ещё свободно?
+die Freizeit	noun	свободное время	Was machst du in deiner Freizeit?	Что ты делаешь в свободное время?
+fremd	adj	чужой, незнакомый	Die fremde Stadt gefällt mir gut.	Чужой город мне нравится.
+sich freuen	verb	радоваться	Ich freue mich auf das Wochenende.	Я радуюсь предстоящим выходным.
+der Freund	noun	друг	Mein Freund kommt heute Abend.	Мой друг придёт сегодня вечером.
+früher	adv	раньше	Früher habe ich in Köln gewohnt.	Раньше я жил в Кёльне.
+frühstücken	verb	завтракать	Wir frühstücken um acht Uhr.	Мы завтракаем в восемь часов.
+das Frühstück	noun	завтрак	Das Frühstück ist um acht Uhr.	Завтрак в восемь часов.
+die Führung	noun	экскурсия	Die Führung durch die Stadt war super.	Экскурсия по городу была отличной.
+für	func	для	Das Geschenk ist für dich.	Этот подарок для тебя.
+der Fuß	noun	нога, стопа	Mein Fuß tut nach dem Laufen weh.	После бега у меня болит нога.
+der Fußball	noun	футбол	Spielen die Kinder gern Fußball?	Дети любят играть в футбол?
+der Garten	noun	сад	Im Garten blühen schöne Blumen.	В саду цветут красивые цветы.
+der Gast	noun	гость	Jeder Gast bekommt ein Glas Wasser.	Каждый гость получает стакан воды.
+geben	verb	давать	Gib mir bitte die Speisekarte!	Дай мне меню, пожалуйста!
+geboren	adj	рождённый	Ich bin in Moskau geboren.	Я родился в Москве.
+das Geburtsjahr	noun	год рождения	Mein Geburtsjahr ist neunzehnhundertneunzig.	Мой год рождения — 1990.
+der Geburtsort	noun	место рождения	Mein Geburtsort ist Sankt Petersburg.	Моё место рождения — Санкт-Петербург.
+der Geburtstag	noun	день рождения	Alles Gute zum Geburtstag, Anna!	С днём рождения, Анна!
+gefallen	verb	нравиться	Das Konzert gefällt mir sehr.	Концерт мне очень нравится.
+gegen	func	против, около	Wir spielen gegen eine andere Mannschaft.	Мы играем против другой команды.
+gehen	verb	идти	Gehen wir heute ins Kino?	Пойдём сегодня в кино?
+gehören	verb	принадлежать	Das Buch gehört meiner Schwester.	Эта книга принадлежит моей сестре.
+das Geld	noun	деньги	Ich habe kein Geld dabei.	У меня с собой нет денег.
+das Gemüse	noun	овощи	Kauf bitte frisches Gemüse auf dem Markt!	Купи свежие овощи на рынке, пожалуйста!
+das Gepäck	noun	багаж	Mein Gepäck ist schon im Hotel.	Мой багаж уже в отеле.
+gerade	adv	сейчас, как раз	Ich bin gerade in der Küche.	Я сейчас на кухне.
+geradeaus	adv	прямо	Geh bitte immer geradeaus bis zur Ampel!	Иди прямо до светофора, пожалуйста!
+gern	adv	охотно, с удовольствием	Ich trinke gern Kaffee am Morgen.	Я люблю пить кофе по утрам.
+das Geschäft	noun	магазин	Das Geschäft schließt um acht Uhr.	Магазин закрывается в восемь часов.
+das Geschenk	noun	подарок	Das Geschenk ist für meine Mutter.	Подарок для моей мамы.
+die Geschwister	noun	братья и сёстры	Meine Geschwister wohnen alle in Berlin.	Мои братья и сёстры живут в Берлине.
+das Gespräch	noun	разговор	Das Gespräch war sehr interessant.	Разговор был очень интересным.
+gestern	adv	вчера	Gestern war ich beim Arzt.	Вчера я был у врача.
+gestorben	adj	умерший	Mein Großvater ist letztes Jahr gestorben.	Мой дедушка умер в прошлом году.
+das Getränk	noun	напиток	Ein kaltes Getränk, bitte!	Холодный напиток, пожалуйста!
+das Gewicht	noun	вес	Wie viel Gewicht hat der Koffer?	Какой вес у чемодана?
+gewinnen	verb	выигрывать	Unsere Mannschaft gewinnt das Spiel.	Наша команда выигрывает матч.
+das Glas	noun	стакан	Ein Glas Apfelsaft, bitte!	Стакан яблочного сока, пожалуйста!
+glauben	verb	верить, думать	Ich glaube dir jedes Wort.	Я верю каждому твоему слову.
+gleich	adj	одинаковый	Beide Tassen sind genau gleich.	Обе чашки совершенно одинаковые.
+das Gleis	noun	путь, платформа	Der Zug fährt von Gleis drei ab.	Поезд отправляется с третьего пути.
+das Glück	noun	счастье, удача	Viel Glück bei der Prüfung!	Удачи на экзамене!
+glücklich	adj	счастливый	Wir sind sehr glücklich hier.	Мы здесь очень счастливы.
+der Glückwunsch	noun	поздравление	Herzlichen Glückwunsch zum Geburtstag!	Сердечно поздравляю с днём рождения!
+Grad	noun	градус	Heute haben wir dreißig Grad im Schatten.	Сегодня у нас тридцать градусов в тени.
+gratulieren	verb	поздравлять	Ich gratuliere dir zum Geburtstag!	Поздравляю тебя с днём рождения!
+grillen	verb	жарить на гриле	Am Sonntag grillen wir im Garten.	В воскресенье мы жарим мясо в саду.
+groß	adj	большой	Berlin ist eine große Stadt.	Берлин — большой город.
+die Größe	noun	размер, рост	Welche Größe haben Sie bitte?	Какой у вас размер?
+die Großeltern	noun	бабушка и дедушка	Meine Großeltern wohnen auf dem Land.	Мои бабушка и дедушка живут за городом.
+die Großmutter	noun	бабушка	Meine Großmutter backt leckeren Kuchen.	Моя бабушка печёт вкусный пирог.
+der Großvater	noun	дедушка	Mein Großvater liest gern Zeitung.	Мой дедушка любит читать газету.
+die Gruppe	noun	группа	Unsere Gruppe trifft sich um neun.	Наша группа встречается в девять.
+der Gruß	noun	привет, приветствие	Viele Grüße aus Hamburg!	Большой привет из Гамбурга!
+gültig	adj	действительный	Die Fahrkarte ist drei Tage gültig.	Билет действителен три дня.
+günstig	adj	выгодный, недорогой	Das Zimmer ist sauber und günstig.	Номер чистый и недорогой.
+gut	adj	хороший	Das Wetter ist heute sehr gut.	Погода сегодня очень хорошая.
+das Haar	noun	волосы	Deine Haare sind sehr lang	Твои волосы очень длинные
+haben	verb	иметь	Wir haben ein neues Auto	У нас есть новая машина
+das Hähnchen	noun	цыплёнок	Das Hähnchen schmeckt sehr gut	Цыплёнок очень вкусный
+die Halbpension	noun	полупансион	Wir buchen Halbpension im Hotel	Мы бронируем полупансион в отеле
+die Halle	noun	зал	Die Halle ist groß und hell	Зал большой и светлый
+hallo	func	привет	Hallo, wie geht es dir	Привет, как у тебя дела
+halten	verb	держать	Der Bus hält hier nicht	Автобус здесь не останавливается
+die Haltestelle	noun	остановка	Die Haltestelle ist gleich um die Ecke	Остановка прямо за углом
+die Hand	noun	рука	Gib mir bitte deine Hand	Дай мне, пожалуйста, твою руку
+das Handy	noun	мобильный телефон	Mein Handy liegt auf dem Tisch	Мой телефон лежит на столе
+das Haus	noun	дом	Unser Haus steht neben dem Park	Наш дом стоит рядом с парком
+die Hausaufgabe	noun	домашнее задание	Ich mache meine Hausaufgaben heute	Я делаю домашнее задание сегодня
+die Hausfrau/der Hausmann	noun	домохозяйка / домохозяин	Meine Mutter ist Hausfrau	Моя мама — домохозяйка
+die Heimat	noun	родина	Meine Heimat ist ein kleines Dorf	Моя родина — маленькая деревня
+heiraten	verb	жениться	Sie heiraten im Sommer	Они женятся летом
+heißen	verb	называться	Ich heiße Anna	Меня зовут Анна
+helfen	verb	помогать	Kannst du mir bitte helfen	Ты можешь мне помочь, пожалуйста
+hell	adj	светлый	Das Zimmer ist hell und freundlich	Комната светлая и уютная
+der Herd	noun	плита	Der Topf steht auf dem Herd	Кастрюля стоит на плите
+der Herr	noun	господин	Guten Tag, Herr Müller	Добрый день, господин Мюллер
+herzlich	adj	сердечный	Herzlich willkommen in Berlin	Добро пожаловать в Берлин
+heute	adv	сегодня	Heute gehen wir ins Kino	Сегодня мы идём в кино
+hier	adv	здесь	Bitte warte hier einen Moment	Подожди здесь минутку, пожалуйста
+die Hilfe	noun	помощь	Ich brauche deine Hilfe	Мне нужна твоя помощь
+hinten	adv	сзади	Das Kind sitzt hinten im Auto	Ребёнок сидит сзади в машине
+das Hobby	noun	хобби	Mein Hobby ist Fotografieren	Моё хобби — фотография
+hoch	adj	высокий	Der Berg ist sehr hoch	Гора очень высокая
+die Hochzeit	noun	свадьба	Die Hochzeit ist im Juni	Свадьба будет в июне
+holen	verb	забирать	Ich hole dich vom Bahnhof ab	Я заберу тебя с вокзала
+hören	verb	слушать	Ich höre gern Musik	Я люблю слушать музыку
+das Hotel	noun	отель	Das Hotel liegt am Meer	Отель находится у моря
+der Hund	noun	собака	Der Hund spielt im Garten	Собака играет в саду
+der Hunger	noun	голод	Ich habe großen Hunger	Я очень голоден
+ich	func	я	Ich komme aus Moskau	Я из Москвы
+ihr/ihm/ihn	func	ей / ему / его	Ich gebe ihm das Buch	Я даю ему книгу
+immer	adv	всегда	Du bist immer pünktlich	Ты всегда пунктуален
+in	func	в	Wir wohnen in Hamburg	Мы живём в Гамбурге
+die Information	noun	информация	Die Information ist sehr wichtig	Эта информация очень важна
+international	adj	международный	Das ist ein internationales Team	Это международная команда
+das Internet	noun	интернет	Das Internet ist heute langsam	Интернет сегодня медленный
+ja	func	да	Ja, das stimmt genau	Да, это совершенно верно
+die Jacke	noun	куртка	Deine Jacke hängt an der Garderobe	Твоя куртка висит на вешалке
+jeder	func	каждый	Jeder Gast bekommt ein Glas Wasser	Каждый гость получает стакан воды
+jetzt	adv	сейчас	Komm bitte jetzt nach Hause	Приходи сейчас домой, пожалуйста
+der Job	noun	работа	Mein neuer Job macht Spaß	Моя новая работа приносит удовольствие
+der Jugendliche	noun	подросток	Der Jugendliche spielt Fußball	Подросток играет в футбол
+jung	adj	молодой	Sie ist noch sehr jung	Она ещё очень молодая
+der Junge	noun	мальчик	Der Junge liest ein Buch	Мальчик читает книгу
+der Kaffee	noun	кофе	Der Kaffee ist heiß und stark	Кофе горячий и крепкий
+kaputt	adj	сломанный	Die Waschmaschine ist kaputt	Стиральная машина сломалась
+die Karte	noun	билет	Zwei Karten für das Konzert bitte	Два билета на концерт, пожалуйста
+die Kreditkarte	noun	кредитная карта	Ich zahle mit Kreditkarte	Я плачу кредитной картой
+die Kartoffel	noun	картошка	Wir kochen heute Kartoffeln	Сегодня мы варим картошку
+die Kasse	noun	касса	Bitte zahlen Sie an der Kasse	Пожалуйста, оплатите на кассе
+kaufen	verb	покупать	Wir kaufen frisches Brot	Мы покупаем свежий хлеб
+kein	func	никакой	Ich habe kein Geld dabei	У меня с собой нет денег
+kennen	verb	знать	Ich kenne diesen Schauspieler gut	Я хорошо знаю этого актёра
+kennenlernen	verb	знакомиться	Wir wollen uns gern kennenlernen	Мы хотим познакомиться
+das Kind	noun	ребёнок	Das Kind spielt mit dem Ball	Ребёнок играет с мячом
+der Kindergarten	noun	детский сад	Mein Sohn geht in den Kindergarten	Мой сын ходит в детский сад
+das Kino	noun	кинотеатр	Gehen wir heute ins Kino	Пойдём сегодня в кино
+der Kiosk	noun	киоск	Am Kiosk gibt es Zeitungen	В киоске есть газеты
+klar	adj	понятный	Alles klar, bis morgen	Всё понятно, до завтра
+die Klasse	noun	класс	Meine Tochter geht in die dritte Klasse	Моя дочь идёт в третий класс
+die Kleidung	noun	одежда	Warme Kleidung liegt im Schrank	Тёплая одежда лежит в шкафу
+klein	adj	маленький	Wir wohnen in einer kleinen Wohnung	Мы живём в маленькой квартире
+kochen	verb	готовить	Meine Oma kocht sehr gut	Моя бабушка очень хорошо готовит
+der Koffer	noun	чемодан	Mein Koffer ist schon gepackt	Мой чемодан уже собран
+der Kollege	noun	коллега	Mein Kollege hilft mir immer	Мой коллега всегда мне помогает
+kommen	verb	приходить	Kommst du morgen zu mir	Ты придёшь завтра ко мне
+können	verb	мочь	Ich kann gut schwimmen	Я хорошо умею плавать
+das Konto	noun	счёт	Ich eröffne ein neues Konto	Я открываю новый счёт
+der Kopf	noun	голова	Mein Kopf tut weh	У меня болит голова
+kosten	verb	стоить	Was kostet das Brot	Сколько стоит хлеб
+krank	adj	больной	Mein Sohn ist krank	Мой сын болен
+kriegen	verb	получать	Was kriegst du zum Geburtstag	Что ты получишь на день рождения
+die Küche	noun	кухня	Die Küche ist modern und hell	Кухня современная и светлая
+der Kuchen	noun	пирог	Oma backt einen leckeren Kuchen	Бабушка печёт вкусный пирог
+lachen	verb	смеяться	Wir lachen viel zusammen	Мы много смеёмся вместе
+der Laden	noun	магазин	Der Laden schließt um acht	Магазин закрывается в восемь
+das Land	noun	страна	Deutschland ist ein schönes Land	Германия — красивая страна
+lang	adj	длинный	Der Film war sehr lang	Фильм был очень длинным
+lange	adv	долго	Wir warten schon lange hier	Мы ждём здесь уже долго
+langsam	adj	медленный	Bitte sprich etwas langsamer	Пожалуйста, говори чуть медленнее
+laufen	verb	бежать	Wir laufen jeden Morgen im Park	Мы бегаем каждое утро в парке
+laut	adj	громкий	Die Musik ist zu laut	Музыка слишком громкая
+leben	verb	жить	Wir leben gern in Hamburg	Нам нравится жить в Гамбурге
+das Leben	noun	жизнь	Das Leben hier ist ruhig	Жизнь здесь спокойная
+die Lebensmittel	noun	продукты	Wir kaufen frische Lebensmittel	Мы покупаем свежие продукты
+ledig	adj	холостой	Bist du verheiratet oder ledig	Ты женат или холост
+legen	verb	класть	Ich lege das Buch auf den Tisch	Я кладу книгу на стол
+der Lehrer	noun	учитель	Unser Lehrer erklärt alles gut	Наш учитель всё хорошо объясняет
+leicht	adj	лёгкий	Die Aufgabe ist ganz leicht	Задание совсем лёгкое
+leider	adv	к сожалению	Leider habe ich keine Zeit	К сожалению, у меня нет времени
+leise	adj	тихий	Bitte sprich etwas leiser	Пожалуйста, говори чуть тише
+lernen	verb	учить	Wir lernen zusammen Deutsch	Мы вместе учим немецкий
+lesen	verb	читать	Ich lese jeden Abend ein Buch	Я читаю книгу каждый вечер
+letzt-	adj	последний	letzte Woche war ich krank	На прошлой неделе я болел
+die Leute	noun	люди	Viele Leute warten auf den Bus	Много людей ждут автобус
+das Licht	noun	свет	Mach bitte das Licht an	Включи, пожалуйста, свет
+lieb-	adj	милый	liebe Grüße aus Hamburg	Привет с любовью из Гамбурга
+lieben	verb	любить	Ich liebe dich sehr	Я тебя очень люблю
+lieber	adv	лучше	Ich trinke lieber Tee als Kaffee	Я лучше выпью чай, чем кофе
+Lieblings-	adj	любимый	Mein Lieblingsfilm läuft heute Abend	Мой любимый фильм идёт сегодня вечером
+das Lied	noun	песня	Wir singen ein schönes Lied	Мы поём красивую песню
+liegen	verb	лежать	Die Schlüssel liegen auf dem Tisch	Ключи лежат на столе
+links	adv	слева	Die Apotheke ist links neben der Bank	Аптека слева от банка
+der Lkw	noun	грузовик	Der Lkw steht vor dem Lager	Грузовик стоит перед складом
+das Lokal	noun	кафе	Das Lokal ist gemütlich und voll	Это кафе уютное и многолюдное
+die Lösung	noun	решение	Wir finden sicher eine Lösung	Мы точно найдём решение
+lustig	adj	весёлый	Der Clown ist wirklich lustig	Клоун действительно смешной
+machen	verb	делать	Was machen wir heute Abend	Что мы делаем сегодня вечером
+das Mädchen	noun	девочка	Das Mädchen spielt mit der Puppe	Девочка играет с куклой
+man	func	безличное местоимение	Hier spricht man nur Deutsch	Здесь говорят только по-немецки
+der Mann	noun	мужчина	Der Mann wartet auf seine Frau	Мужчина ждёт свою жену
+männlich	adj	мужской	Ist der Name männlich oder weiblich	Это имя мужское или женское
+die Maschine	noun	машина	Die Maschine wäscht die Wäsche schnell	Машина быстро стирает бельё
+das Meer	noun	море	Wir fahren im Sommer ans Meer	Летом мы едем на море
+mehr	adv	больше	Ich möchte mehr Kaffee bitte	Я хочу ещё кофе, пожалуйста
+mein	func	мой	Mein Bruder wohnt in Berlin	Мой брат живёт в Берлине
+meist-	adj	большинство	die meisten Gäste kommen später	Большинство гостей придут позже
+der Mensch	noun	человек	Jeder Mensch braucht Freunde	Каждому человеку нужны друзья
+mieten	verb	снимать	Wir mieten eine Wohnung in der Stadt	Мы снимаем квартиру в городе
+die Miete	noun	аренда	Die Miete ist diesen Monat höher	Аренда в этом месяце выше
+die Milch	noun	молоко	Die Milch ist frisch und kalt	Молоко свежее и холодное
+mit	func	с	Kommst du mit mir mit	Ты пойдёшь со мной
+mitbringen	verb	приносить	Ich bringe morgen Kuchen mit	Я принесу завтра торт с собой
+mitkommen	verb	идти вместе	Kommst du morgen mit	Ты пойдёшь завтра с нами
+mitmachen	verb	участвовать	Machst du beim Spiel mit	Ты участвуешь в игре
+mitnehmen	verb	брать с собой	Ich nehme meinen Hund mit	Я беру свою собаку с собой
+die Mitte	noun	середина	Wir sitzen in der Mitte	Мы сидим посередине
+die Möbel	noun	мебель	Die Möbel sind neu und modern	Мебель новая и современная
+möchten	verb	хотеть	Ich möchte ein Zimmer buchen	Я хотел бы забронировать номер
+mögen	verb	любить	Ich mag Schokolade sehr	Я очень люблю шоколад
+möglich	adj	возможный	Ist das morgen möglich	Это возможно завтра
+der Moment	noun	момент	Einen Moment bitte, ich komme	Одну минутку, пожалуйста, я иду
+morgen	adv	завтра	Wir treffen uns morgen früh	Мы встретимся завтра утром
+müde	adj	усталый	Ich bin heute sehr müde	Я сегодня очень устал
+der Mund	noun	рот	Mach bitte den Mund auf	Открой, пожалуйста, рот
+müssen	verb	быть должным	Ich muss morgen früh aufstehen	Мне нужно завтра рано вставать
+die Mutter	noun	мама	Meine Mutter wohnt in Köln	Моя мама живёт в Кёльне
+nach	func	к, после	Wir fahren nach Berlin	Мы едем в Берлин
+nächst-	adj	следующий	Nächste Woche habe ich Urlaub	На следующей неделе у меня отпуск
+der Name	noun	имя, фамилия	Mein Name ist Anna	Меня зовут Анна
+nehmen	verb	брать, взять	Nimmst du Zucker in den Tee	Ты кладёшь сахар в чай
+nein	adv	нет	Nein, ich habe keine Zeit	Нет, у меня нет времени
+neu	adj	новый	Mein Handy ist neu	Мой телефон новый
+nicht	adv	не	Ich bin nicht müde	Я не устал
+nichts	func	ничего	Ich esse nichts am Morgen	Я ничего не ем утром
+nie	adv	никогда	Ich war nie in Wien	Я никогда не был в Вене
+noch	adv	ещё, всё ещё	Ich bin noch im Büro	Я ещё в офисе
+normal	adj	обычный, нормальный	Das ist ganz normal hier	Это здесь вполне обычно
+die Nummer	noun	номер	Bitte sagen Sie Ihre Nummer	Назовите, пожалуйста, ваш номер
+nur	adv	только	Ich habe nur zehn Euro	У меня только десять евро
+oben	adv	наверху, сверху	Die Wohnung ist oben	Квартира наверху
+das Obst	noun	фрукты	Ich kaufe Obst auf dem Markt	Я покупаю фрукты на рынке
+oder	func	или	Kaffee oder Tee bitte	Кофе или чай, пожалуйста
+öffnen	verb	открывать	Öffnest du bitte das Fenster	Открой, пожалуйста, окно
+geöffnet	adj	открыт	Die Bank ist samstags geöffnet	Банк открыт по субботам
+oft	adv	часто	Wir kochen oft zusammen	Мы часто готовим вместе
+ohne	func	без	Ich trinke Kaffee ohne Zucker	Я пью кофе без сахара
+das Öl	noun	масло для готовки	Ich brauche Öl zum Kochen	Мне нужно масло для готовки
+die Oma	noun	бабушка	Die Oma backt einen Kuchen	Бабушка печёт пирог
+der Opa	noun	дедушка	Der Opa liest die Zeitung	Дедушка читает газету
+die Ordnung	noun	порядок	In der Küche ist Ordnung	На кухне порядок
+der Ort	noun	место, посёлок	Der Ort ist sehr klein	Посёлок очень маленький
+das Papier	noun	бумага	Ich brauche ein Blatt Papier	Мне нужен лист бумаги
+die Papiere	noun	документы	Haben Sie Ihre Papiere dabei	У вас с собой документы
+der Partner/die Partnerin	noun	партнёр, партнёрша	Mein Partner lernt Deutsch	Мой партнёр учит немецкий
+die Party	noun	вечеринка	Die Party beginnt um acht	Вечеринка начинается в восемь
+der Pass	noun	паспорт	Zeigen Sie bitte Ihren Pass	Покажите, пожалуйста, ваш паспорт
+die Pause	noun	перерыв, пауза	Wir machen eine kurze Pause	Мы делаем короткий перерыв
+der Plan	noun	план	Mein Plan ändert sich morgen	Мой план изменится завтра
+der Platz	noun	место, площадь	Der Platz ist noch frei	Это место ещё свободно
+die Polizei	noun	полиция	Ruf bitte die Polizei an	Позвони, пожалуйста, в полицию
+die Pommes frites	noun	картофель фри	Ich nehme Pommes frites mit Ketchup	Я возьму картошку фри с кетчупом
+die Post	noun	почта	Der Brief ist bei der Post	Письмо на почте
+die Postleitzahl	noun	почтовый индекс	Wie ist Ihre Postleitzahl bitte	Какой у вас индекс, пожалуйста
+das Praktikum	noun	стажировка, практика	Ich mache ein Praktikum im Hotel	Я прохожу стажировку в отеле
+die Praxis	noun	врачебный кабинет	Die Praxis öffnet um neun	Кабинет открывается в девять
+der Preis	noun	цена	Der Preis ist zu hoch	Цена слишком высокая
+das Problem	noun	проблема	Kein Problem, ich helfe dir	Не проблема, я тебе помогу
+der Prospekt	noun	рекламный каталог	Der Prospekt liegt an der Rezeption	Каталог лежит на ресепшене
+die Prüfung	noun	экзамен	Die Prüfung beginnt um zehn	Экзамен начинается в десять
+pünktlich	adj	пунктуальный, вовремя	Der Zug ist heute pünktlich	Поезд сегодня вовремя
+Rad fahren	verb	ехать на велосипеде	Wir fahren Rad im Park	Мы катаемся на велосипеде в парке
+rauchen	verb	курить	Er raucht nicht mehr	Он больше не курит
+der Raum	noun	комната, помещение	Der Raum ist hell und groß	Комната светлая и большая
+die Rechnung	noun	счёт	Die Rechnung kommt sofort	Счёт сейчас принесут
+rechts	adv	справа, направо	Die Bank ist rechts nebenan	Банк справа рядом
+regnen	verb	идти о дожде	Es regnet heute den ganzen Tag	Сегодня весь день идёт дождь
+der Regen	noun	дождь	Der Regen hört bald auf	Дождь скоро закончится
+der Reis	noun	рис	Ich koche Reis zum Abendessen	Я варю рис на ужин
+reisen	verb	путешествовать	Wir reisen gern mit dem Zug	Мы любим путешествовать на поезде
+die Reise	noun	поездка, путешествие	Die Reise dauert zwei Stunden	Поездка длится два часа
+das Reisebüro	noun	турагентство	Das Reisebüro ist in der Stadt	Турагентство находится в городе
+der Reiseführer	noun	путеводитель, гид	Der Reiseführer zeigt die Altstadt	Гид показывает старый город
+reparieren	verb	чинить, ремонтировать	Wer repariert mein Fahrrad hier	Кто починит здесь мой велосипед
+die Reparatur	noun	ремонт	Die Reparatur kostet fünfzig Euro	Ремонт стоит пятьдесят евро
+das Restaurant	noun	ресторан	Das Restaurant ist heute voll	Ресторан сегодня полный
+die Rezeption	noun	ресепшен, стойка регистрации	Fragen Sie bitte an der Rezeption	Спросите, пожалуйста, на ресепшене
+richtig	adj	правильный, верный	Deine Antwort ist richtig	Твой ответ правильный
+riechen	verb	пахнуть, нюхать	Die Blumen riechen sehr gut	Цветы пахнут очень хорошо
+ruhig	adj	тихий, спокойный	Das Zimmer ist sehr ruhig	Комната очень тихая
+der Saft	noun	сок	Ich trinke gern frischen Saft	Я люблю пить свежий сок
+sagen	verb	сказать, говорить	Sag mir bitte die Wahrheit	Скажи мне, пожалуйста, правду
+der Salat	noun	салат	Der Salat schmeckt frisch und gut	Салат свежий и вкусный
+das Salz	noun	соль	Gib mir bitte das Salz	Дай мне, пожалуйста, соль
+der Satz	noun	предложение, фраза	Der Satz ist zu lang	Предложение слишком длинное
+die S-Bahn	noun	городская электричка	Die S-Bahn fährt alle zehn Minuten	Электричка ходит каждые десять минут
+der Schalter	noun	окошко, стойка	Der Schalter schließt um zwölf	Окошко закрывается в двенадцать
+scheinen	verb	светить, казаться	Die Sonne scheint heute hell	Сегодня ярко светит солнце
+schicken	verb	посылать, отправлять	Ich schicke dir eine Postkarte	Я отправлю тебе открытку
+das Schild	noun	табличка, знак	Das Schild hängt an der Tür	Табличка висит на двери
+der Schinken	noun	ветчина	Ich esse Brot mit Schinken	Я ем хлеб с ветчиной
+schlafen	verb	спать	Die Kinder schlafen schon lange	Дети уже давно спят
+schlecht	adj	плохой	Das Wetter ist heute schlecht	Погода сегодня плохая
+schließen	verb	закрывать	Wir schließen das Geschäft um sechs	Мы закрываем магазин в шесть
+geschlossen	adj	закрыт	Das Geschäft ist sonntags geschlossen	Магазин закрыт по воскресеньям
+der Schluss	noun	конец, завершение	Am Schluss essen wir Eis	В конце мы едим мороженое
+der Schlüssel	noun	ключ	Ich finde meinen Schlüssel nicht	Я не нахожу свой ключ
+schmecken	verb	быть вкусным	Die Suppe schmeckt sehr gut	Суп очень вкусный
+schnell	adj	быстрый	Der Zug ist sehr schnell	Поезд очень быстрый
+schon	adv	уже	Ich bin schon zu Hause	Я уже дома
+schön	adj	красивый, прекрасный	Das Wetter ist heute schön	Погода сегодня прекрасная
+der Schrank	noun	шкаф	Die Jacke hängt im Schrank	Куртка висит в шкафу
+schreiben	verb	писать	Ich schreibe eine E-Mail an dich	Я пишу тебе электронное письмо
+der Schuh	noun	ботинок, туфля	Ein Schuh steht unter dem Bett	Один ботинок стоит под кроватью
+die Schule	noun	школа	Die Schule beginnt um acht	Школа начинается в восемь
+der Schüler	noun	школьник, ученик	Der Schüler lernt fleißig Deutsch	Школьник усердно учит немецкий
+schwer	adj	тяжёлый, трудный	Die Tasche ist zu schwer	Сумка слишком тяжёлая
+die Schwester	noun	сестра	Meine Schwester wohnt in Hamburg	Моя сестра живёт в Гамбурге
+schwimmen	verb	плавать	Wir schwimmen jeden Morgen im See	Мы плаваем каждое утро в озере
+das Schwimmbad	noun	бассейн	Das Schwimmbad öffnet um sieben	Бассейн открывается в семь
+der See	noun	озеро, море	Der See ist heute sehr ruhig	Озеро сегодня очень спокойное
+sehen	verb	видеть, смотреть	Ich sehe dich morgen früh	Увидимся завтра утром
+die Sehenswürdigkeit	noun	достопримечательность	Die Kirche ist eine Sehenswürdigkeit hier	Церковь здесь достопримечательность
+sehr	adv	очень	Ich freue mich sehr heute	Я очень рад сегодня
+sein	verb	быть	Ich bin müde nach der Arbeit	Я устал после работы
+weg sein	verb	отсутствовать, пропасть	Mein Schlüssel ist plötzlich weg	Мой ключ вдруг пропал
+zu sein	verb	быть закрытым	Die Tür ist schon zu	Дверь уже закрыта
+seit	func	с, с тех пор	Ich wohne seit Mai hier	Я живу здесь с мая
+selbstständig	adj	самостоятельный, независимый	Sie arbeitet selbstständig von zu Hause	Она работает на себя из дома
+sich	func	себя, возвратная частица	Ich freue mich auf dich	Я очень тебе рад
+sie	func	она, они	sie kommen morgen zu uns	Они придут завтра к нам
+Sie	func	Вы вежливое	Was möchten Sie heute trinken	Что вы будете пить сегодня
+sitzen	verb	сидеть	Wir sitzen gern am Fenster	Мы любим сидеть у окна
+so	adv	так, такой	Das Wetter ist so schön	Погода такая хорошая
+das Sofa	noun	диван	Das Sofa steht im Wohnzimmer	Диван стоит в гостиной
+sofort	adv	сразу, немедленно	Ich komme sofort zu dir	Я иду к тебе прямо сейчас
+der Sohn	noun	сын	Mein Sohn spielt gern Fußball	Мой сын любит играть в футбол
+sollen	verb	быть должным	Du sollst mehr Wasser trinken	Тебе стоит пить больше воды
+die Sonne	noun	солнце	Die Sonne scheint heute warm	Солнце сегодня греет тепло
+spät	adj	поздний	Es ist schon sehr spät	Уже очень поздно
+später	adv	позже	Wir essen später zu Hause	Мы поедим позже дома
+die Speisekarte	noun	меню	Die Speisekarte liegt auf dem Tisch	Меню лежит на столе
+spielen	verb	играть	Die Kinder spielen im Garten	Дети играют в саду
+der Sport	noun	спорт	Ich mache zweimal Sport pro Woche	Я занимаюсь спортом дважды в неделю
+die Sprache	noun	язык	Deutsch ist eine schwere Sprache	Немецкий — трудный язык
+sprechen	verb	говорить, разговаривать	Wir sprechen morgen über den Plan	Мы поговорим завтра о плане
+die Stadt	noun	город	Die Stadt ist am Abend schön	Город вечером красивый
+stehen	verb	стоять	Der Zug steht am Gleis	Поезд стоит на платформе
+die Stelle	noun	место, должность	Die Stelle ist schon besetzt	Вакансия уже занята
+stellen	verb	ставить, класть	Stell die Tasche bitte hierhin	Поставь сумку, пожалуйста, сюда
+der Stock	noun	этаж	Wir wohnen im dritten Stock	Мы живём на третьем этаже
+die Straße	noun	улица	Die Straße ist heute sehr laut	Улица сегодня очень шумная
+die Straßenbahn	noun	трамвай	Die Straßenbahn kommt in fünf Minuten	Трамвай придёт через пять минут
+studieren	verb	учиться в вузе	Sie studiert Medizin in Berlin	Она изучает медицину в Берлине
+das Studium	noun	учёба в вузе	Das Studium beginnt im Oktober	Учёба начинается в октябре
+der Student	noun	студент	Der Student wohnt im Wohnheim	Студент живёт в общежитии
+die Stunde	noun	час, урок	Die Stunde dauert sechzig Minuten	Час длится шестьдесят минут
+suchen	verb	искать	Ich suche meine Brille überall	Я ищу свои очки везде
+tanzen	verb	танцевать	Wir tanzen gern am Abend	Мы охотно танцуем по вечерам
+die Tasche	noun	сумка	Die Tasche ist schwer	Сумка тяжёлая
+das Taxi	noun	такси	Ich nehme ein Taxi	Я возьму такси
+der Tee	noun	чай	Der Tee ist heiß	Чай горячий
+der Teil	noun	часть	Das ist nur ein Teil	Это только часть
+telefonieren	verb	звонить по телефону	Ich telefoniere mit Anna	Я говорю по телефону с Анной
+das Telefon	noun	телефон	Das Telefon klingelt laut	Телефон громко звонит
+der Termin	noun	встреча, приём	Ich habe einen Termin	У меня встреча
+der Test	noun	тест	Der Test ist leicht	Тест лёгкий
+teuer	adj	дорогой	Das Auto ist zu teuer	Машина слишком дорогая
+der Text	noun	текст	Ich lese den Text	Я читаю текст
+das Thema	noun	тема	Das Thema ist interessant	Тема интересная
+das Ticket	noun	билет	Das Ticket kostet zehn Euro	Билет стоит десять евро
+der Tisch	noun	стол	Der Tisch steht hier	Стол стоит здесь
+die Tochter	noun	дочь	Meine Tochter ist klein	Моя дочь маленькая
+die Toilette	noun	туалет	Wo ist die Toilette?	Где туалет?
+die Tomate	noun	помидор	Die Tomate ist rot	Помидор красный
+tot	adj	мёртвый	Die Maus ist tot	Мышь мёртвая
+sich treffen	verb	встречаться	Wir treffen uns morgen	Мы встречаемся завтра
+die Treppe	noun	лестница	Die Treppe ist steil	Лестница крутая
+trinken	verb	пить	Ich trinke gern Wasser	Я охотно пью воду
+tschüss	func	пока	Tschüss, bis morgen	Пока, до завтра
+tun	verb	делать	Was tust du heute?	Что ты делаешь сегодня?
+über	func	над, о	Die Lampe hängt über dem Tisch	Лампа висит над столом
+übernachten	verb	ночевать	Wir übernachten bei Freunden	Мы ночуем у друзей
+überweisen	verb	переводить деньги	Ich überweise das Geld morgen	Я переведу деньги завтра
+die Uhr	noun	часы	Die Uhr ist kaputt	Часы сломаны
+um	func	в, вокруг	Wir treffen uns um acht	Мы встречаемся в восемь
+umziehen	verb	переезжать	Wir ziehen bald um	Мы скоро переезжаем
+und	func	и	Brot und Butter schmecken gut	Хлеб и масло вкусные
+unser-	func	наш	Unser Haus ist groß	Наш дом большой
+unten	adv	внизу	Die Kinder warten unten	Дети ждут внизу
+unter	func	под	Die Katze sitzt unter dem Tisch	Кошка сидит под столом
+der Unterricht	noun	занятие, урок	Der Unterricht beginnt um neun	Занятие начинается в девять
+unterschreiben	verb	подписывать	Bitte unterschreiben Sie hier	Подпишите, пожалуйста, здесь
+die Unterschrift	noun	подпись	Die Unterschrift fehlt hier	Здесь не хватает подписи
+der Urlaub	noun	отпуск	Wir machen Urlaub am Meer	Мы в отпуске на море
+der Vater	noun	отец	Mein Vater arbeitet viel	Мой отец много работает
+verboten	adj	запрещённый	Rauchen ist hier verboten	Здесь курить запрещено
+verdienen	verb	зарабатывать	Er verdient gut	Он хорошо зарабатывает
+der Verein	noun	клуб, объединение	Ich bin im Sportverein	Я в спортивном клубе
+verheiratet	adj	женатый, замужняя	Bist du verheiratet?	Ты женат (замужем)?
+verkaufen	verb	продавать	Wir verkaufen unser Auto	Мы продаём нашу машину
+der Verkäufer	noun	продавец	Der Verkäufer hilft gern	Продавец охотно помогает
+vermieten	verb	сдавать в аренду	Sie vermietet ein Zimmer	Она сдаёт комнату
+der Vermieter	noun	арендодатель	Der Vermieter wohnt oben	Арендодатель живёт наверху
+verstehen	verb	понимать	Ich verstehe dich gut	Я тебя хорошо понимаю
+der Verwandte	noun	родственник	Viele Verwandte kommen heute	Сегодня приходят много родственников
+viel	adv	много	Ich habe viel Arbeit	У меня много работы
+vielleicht	adv	возможно, может быть	Vielleicht kommt er morgen	Может быть, он придёт завтра
+von	func	от, из	Das Geschenk ist von mir	Подарок от меня
+vor	func	перед, до	Das Kino ist vor dem Bahnhof	Кинотеатр перед вокзалом
+der Vorname	noun	имя	Mein Vorname ist Anna	Моё имя — Анна
+die Vorsicht	noun	осторожность	Vorsicht an der Tür!	Осторожно у двери!
+sich vorstellen	verb	представляться	Ich stelle mich kurz vor	Я коротко представлюсь
+die Vorwahl	noun	телефонный код	Wie ist deine Vorwahl?	Какой у тебя код города?
+wandern	verb	ходить в поход	Wir wandern gern in den Bergen	Мы любим ходить в горах
+wann	func	когда	Wann kommst du heim?	Когда ты придёшь домой?
+warten	verb	ждать	Ich warte auf dich	Я жду тебя
+warum	func	почему	Warum weinst du?	Почему ты плачешь?
+was	func	что	Was machst du heute?	Что ты делаешь сегодня?
+was für ein	func	что за, какой	Was für ein Auto ist das?	Что это за машина?
+sich waschen	verb	умываться, мыться	Ich wasche mich morgens kalt	Я умываюсь по утрам холодной водой
+das Wasser	noun	вода	Das Wasser ist kalt	Вода холодная
+weh tun	verb	болеть	Mein Kopf tut weh	У меня болит голова
+weiblich	adj	женский	Die Form ist weiblich	Форма женского рода
+der Wein	noun	вино	Der Wein schmeckt gut	Вино вкусное
+weit	adj	далёкий	Der Weg ist weit	Путь далёкий
+weiter	adv	дальше	Gehen wir weiter	Пойдём дальше
+welch-	func	какой	Welchen Film magst du?	Какой фильм тебе нравится?
+die Welt	noun	мир	Die Welt ist groß	Мир большой
+wenig	adv	мало	Ich habe wenig Zeit	У меня мало времени
+wer	func	кто	Wer ist das?	Кто это?
+werden	verb	становиться	Ich werde bald Lehrer	Я скоро стану учителем
+das Wetter	noun	погода	Das Wetter ist schön	Погода хорошая
+wichtig	adj	важный	Das ist sehr wichtig	Это очень важно
+wie	func	как	Wie heißt du?	Как тебя зовут?
+wiederholen	verb	повторять	Bitte wiederholen Sie das	Повторите это, пожалуйста
+das Wiederhören	noun	до свидания (по телефону)	Auf Wiederhören bis morgen	До свидания, до завтра (по телефону)
+das Wiedersehen	noun	свидание, встреча	Auf Wiedersehen bis bald	До свидания, до скорого
+wie viel	func	сколько	Wie viel kostet das?	Сколько это стоит?
+willkommen	adj	добро пожаловать	Herzlich willkommen zu Hause	Добро пожаловать домой
+der Wind	noun	ветер	Der Wind ist kalt	Ветер холодный
+wir	func	мы	Wir wohnen in Berlin	Мы живём в Берлине
+wissen	verb	знать	Ich weiß das nicht	Я этого не знаю
+wo	func	где	Wo wohnst du?	Где ты живёшь?
+woher	func	откуда	Woher kommst du?	Откуда ты?
+wohin	func	куда	Wohin fährst du?	Куда ты едешь?
+wohnen	verb	жить	Ich wohne in Moskau	Я живу в Москве
+die Wohnung	noun	квартира	Die Wohnung ist hell	Квартира светлая
+wollen	verb	хотеть	Ich will nach Hause	Я хочу домой
+das Wort	noun	слово	Das Wort ist schwer	Слово трудное
+wunderbar	adj	чудесный	Das Essen ist wunderbar	Еда чудесная
+zahlen	verb	платить	Ich zahle mit Karte	Я плачу картой
+die Zeit	noun	время	Ich habe keine Zeit	У меня нет времени
+zurzeit	adv	сейчас	Ich bin zurzeit krank	Я сейчас болею
+die Zeitung	noun	газета	Ich lese die Zeitung	Я читаю газету
+die Zigarette	noun	сигарета	Die Zigarette liegt hier	Сигарета лежит здесь
+das Zimmer	noun	комната	Dein Zimmer ist schön	Твоя комната красивая
+der Zoll	noun	таможня	Der Zoll kontrolliert alles	Таможня всё проверяет
+zu	func	к	Komm bitte zu mir	Приди, пожалуйста, ко мне
+zufrieden	adj	довольный	Ich bin sehr zufrieden	Я очень доволен
+der Zug	noun	поезд	Der Zug kommt bald	Поезд скоро придёт
+zurück	adv	назад, обратно	Komm bitte bald zurück	Вернись, пожалуйста, скорее
+zusammen	adv	вместе	Wir essen zusammen	Мы едим вместе
+zwischen	func	между	Der Park ist zwischen Schule und Kirche	Парк между школой и церковью
+eins	num	один	Eins plus zwei ist drei	Один плюс два — три
+zwei	num	два	Ich habe zwei Brüder	У меня два брата
+drei	num	три	Es ist drei Uhr	Сейчас три часа
+vier	num	четыре	Wir sind vier Personen	Нас четверо
+fünf	num	пять	Das kostet fünf Euro	Это стоит пять евро
+sechs	num	шесть	Ich habe sechs Äpfel	У меня шесть яблок
+sieben	num	семь	Es ist sieben Uhr morgens	Сейчас семь часов утра
+acht	num	восемь	Das Buch kostet acht Euro	Книга стоит восемь евро
+neun	num	девять	Ich habe neun Stifte	У меня девять ручек
+zehn	num	десять	Es sind zehn Kinder hier	Здесь десять детей
+elf	num	одиннадцать	Es ist elf Uhr	Сейчас одиннадцать часов
+zwölf	num	двенадцать	Es ist zwölf Uhr mittags	Сейчас двенадцать часов дня
+dreizehn	num	тринадцать	Ich bin dreizehn Jahre alt	Мне тринадцать лет
+vierzehn	num	четырнадцать	Das kostet vierzehn Euro	Это стоит четырнадцать евро
+fünfzehn	num	пятнадцать	Es ist fünfzehn Uhr	Сейчас пятнадцать часов
+sechzehn	num	шестнадцать	Ich bin sechzehn Jahre alt	Мне шестнадцать лет
+siebzehn	num	семнадцать	Das kostet siebzehn Euro	Это стоит семнадцать евро
+achtzehn	num	восемнадцать	Ich bin achtzehn Jahre alt	Мне восемнадцать лет
+neunzehn	num	девятнадцать	Es ist neunzehn Uhr	Сейчас девятнадцать часов
+zwanzig	num	двадцать	Das kostet zwanzig Euro	Это стоит двадцать евро
+einundzwanzig	num	двадцать один	Es ist einundzwanzig Uhr	Сейчас двадцать один час
+dreißig	num	тридцать	Das kostet dreißig Euro	Это стоит тридцать евро
+vierzig	num	сорок	Er ist vierzig Jahre alt	Ему сорок лет
+fünfzig	num	пятьдесят	Das kostet fünfzig Euro	Это стоит пятьдесят евро
+sechzig	num	шестьдесят	Es sind sechzig Minuten	Это шестьдесят минут
+siebzig	num	семьдесят	Das kostet siebzig Euro	Это стоит семьдесят евро
+achtzig	num	восемьдесят	Sie ist achtzig Jahre alt	Ей восемьдесят лет
+neunzig	num	девяносто	Das kostet neunzig Euro	Это стоит девяносто евро
+hundert	num	сто	Das kostet hundert Euro	Это стоит сто евро
+hunderteins	num	сто один	Das Buch hat hunderteins Seiten	В книге сто одна страница
+zweihundert	num	двести	Das kostet zweihundert Euro	Это стоит двести евро
+tausend	num	тысяча	Das kostet tausend Euro	Это стоит тысячу евро
+eine Million	num	миллион	Die Stadt hat eine Million Einwohner	В городе миллион жителей
+eine Milliarde	num	миллиард	Die Stadt hat fast eine Milliarde Menschen	В городе почти миллиард человек
+erste	num	первый	Er ist der erste Gast	Он первый гость
+zweite	num	второй	Das ist die zweite Tasse	Это вторая чашка
+dritte	num	третий	Das ist das dritte Kind	Это третий ребёнок
+vierte	num	четвёртый	Das ist die vierte Woche	Это четвёртая неделя
+fünfte	num	пятый	Das ist der fünfte Tag	Это пятый день
+sechste	num	шестой	Das ist die sechste Stunde	Это шестой урок
+siebte	num	седьмой	Das ist der siebte Mai	Это седьмое мая
+achte	num	восьмой	Das ist der achte März	Это восьмое марта
+neunte	num	девятый	Das ist der neunte Juni	Это девятое июня
+zehnte	num	десятый	Das ist der zehnte Juli	Это десятое июля
+elfte	num	одиннадцатый	Das ist der elfte August	Это одиннадцатое августа
+zwölfte	num	двенадцатый	Das ist der zwölfte Dezember	Это двенадцатое декабря
+halb	adv	половина	Es ist halb drei	Сейчас половина третьего
+Viertel	noun	четверть	Es ist Viertel nach zwei	Сейчас четверть третьего
+die Sekunde	noun	секунда	Einen Moment, eine Sekunde bitte	Минутку, одну секунду пожалуйста
+die Minute	noun	минута	Eine Minute hat sechzig Sekunden	В минуте шестьдесят секунд
+der Tag	noun	день	Der Tag hat vierundzwanzig Stunden	В сутках двадцать четыре часа
+die Woche	noun	неделя	Eine Woche hat sieben Tage	В неделе семь дней
+das Jahr	noun	год	Ein Jahr hat zwölf Monate	В году двенадцать месяцев
+der Morgen	noun	утро	Guten Morgen, wie geht es	Доброе утро, как дела
+der Vormittag	noun	время до полудня	Am Vormittag habe ich Schule	До обеда у меня школа
+der Mittag	noun	полдень	Am Mittag essen wir zusammen	В полдень мы едим вместе
+der Nachmittag	noun	время после полудня	Am Nachmittag trinken wir Kaffee	После обеда мы пьём кофе
+der Abend	noun	вечер	Guten Abend, wie geht es	Добрый вечер, как дела
+die Nacht	noun	ночь	Gute Nacht, schlaf gut	Спокойной ночи, спи хорошо
+der Wochentag	noun	день недели	Welcher Wochentag ist heute	Какой сегодня день недели
+der Sonntag	noun	воскресенье	Am Sonntag bleiben wir zu Hause	В воскресенье мы остаёмся дома
+der Montag	noun	понедельник	Am Montag habe ich frei	В понедельник я свободен
+der Dienstag	noun	вторник	Am Dienstag habe ich Deutsch	Во вторник у меня немецкий
+der Mittwoch	noun	среда	Am Mittwoch spiele ich Fußball	В среду я играю в футбол
+der Donnerstag	noun	четверг	Am Donnerstag kommt mein Freund	В четверг приезжает мой друг
+der Freitag	noun	пятница	Am Freitag gehen wir ins Kino	В пятницу мы идём в кино
+der Samstag	noun	суббота	Am Samstag kaufe ich Brot	В субботу я покупаю хлеб
+das Wochenende	noun	выходные	Am Wochenende schlafen wir lange	На выходных мы долго спим
+der Januar	noun	январь	Der Januar ist sehr kalt	Январь очень холодный
+der Februar	noun	февраль	Der Februar ist kurz	Февраль короткий
+der März	noun	март	Im März beginnt der Frühling	В марте начинается весна
+der April	noun	апрель	Im April regnet es oft	В апреле часто идёт дождь
+der Mai	noun	май	Im Mai blühen die Blumen	В мае цветут цветы
+der Juni	noun	июнь	Im Juni ist es warm	В июне тепло
+der Juli	noun	июль	Im Juli machen wir Urlaub	В июле мы едем в отпуск
+der August	noun	август	Im August ist es heiß	В августе жарко
+der September	noun	сентябрь	Im September beginnt die Schule	В сентябре начинается школа
+der Oktober	noun	октябрь	Im Oktober sind die Blätter bunt	В октябре листья разноцветные
+der November	noun	ноябрь	Im November ist es dunkel	В ноябре темно
+der Dezember	noun	декабрь	Im Dezember feiern wir Weihnachten	В декабре мы празднуем Рождество
+der Frühling	noun	весна	Im Frühling blühen die Bäume	Весной цветут деревья
+der Sommer	noun	лето	Im Sommer schwimmen wir viel	Летом мы много плаваем
+der Herbst	noun	осень	Im Herbst regnet es viel	Осенью много дождей
+der Winter	noun	зима	Im Winter schneit es oft	Зимой часто идёт снег
+der Meter	noun	метр	Das Zimmer ist vier Meter lang	Комната четыре метра в длину
+der Zentimeter	noun	сантиметр	Das Lineal ist dreißig Zentimeter lang	Линейка длиной тридцать сантиметров
+der Kilometer	noun	километр	Die Stadt ist zehn Kilometer weit	Город в десяти километрах отсюда
+der Quadratmeter	noun	квадратный метр	Die Wohnung hat achtzig Quadratmeter	Квартира площадью восемьдесят квадратных метров
+das Prozent	noun	процент	Zehn Prozent sind viel	Десять процентов — это много
+der Liter	noun	литр	Ich kaufe einen Liter Milch	Я покупаю литр молока
+das Gramm	noun	грамм	Ich brauche zweihundert Gramm Käse	Мне нужно двести граммов сыра
+das Pfund	noun	фунт	Ein Pfund Äpfel kostet zwei Euro	Фунт яблок стоит два евро
+das Kilo	noun	килограмм	Das Kilo Kartoffeln kostet drei Euro	Килограмм картошки стоит три евро
+der Euro	noun	евро	Das kostet fünf Euro	Это стоит пять евро
+der Cent	noun	цент	Das kostet nur zehn Cent	Это стоит всего десять центов
+Deutschland	noun	Германия	Ich wohne in Deutschland	Я живу в Германии
+der Deutsche	noun	немец	Er ist ein Deutscher	Он немец
+deutsch	adj	немецкий	Wir sprechen deutsch	Мы говорим по-немецки
+Europa	noun	Европа	Europa ist sehr schön	Европа очень красивая
+der Europäer	noun	европеец	Er ist Europäer	Он европеец
+europäisch	adj	европейский	Die Musik ist europäisch	Музыка европейская
+die Türkei	noun	Турция	Die Türkei ist groß	Турция большая
+der Türke	noun	турок	Er ist Türke	Он турок
+türkisch	adj	турецкий	Das Brot ist türkisch	Этот хлеб турецкий
+Finnland	noun	Финляндия	Finnland liegt im Norden	Финляндия находится на севере
+der Finne	noun	финн	Er ist Finne	Он финн
+finnisch	adj	финский	Wir sprechen finnisch	Мы говорим по-фински
+Mexiko	noun	Мексика	Mexiko ist sehr warm	Мексика очень тёплая
+der Mexikaner	noun	мексиканец	Er ist Mexikaner	Он мексиканец
+mexikanisch	adj	мексиканский	Das Essen ist mexikanisch	Еда мексиканская
+schwarz	adj	чёрный	Die Katze ist schwarz	Кошка чёрная
+grau	adj	серый	Der Himmel ist grau	Небо серое
+blau	adj	синий	Das Meer ist blau	Море синее
+grün	adj	зелёный	Der Baum ist grün	Дерево зелёное
+weiß	adj	белый	Der Schnee ist weiß	Снег белый
+rot	adj	красный	Die Rose ist rot	Роза красная
+gelb	adj	жёлтый	Die Sonne ist gelb	Солнце жёлтое
+braun	adj	коричневый	Der Tisch ist braun	Стол коричневый
+der Norden	noun	север	Finnland liegt im Norden	Финляндия находится на севере
+der Süden	noun	юг	Italien liegt im Süden	Италия находится на юге
+der Westen	noun	запад	Frankreich liegt im Westen	Франция находится на западе
+der Osten	noun	восток	Polen liegt im Osten	Польша находится на востоке
