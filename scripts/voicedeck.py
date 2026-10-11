@@ -361,6 +361,71 @@ async def cmd_cards(args) -> int:
     return 1 if failed else 0
 
 
+async def cmd_build(args) -> int:
+    """Сборка юнита библиотеки: story/phrases/dialog -> audio/ + anki.tsv."""
+    unit = Path(args.unit)
+    meta = json.loads((unit / "meta.json").read_text(encoding="utf-8"))
+    voice = args.voice or meta.get("voices", {}).get("front") or "en-us-f"
+    audio = unit / "audio"
+    audio.mkdir(parents=True, exist_ok=True)
+    jobs, tsv = [], []
+
+    sp = unit / "story.txt"
+    if sp.is_file():
+        text = " ".join(read_lines(sp))
+        jobs.append(synth(text, voice, audio / "story.mp3", audio / "story.srt",
+                          "+0%", args.volume, args.pitch, args.proxy))
+        if not args.no_slow:
+            jobs.append(synth(text, voice, audio / "story@slow.mp3", None,
+                              args.slow_rate, args.volume, args.pitch, args.proxy))
+
+    pp = unit / "phrases.txt"
+    if pp.is_file():
+        for i, line in enumerate(read_lines(pp), 1):
+            phrase, trans = split_card(line)
+            base = f"ph{i:02d}-{slugify(phrase)}"
+            jobs.append(synth(phrase, voice, audio / f"{base}.mp3", audio / f"{base}.srt",
+                              "+0%", args.volume, args.pitch, args.proxy))
+            if not args.no_slow:
+                jobs.append(synth(phrase, voice, audio / f"{base}@slow.mp3", None,
+                                  args.slow_rate, args.volume, args.pitch, args.proxy))
+            tsv.append(f"{phrase} [sound:{base}.mp3]\t{trans}")
+
+    parts: list[Path] = []
+    dp = unit / "dialog.txt"
+    if dp.is_file():
+        cast = parse_cast(args.cast or meta.get("cast", ""))
+        cycle = [v.strip() for v in (args.voices or ",".join(
+            [voice, meta.get("voices", {}).get("back", voice)])).split(",")]
+        items = assign_voices(parse_dialog(read_lines(dp)), cycle, cast,
+                              args.narrator or voice)
+        for i, (speaker, text, v) in enumerate(items, 1):
+            label = f"{speaker}-{text}" if speaker else text
+            normal = audio / f"{i:03d}-{slugify(label)}.mp3"
+            jobs.append(synth(text, v, normal, audio / f"{i:03d}-{slugify(label)}.srt",
+                              "+0%", args.volume, args.pitch, args.proxy))
+            parts.append(normal)
+            who = f"[{speaker}] " if speaker else ""
+            tsv.append(f"{who}{text} [sound:{normal.name}]")
+
+    results = await run_jobs(jobs, args.jobs)
+    failed = sum(1 for r in results if isinstance(r, Exception))
+    if sp.is_file() and not args.no_shadow and not failed:
+        if have_ffmpeg():
+            ffmpeg_concat([audio / "story@slow.mp3", audio / "story.mp3"],
+                          audio / "story@shadow.mp3", gap=args.gap)
+        else:
+            print("WARN: нет ffmpeg — story@shadow пропущен")
+    if parts and not args.no_mix and not failed:
+        if have_ffmpeg():
+            ffmpeg_concat(parts, audio / "mix.mp3", gap=args.gap)
+        else:
+            write_playlist(parts, audio / "playlist.m3u")
+    (unit / "anki.tsv").write_text("\n".join(tsv) + "\n", encoding="utf-8")
+    print(f"unit: {unit}\nfiles: {len(jobs)}, failed: {failed}\nanki: {unit / 'anki.tsv'}")
+    return 1 if failed else 0
+
+
 async def cmd_voices(args) -> int:
     if not args.live:
         for name in sorted(PRESETS):
@@ -450,6 +515,18 @@ def build_parser() -> argparse.ArgumentParser:
     v.add_argument("--live", action="store_true", help="Живой список с сервера")
     v.add_argument("--lang", default="", help="Фильтр, напр. de-DE или en-GB")
 
+    u = sub.add_parser("build", parents=[common], help="Собрать юнит библиотеки в audio+anki")
+    u.add_argument("unit", help="Папка юнита (там meta.json + txt)")
+    u.add_argument("--voice", default=None, help="Голос поверх meta (default: из meta.json)")
+    u.add_argument("--voices", default=None, help="Голоса диалога по кругу (default: front+back из meta)")
+    u.add_argument("--cast", default=None, help="Каст поверх meta (default: из meta.json)")
+    u.add_argument("--narrator", default=None, help="Голос ремарок (default: основной)")
+    u.add_argument("--slow-rate", default="-30%", help="Темп slow-версий (default: -30%%)")
+    u.add_argument("--gap", type=float, default=0.8, help="Пауза в склейках, сек (default: 0.8)")
+    u.add_argument("--no-slow", action="store_true", help="Без slow-версий")
+    u.add_argument("--no-shadow", action="store_true", help="Без story@shadow")
+    u.add_argument("--no-mix", action="store_true", help="Без mix.mp3 диалога")
+
     sub.add_parser("selfcheck", help="Проверки без сети")
     return p
 
@@ -480,6 +557,8 @@ async def amain(argv: list[str] | None = None) -> int:
             return await cmd_cards(args)
         if args.cmd == "voices":
             return await cmd_voices(args)
+        if args.cmd == "build":
+            return await cmd_build(args)
         if args.cmd == "selfcheck":
             return cmd_selfcheck(args)
     except (ValueError, RuntimeError) as e:

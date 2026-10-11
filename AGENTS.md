@@ -8,6 +8,7 @@
 - batch: `python scripts/voicedeck.py batch phrases.txt --voice en-us-f --deck unit1`
 - dialog: `python scripts/voicedeck.py dialog dialog.txt --cast "Anna=de-f,Ben=de-m"`
 - cards: `python scripts/voicedeck.py cards cards.tsv --voice en-gb-f --back-voice ru-f`
+- build: `python scripts/voicedeck.py build library/en/<unit>/` (юнит → audio + anki, голос из meta)
 - web: `python scripts/app.py [--port 8765]` (интерфейс учёбы) или `VoiceDeck.bat`
 - web files: `scripts/app.py` (сервер, только stdlib) + `scripts/web/index.html` (vanilla, без CDN)
 - python: `python` (3.13 по факту окружения), не `python3`

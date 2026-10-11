@@ -1,0 +1,12 @@
+{
+  "lang": "en",
+  "level": "B2",
+  "date": "2026-10-11",
+  "topic": "blocker",
+  "track": "work",
+  "kind": "story",
+  "voices": {"front": "en-us-f", "back": "ru-f"},
+  "phrases": 8,
+  "spiral_from": ["2026-10-11-status-meeting"],
+  "source": "hq 2026-10-11, task 0006"
+}

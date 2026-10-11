@@ -1,0 +1,17 @@
+# TITLE: Blocker on the Payment Module
+# LEVEL: B2
+# HOW: история продолжает Day 1 (те же герои, следующий день).
+
+Tuesday. Max opens his laptop and sighs. The refund case is still red. "I'm blocked by the bank," he tells Anna. "They promised the papers yesterday, but nothing came. The deadline is at risk."
+
+Anna frowns. "Could you give me a hand with the summary? I need to warn the client before lunch."
+
+"Sure. Short version: the code is ready, the bank is slow. We need their letter by Friday, or we slip again."
+
+Anna calls Lena. "What do you suggest? You know these people."
+
+"Let's figure it out together," Lena says. "I'll call the bank now and push them. Max, you prepare the fallback: manual refunds for the first week."
+
+"Good plan. I'll take care of it," Max says. "If they send the letter today, we're fine."
+
+In the evening Max writes to the chat: "Bank promised the letter tomorrow morning. Thanks for flagging this early — we caught it in time."
