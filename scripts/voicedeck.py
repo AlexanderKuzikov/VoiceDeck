@@ -157,23 +157,43 @@ async def synth(
     volume: str = "+0%",
     pitch: str = "+0Hz",
     proxy: str | None = None,
+    retries: int = 4,
 ) -> None:
-    """Один запрос: аудио всегда, субтитры — если нужен srt_path."""
+    """Один запрос: аудио всегда, субтитры — если нужен srt_path.
+
+    Бесплатный endpoint периодически режет синтез 403 (троттлинг) —
+    поэтому повторы с паузой 2/4/8 сек прямо внутри, а не наружу.
+    """
+    from edge_tts.exceptions import EdgeTTSException
+    try:
+        import aiohttp
+        net_errors: tuple = (aiohttp.ClientError, asyncio.TimeoutError, EdgeTTSException)
+    except ImportError:  # pragma: no cover
+        net_errors = (OSError, asyncio.TimeoutError, EdgeTTSException)
     boundary = "WordBoundary" if srt_path else "SentenceBoundary"
-    communicate = edge_tts.Communicate(
-        text, resolve_voice(voice), rate=rate, volume=volume, pitch=pitch,
-        boundary=boundary, proxy=proxy,
-    )
-    submaker = edge_tts.SubMaker() if srt_path else None
     mp3_path.parent.mkdir(parents=True, exist_ok=True)
-    with open(mp3_path, "wb") as audio:
-        async for chunk in communicate.stream():
-            if chunk["type"] == "audio":
-                audio.write(chunk["data"])
-            elif submaker is not None and chunk["type"] in ("WordBoundary", "SentenceBoundary"):
-                submaker.feed(chunk)
-    if submaker is not None and srt_path is not None:
-        srt_path.write_text(submaker.get_srt(), encoding="utf-8")
+    last: Exception | None = None
+    for attempt in range(retries):
+        communicate = edge_tts.Communicate(
+            text, resolve_voice(voice), rate=rate, volume=volume, pitch=pitch,
+            boundary=boundary, proxy=proxy,
+        )
+        submaker = edge_tts.SubMaker() if srt_path else None
+        try:
+            with open(mp3_path, "wb") as audio:
+                async for chunk in communicate.stream():
+                    if chunk["type"] == "audio":
+                        audio.write(chunk["data"])
+                    elif submaker is not None and chunk["type"] in ("WordBoundary", "SentenceBoundary"):
+                        submaker.feed(chunk)
+            if submaker is not None and srt_path is not None:
+                srt_path.write_text(submaker.get_srt(), encoding="utf-8")
+            return
+        except net_errors as e:
+            last = e
+            if attempt + 1 < retries:
+                await asyncio.sleep(2 ** (attempt + 1))
+    raise RuntimeError(f"Движок отклонил запрос ({type(last).__name__}): попробуй через минуту") from last
 
 
 def have_ffmpeg() -> bool:
@@ -390,7 +410,7 @@ def build_parser() -> argparse.ArgumentParser:
     common.add_argument("--volume", default="+0%", help="Громкость, напр. +10%% (default: +0%%)")
     common.add_argument("--pitch", default="+0Hz", help="Тон, напр. -10Hz (default: +0Hz)")
     common.add_argument("--proxy", default=None, help="Прокси для движка, если прямой доступ режут")
-    common.add_argument("--jobs", type=int, default=4, help="Параллельных запросов (default: 4)")
+    common.add_argument("--jobs", type=int, default=2, help="Параллельных запросов (default: 2, больше — чаще 403)")
     common.add_argument("--out", type=Path, default=Path("out"), help="Куда класть результат (default: out/)")
 
     p = argparse.ArgumentParser(prog="voicedeck", description="Озвучка учебных текстов EN/DE")

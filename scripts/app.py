@@ -205,7 +205,7 @@ async def api_synth(d: dict) -> dict:
     if d.get("slow", True):
         slow = WEB / f"p-{tag}-{slug}@slow.mp3"
         jobs.append(synth(text, voice, slow, None, rate=slow_rate))
-    await run_jobs(jobs, 4)
+    await run_jobs(jobs, 2)
     out = {"normal": "/audio/" + normal.name,
            "slow": "/audio/" + slow.name if slow else None,
            "words": srt_words(srt.read_text(encoding="utf-8"))}
@@ -249,7 +249,7 @@ async def api_batch(d: dict) -> dict:
                          "trans": trans, "voice": voice, "rate": "+0%"})
         cell = f"{phrase} [sound:{normal.name}]"
         tsv.append(f"{cell}\t{trans}" if trans else cell)
-    failed = sum(1 for r in await run_jobs(jobs, 4) if isinstance(r, Exception))
+    failed = sum(1 for r in await run_jobs(jobs, 2) if isinstance(r, Exception))
     (deck / "anki.tsv").write_text("\n".join(tsv) + "\n", encoding="utf-8")
     write_manifest(manifest, deck / "manifest.json")
     return {"dir": deck.name, "rows": rows, "failed": failed,
@@ -273,7 +273,7 @@ async def api_dialog(d: dict) -> dict:
         manifest.append({"file": mp3.name, "speaker": speaker, "text": text, "voice": voice})
         who = f"[{speaker}] " if speaker else ""
         tsv.append(f"{who}{text} [sound:{mp3.name}]")
-    failed = sum(1 for r in await run_jobs(jobs, 4) if isinstance(r, Exception))
+    failed = sum(1 for r in await run_jobs(jobs, 2) if isinstance(r, Exception))
     (deck / "anki.tsv").write_text("\n".join(tsv) + "\n", encoding="utf-8")
     (deck / "playlist.m3u").write_text("#EXTM3U\n" + "\n".join(p.name for p in parts) + "\n", encoding="utf-8")
     write_manifest(manifest, deck / "manifest.json")
@@ -308,7 +308,7 @@ async def api_cards(d: dict) -> dict:
         cards.append({"front": front, "back": back,
                       "frontAudio": f"/audio/{deck.name}/{f_mp3.name}", "backAudio": back_url})
         tsv.append(f"{front_cell}\t{back_cell}")
-    failed = sum(1 for r in await run_jobs(jobs, 4) if isinstance(r, Exception))
+    failed = sum(1 for r in await run_jobs(jobs, 2) if isinstance(r, Exception))
     (deck / "anki.tsv").write_text("\n".join(tsv) + "\n", encoding="utf-8")
     return {"dir": deck.name, "cards": cards, "failed": failed,
             "tsv": "/audio/" + deck.name + "/anki.tsv", "zip": "/api/zip?dir=" + deck.name}
