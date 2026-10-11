@@ -28,7 +28,7 @@
 - meta.json: lang, level, date, topic, track, kind, voices{front,back},
   phrases (число), spiral_from (повторы из прошлых юнитов), source
 - `out/` — сгенерированные mp3 (игнорируется git)
-- `docs/` — только CONTEXT.md и DECISIONS.md
+- `docs/` — CONTEXT.md, DECISIONS.md, TASK.md + VOICES.md/voices.html (таблица голосов, генерируется из живого списка)
 
 ## Do NOT touch
 - `.git/` руками не трогать, никакого `push --force` и `reset --hard` без подтверждения

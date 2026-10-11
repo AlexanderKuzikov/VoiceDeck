@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="ru" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>VoiceDeck — голоса</title>
+<link rel="icon" href="data:,">
+<script>try{document.documentElement.dataset.theme=localStorage.getItem('vd-theme')||'light'}catch(e){}</script>
+<style>
+:root{--bg:#f6f7f9;--surface:#fff;--surface-2:#f1f3f5;--border:#e3e6ea;--border-strong:#d0d5db;
+--text:#1a1d21;--text-2:#5c6570;--text-3:#9aa3ad;--accent:#2563eb;--accent-hover:#1d4ed8;--accent-soft:#e8effd;
+--hover:#f1f3f5;--head:#f1f3f5;--stripe:#fafbfc;--r-s:6px;--r-m:8px;--shadow-s:0 1px 2px rgb(0 0 0/.05)}
+html[data-theme="dark"]{--bg:#1e2228;--surface:#2a2f3a;--surface-2:#343b48;--border:#3d4451;--border-strong:#4d5563;
+--text:#e8eaf0;--text-2:#b6bdc9;--text-3:#7c8494;--accent:#7ba4e5;--accent-hover:#9bbcf0;--accent-soft:#2c3a55;
+--hover:#343b48;--head:#343b48;--stripe:#2a2f3a}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--text);font:14px/1.45 "Segoe UI",system-ui,Roboto,Arial,sans-serif}
+header{display:flex;align-items:center;gap:12px;padding:12px 24px;background:var(--surface);border-bottom:1px solid var(--border)}
+header h1{font-size:20px;margin:0}header .sub{color:var(--text-2);font-size:13px}header .sp{flex:1}
+main{max-width:860px;margin:0 auto;padding:16px}
+input[type=text]{width:100%;font:inherit;color:var(--text);background:var(--surface);border:1px solid var(--border-strong);border-radius:var(--r-s);padding:8px}
+.meta{color:var(--text-2);font-size:13px;margin:12px 0}
+table{width:100%;border-collapse:collapse;background:var(--surface);border:1px solid var(--border);border-radius:var(--r-m);overflow:hidden;box-shadow:var(--shadow-s)}
+th{background:var(--head);text-align:left;font-weight:600;padding:8px}
+td{border-top:1px solid var(--border);padding:8px;vertical-align:top}
+tbody tr:nth-child(even) td{background:var(--stripe)}
+tbody tr:hover td{background:var(--hover)}
+code{font-family:Consolas,monospace;font-size:13px}
+button.ghost{background:var(--surface-2);color:var(--text);border:1px solid var(--border);border-radius:var(--r-s);padding:4px 12px;font-size:13px;cursor:pointer}
+</style>
+</head>
+<body>
+<header><h1>Голоса</h1><span class="sub">Microsoft Neural · 322 шт · 2026-10-11</span><span class="sp"></span>
+<button class="ghost" id="theme">Тема</button></header>
+<main>
+<input type="text" id="q" placeholder="Фильтр: de-DE, Katja, Conrad…">
+<div class="meta" id="count"></div>
+<table><thead><tr><th>Локаль</th><th>Голос</th><th>Пол</th><th>ShortName</th></tr></thead>
+<tbody id="rows">
+<tr data-s="af-za adri af-za-adrineural"><td>af-ZA</td><td>Adri</td><td>жен</td><td><code>af-ZA-AdriNeural</code></td></tr>
+<tr data-s="af-za willem af-za-willemneural"><td>af-ZA</td><td>Willem</td><td>муж</td><td><code>af-ZA-WillemNeural</code></td></tr>
+<tr data-s="am-et mekdes am-et-mekdesneural"><td>am-ET</td><td>Mekdes</td><td>жен</td><td><code>am-ET-MekdesNeural</code></td></tr>
+<tr data-s="am-et ameha am-et-amehaneural"><td>am-ET</td><td>Ameha</td><td>муж</td><td><code>am-ET-AmehaNeural</code></td></tr>
+<tr data-s="ar-ae fatima ar-ae-fatimaneural"><td>ar-AE</td><td>Fatima</td><td>жен</td><td><code>ar-AE-FatimaNeural</code></td></tr>
+<tr data-s="ar-ae hamdan ar-ae-hamdanneural"><td>ar-AE</td><td>Hamdan</td><td>муж</td><td><code>ar-AE-HamdanNeural</code></td></tr>
+<tr data-s="ar-bh laila ar-bh-lailaneural"><td>ar-BH</td><td>Laila</td><td>жен</td><td><code>ar-BH-LailaNeural</code></td></tr>
+<tr data-s="ar-bh ali ar-bh-alineural"><td>ar-BH</td><td>Ali</td><td>муж</td><td><code>ar-BH-AliNeural</code></td></tr>
+<tr data-s="ar-dz amina ar-dz-aminaneural"><td>ar-DZ</td><td>Amina</td><td>жен</td><td><code>ar-DZ-AminaNeural</code></td></tr>
+<tr data-s="ar-dz ismael ar-dz-ismaelneural"><td>ar-DZ</td><td>Ismael</td><td>муж</td><td><code>ar-DZ-IsmaelNeural</code></td></tr>
+<tr data-s="ar-eg salma ar-eg-salmaneural"><td>ar-EG</td><td>Salma</td><td>жен</td><td><code>ar-EG-SalmaNeural</code></td></tr>
+<tr data-s="ar-eg shakir ar-eg-shakirneural"><td>ar-EG</td><td>Shakir</td><td>муж</td><td><code>ar-EG-ShakirNeural</code></td></tr>
+<tr data-s="ar-iq rana ar-iq-rananeural"><td>ar-IQ</td><td>Rana</td><td>жен</td><td><code>ar-IQ-RanaNeural</code></td></tr>
+<tr data-s="ar-iq bassel ar-iq-basselneural"><td>ar-IQ</td><td>Bassel</td><td>муж</td><td><code>ar-IQ-BasselNeural</code></td></tr>
+<tr data-s="ar-jo sana ar-jo-sananeural"><td>ar-JO</td><td>Sana</td><td>жен</td><td><code>ar-JO-SanaNeural</code></td></tr>
+<tr data-s="ar-jo taim ar-jo-taimneural"><td>ar-JO</td><td>Taim</td><td>муж</td><td><code>ar-JO-TaimNeural</code></td></tr>
+<tr data-s="ar-kw noura ar-kw-nouraneural"><td>ar-KW</td><td>Noura</td><td>жен</td><td><code>ar-KW-NouraNeural</code></td></tr>
+<tr data-s="ar-kw fahed ar-kw-fahedneural"><td>ar-KW</td><td>Fahed</td><td>муж</td><td><code>ar-KW-FahedNeural</code></td></tr>
+<tr data-s="ar-lb layla ar-lb-laylaneural"><td>ar-LB</td><td>Layla</td><td>жен</td><td><code>ar-LB-LaylaNeural</code></td></tr>
+<tr data-s="ar-lb rami ar-lb-ramineural"><td>ar-LB</td><td>Rami</td><td>муж</td><td><code>ar-LB-RamiNeural</code></td></tr>
+<tr data-s="ar-ly iman ar-ly-imanneural"><td>ar-LY</td><td>Iman</td><td>жен</td><td><code>ar-LY-ImanNeural</code></td></tr>
+<tr data-s="ar-ly omar ar-ly-omarneural"><td>ar-LY</td><td>Omar</td><td>муж</td><td><code>ar-LY-OmarNeural</code></td></tr>
+<tr data-s="ar-ma mouna ar-ma-mounaneural"><td>ar-MA</td><td>Mouna</td><td>жен</td><td><code>ar-MA-MounaNeural</code></td></tr>
+<tr data-s="ar-ma jamal ar-ma-jamalneural"><td>ar-MA</td><td>Jamal</td><td>муж</td><td><code>ar-MA-JamalNeural</code></td></tr>
+<tr data-s="ar-om aysha ar-om-ayshaneural"><td>ar-OM</td><td>Aysha</td><td>жен</td><td><code>ar-OM-AyshaNeural</code></td></tr>
+<tr data-s="ar-om abdullah ar-om-abdullahneural"><td>ar-OM</td><td>Abdullah</td><td>муж</td><td><code>ar-OM-AbdullahNeural</code></td></tr>
+<tr data-s="ar-qa amal ar-qa-amalneural"><td>ar-QA</td><td>Amal</td><td>жен</td><td><code>ar-QA-AmalNeural</code></td></tr>
+<tr data-s="ar-qa moaz ar-qa-moazneural"><td>ar-QA</td><td>Moaz</td><td>муж</td><td><code>ar-QA-MoazNeural</code></td></tr>
+<tr data-s="ar-sa zariyah ar-sa-zariyahneural"><td>ar-SA</td><td>Zariyah</td><td>жен</td><td><code>ar-SA-ZariyahNeural</code></td></tr>
+<tr data-s="ar-sa hamed ar-sa-hamedneural"><td>ar-SA</td><td>Hamed</td><td>муж</td><td><code>ar-SA-HamedNeural</code></td></tr>
+<tr data-s="ar-sy amany ar-sy-amanyneural"><td>ar-SY</td><td>Amany</td><td>жен</td><td><code>ar-SY-AmanyNeural</code></td></tr>
+<tr data-s="ar-sy laith ar-sy-laithneural"><td>ar-SY</td><td>Laith</td><td>муж</td><td><code>ar-SY-LaithNeural</code></td></tr>
+<tr data-s="ar-tn reem ar-tn-reemneural"><td>ar-TN</td><td>Reem</td><td>жен</td><td><code>ar-TN-ReemNeural</code></td></tr>
+<tr data-s="ar-tn hedi ar-tn-hedineural"><td>ar-TN</td><td>Hedi</td><td>муж</td><td><code>ar-TN-HediNeural</code></td></tr>
+<tr data-s="ar-ye maryam ar-ye-maryamneural"><td>ar-YE</td><td>Maryam</td><td>жен</td><td><code>ar-YE-MaryamNeural</code></td></tr>
+<tr data-s="ar-ye saleh ar-ye-salehneural"><td>ar-YE</td><td>Saleh</td><td>муж</td><td><code>ar-YE-SalehNeural</code></td></tr>
+<tr data-s="az-az banu az-az-banuneural"><td>az-AZ</td><td>Banu</td><td>жен</td><td><code>az-AZ-BanuNeural</code></td></tr>
+<tr data-s="az-az babek az-az-babekneural"><td>az-AZ</td><td>Babek</td><td>муж</td><td><code>az-AZ-BabekNeural</code></td></tr>
+<tr data-s="bg-bg kalina bg-bg-kalinaneural"><td>bg-BG</td><td>Kalina</td><td>жен</td><td><code>bg-BG-KalinaNeural</code></td></tr>
+<tr data-s="bg-bg borislav bg-bg-borislavneural"><td>bg-BG</td><td>Borislav</td><td>муж</td><td><code>bg-BG-BorislavNeural</code></td></tr>
+<tr data-s="bn-bd nabanita bn-bd-nabanitaneural"><td>bn-BD</td><td>Nabanita</td><td>жен</td><td><code>bn-BD-NabanitaNeural</code></td></tr>
+<tr data-s="bn-bd pradeep bn-bd-pradeepneural"><td>bn-BD</td><td>Pradeep</td><td>муж</td><td><code>bn-BD-PradeepNeural</code></td></tr>
+<tr data-s="bn-in tanishaa bn-in-tanishaaneural"><td>bn-IN</td><td>Tanishaa</td><td>жен</td><td><code>bn-IN-TanishaaNeural</code></td></tr>
+<tr data-s="bn-in bashkar bn-in-bashkarneural"><td>bn-IN</td><td>Bashkar</td><td>муж</td><td><code>bn-IN-BashkarNeural</code></td></tr>
+<tr data-s="bs-ba vesna bs-ba-vesnaneural"><td>bs-BA</td><td>Vesna</td><td>жен</td><td><code>bs-BA-VesnaNeural</code></td></tr>
+<tr data-s="bs-ba goran bs-ba-goranneural"><td>bs-BA</td><td>Goran</td><td>муж</td><td><code>bs-BA-GoranNeural</code></td></tr>
+<tr data-s="ca-es joana ca-es-joananeural"><td>ca-ES</td><td>Joana</td><td>жен</td><td><code>ca-ES-JoanaNeural</code></td></tr>
+<tr data-s="ca-es enric ca-es-enricneural"><td>ca-ES</td><td>Enric</td><td>муж</td><td><code>ca-ES-EnricNeural</code></td></tr>
+<tr data-s="cs-cz vlasta cs-cz-vlastaneural"><td>cs-CZ</td><td>Vlasta</td><td>жен</td><td><code>cs-CZ-VlastaNeural</code></td></tr>
+<tr data-s="cs-cz antonin cs-cz-antoninneural"><td>cs-CZ</td><td>Antonin</td><td>муж</td><td><code>cs-CZ-AntoninNeural</code></td></tr>
+<tr data-s="cy-gb nia cy-gb-nianeural"><td>cy-GB</td><td>Nia</td><td>жен</td><td><code>cy-GB-NiaNeural</code></td></tr>
+<tr data-s="cy-gb aled cy-gb-aledneural"><td>cy-GB</td><td>Aled</td><td>муж</td><td><code>cy-GB-AledNeural</code></td></tr>
+<tr data-s="da-dk christel da-dk-christelneural"><td>da-DK</td><td>Christel</td><td>жен</td><td><code>da-DK-ChristelNeural</code></td></tr>
+<tr data-s="da-dk jeppe da-dk-jeppeneural"><td>da-DK</td><td>Jeppe</td><td>муж</td><td><code>da-DK-JeppeNeural</code></td></tr>
+<tr data-s="de-at ingrid de-at-ingridneural"><td>de-AT</td><td>Ingrid</td><td>жен</td><td><code>de-AT-IngridNeural</code></td></tr>
+<tr data-s="de-at jonas de-at-jonasneural"><td>de-AT</td><td>Jonas</td><td>муж</td><td><code>de-AT-JonasNeural</code></td></tr>
+<tr data-s="de-ch leni de-ch-lenineural"><td>de-CH</td><td>Leni</td><td>жен</td><td><code>de-CH-LeniNeural</code></td></tr>
+<tr data-s="de-ch jan de-ch-janneural"><td>de-CH</td><td>Jan</td><td>муж</td><td><code>de-CH-JanNeural</code></td></tr>
+<tr data-s="de-de amala de-de-amalaneural"><td>de-DE</td><td>Amala</td><td>жен</td><td><code>de-DE-AmalaNeural</code></td></tr>
+<tr data-s="de-de katja de-de-katjaneural"><td>de-DE</td><td>Katja</td><td>жен</td><td><code>de-DE-KatjaNeural</code></td></tr>
+<tr data-s="de-de seraphinamultilingual de-de-seraphinamultilingualneural"><td>de-DE</td><td>SeraphinaMultilingual</td><td>жен</td><td><code>de-DE-SeraphinaMultilingualNeural</code></td></tr>
+<tr data-s="de-de conrad de-de-conradneural"><td>de-DE</td><td>Conrad</td><td>муж</td><td><code>de-DE-ConradNeural</code></td></tr>
+<tr data-s="de-de florianmultilingual de-de-florianmultilingualneural"><td>de-DE</td><td>FlorianMultilingual</td><td>муж</td><td><code>de-DE-FlorianMultilingualNeural</code></td></tr>
+<tr data-s="de-de killian de-de-killianneural"><td>de-DE</td><td>Killian</td><td>муж</td><td><code>de-DE-KillianNeural</code></td></tr>
+<tr data-s="el-gr athina el-gr-athinaneural"><td>el-GR</td><td>Athina</td><td>жен</td><td><code>el-GR-AthinaNeural</code></td></tr>
+<tr data-s="el-gr nestoras el-gr-nestorasneural"><td>el-GR</td><td>Nestoras</td><td>муж</td><td><code>el-GR-NestorasNeural</code></td></tr>
+<tr data-s="en-au natasha en-au-natashaneural"><td>en-AU</td><td>Natasha</td><td>жен</td><td><code>en-AU-NatashaNeural</code></td></tr>
+<tr data-s="en-au williammultilingual en-au-williammultilingualneural"><td>en-AU</td><td>WilliamMultilingual</td><td>муж</td><td><code>en-AU-WilliamMultilingualNeural</code></td></tr>
+<tr data-s="en-ca clara en-ca-claraneural"><td>en-CA</td><td>Clara</td><td>жен</td><td><code>en-CA-ClaraNeural</code></td></tr>
+<tr data-s="en-ca liam en-ca-liamneural"><td>en-CA</td><td>Liam</td><td>муж</td><td><code>en-CA-LiamNeural</code></td></tr>
+<tr data-s="en-gb libby en-gb-libbyneural"><td>en-GB</td><td>Libby</td><td>жен</td><td><code>en-GB-LibbyNeural</code></td></tr>
+<tr data-s="en-gb maisie en-gb-maisieneural"><td>en-GB</td><td>Maisie</td><td>жен</td><td><code>en-GB-MaisieNeural</code></td></tr>
+<tr data-s="en-gb sonia en-gb-sonianeural"><td>en-GB</td><td>Sonia</td><td>жен</td><td><code>en-GB-SoniaNeural</code></td></tr>
+<tr data-s="en-gb ryan en-gb-ryanneural"><td>en-GB</td><td>Ryan</td><td>муж</td><td><code>en-GB-RyanNeural</code></td></tr>
+<tr data-s="en-gb thomas en-gb-thomasneural"><td>en-GB</td><td>Thomas</td><td>муж</td><td><code>en-GB-ThomasNeural</code></td></tr>
+<tr data-s="en-hk yan en-hk-yanneural"><td>en-HK</td><td>Yan</td><td>жен</td><td><code>en-HK-YanNeural</code></td></tr>
+<tr data-s="en-hk sam en-hk-samneural"><td>en-HK</td><td>Sam</td><td>муж</td><td><code>en-HK-SamNeural</code></td></tr>
+<tr data-s="en-ie emily en-ie-emilyneural"><td>en-IE</td><td>Emily</td><td>жен</td><td><code>en-IE-EmilyNeural</code></td></tr>
+<tr data-s="en-ie connor en-ie-connorneural"><td>en-IE</td><td>Connor</td><td>муж</td><td><code>en-IE-ConnorNeural</code></td></tr>
+<tr data-s="en-in neerja en-in-neerjaneural"><td>en-IN</td><td>Neerja</td><td>жен</td><td><code>en-IN-NeerjaNeural</code></td></tr>
+<tr data-s="en-in neerjaexpressive en-in-neerjaexpressiveneural"><td>en-IN</td><td>NeerjaExpressive</td><td>жен</td><td><code>en-IN-NeerjaExpressiveNeural</code></td></tr>
+<tr data-s="en-in prabhat en-in-prabhatneural"><td>en-IN</td><td>Prabhat</td><td>муж</td><td><code>en-IN-PrabhatNeural</code></td></tr>
+<tr data-s="en-ke asilia en-ke-asilianeural"><td>en-KE</td><td>Asilia</td><td>жен</td><td><code>en-KE-AsiliaNeural</code></td></tr>
+<tr data-s="en-ke chilemba en-ke-chilembaneural"><td>en-KE</td><td>Chilemba</td><td>муж</td><td><code>en-KE-ChilembaNeural</code></td></tr>
+<tr data-s="en-ng ezinne en-ng-ezinneneural"><td>en-NG</td><td>Ezinne</td><td>жен</td><td><code>en-NG-EzinneNeural</code></td></tr>
+<tr data-s="en-ng abeo en-ng-abeoneural"><td>en-NG</td><td>Abeo</td><td>муж</td><td><code>en-NG-AbeoNeural</code></td></tr>
+<tr data-s="en-nz molly en-nz-mollyneural"><td>en-NZ</td><td>Molly</td><td>жен</td><td><code>en-NZ-MollyNeural</code></td></tr>
+<tr data-s="en-nz mitchell en-nz-mitchellneural"><td>en-NZ</td><td>Mitchell</td><td>муж</td><td><code>en-NZ-MitchellNeural</code></td></tr>
+<tr data-s="en-ph rosa en-ph-rosaneural"><td>en-PH</td><td>Rosa</td><td>жен</td><td><code>en-PH-RosaNeural</code></td></tr>
+<tr data-s="en-ph james en-ph-jamesneural"><td>en-PH</td><td>James</td><td>муж</td><td><code>en-PH-JamesNeural</code></td></tr>
+<tr data-s="en-sg luna en-sg-lunaneural"><td>en-SG</td><td>Luna</td><td>жен</td><td><code>en-SG-LunaNeural</code></td></tr>
+<tr data-s="en-sg wayne en-sg-wayneneural"><td>en-SG</td><td>Wayne</td><td>муж</td><td><code>en-SG-WayneNeural</code></td></tr>
+<tr data-s="en-tz imani en-tz-imanineural"><td>en-TZ</td><td>Imani</td><td>жен</td><td><code>en-TZ-ImaniNeural</code></td></tr>
+<tr data-s="en-tz elimu en-tz-elimuneural"><td>en-TZ</td><td>Elimu</td><td>муж</td><td><code>en-TZ-ElimuNeural</code></td></tr>
+<tr data-s="en-us ana en-us-ananeural"><td>en-US</td><td>Ana</td><td>жен</td><td><code>en-US-AnaNeural</code></td></tr>
+<tr data-s="en-us aria en-us-arianeural"><td>en-US</td><td>Aria</td><td>жен</td><td><code>en-US-AriaNeural</code></td></tr>
+<tr data-s="en-us ava en-us-avaneural"><td>en-US</td><td>Ava</td><td>жен</td><td><code>en-US-AvaNeural</code></td></tr>
+<tr data-s="en-us avamultilingual en-us-avamultilingualneural"><td>en-US</td><td>AvaMultilingual</td><td>жен</td><td><code>en-US-AvaMultilingualNeural</code></td></tr>
+<tr data-s="en-us emma en-us-emmaneural"><td>en-US</td><td>Emma</td><td>жен</td><td><code>en-US-EmmaNeural</code></td></tr>
+<tr data-s="en-us emmamultilingual en-us-emmamultilingualneural"><td>en-US</td><td>EmmaMultilingual</td><td>жен</td><td><code>en-US-EmmaMultilingualNeural</code></td></tr>
+<tr data-s="en-us jenny en-us-jennyneural"><td>en-US</td><td>Jenny</td><td>жен</td><td><code>en-US-JennyNeural</code></td></tr>
+<tr data-s="en-us michelle en-us-michelleneural"><td>en-US</td><td>Michelle</td><td>жен</td><td><code>en-US-MichelleNeural</code></td></tr>
+<tr data-s="en-us andrew en-us-andrewneural"><td>en-US</td><td>Andrew</td><td>муж</td><td><code>en-US-AndrewNeural</code></td></tr>
+<tr data-s="en-us andrewmultilingual en-us-andrewmultilingualneural"><td>en-US</td><td>AndrewMultilingual</td><td>муж</td><td><code>en-US-AndrewMultilingualNeural</code></td></tr>
+<tr data-s="en-us brian en-us-brianneural"><td>en-US</td><td>Brian</td><td>муж</td><td><code>en-US-BrianNeural</code></td></tr>
+<tr data-s="en-us brianmultilingual en-us-brianmultilingualneural"><td>en-US</td><td>BrianMultilingual</td><td>муж</td><td><code>en-US-BrianMultilingualNeural</code></td></tr>
+<tr data-s="en-us christopher en-us-christopherneural"><td>en-US</td><td>Christopher</td><td>муж</td><td><code>en-US-ChristopherNeural</code></td></tr>
+<tr data-s="en-us eric en-us-ericneural"><td>en-US</td><td>Eric</td><td>муж</td><td><code>en-US-EricNeural</code></td></tr>
+<tr data-s="en-us guy en-us-guyneural"><td>en-US</td><td>Guy</td><td>муж</td><td><code>en-US-GuyNeural</code></td></tr>
+<tr data-s="en-us roger en-us-rogerneural"><td>en-US</td><td>Roger</td><td>муж</td><td><code>en-US-RogerNeural</code></td></tr>
+<tr data-s="en-us steffan en-us-steffanneural"><td>en-US</td><td>Steffan</td><td>муж</td><td><code>en-US-SteffanNeural</code></td></tr>
+<tr data-s="en-za leah en-za-leahneural"><td>en-ZA</td><td>Leah</td><td>жен</td><td><code>en-ZA-LeahNeural</code></td></tr>
+<tr data-s="en-za luke en-za-lukeneural"><td>en-ZA</td><td>Luke</td><td>муж</td><td><code>en-ZA-LukeNeural</code></td></tr>
+<tr data-s="es-ar elena es-ar-elenaneural"><td>es-AR</td><td>Elena</td><td>жен</td><td><code>es-AR-ElenaNeural</code></td></tr>
+<tr data-s="es-ar tomas es-ar-tomasneural"><td>es-AR</td><td>Tomas</td><td>муж</td><td><code>es-AR-TomasNeural</code></td></tr>
+<tr data-s="es-bo sofia es-bo-sofianeural"><td>es-BO</td><td>Sofia</td><td>жен</td><td><code>es-BO-SofiaNeural</code></td></tr>
+<tr data-s="es-bo marcelo es-bo-marceloneural"><td>es-BO</td><td>Marcelo</td><td>муж</td><td><code>es-BO-MarceloNeural</code></td></tr>
+<tr data-s="es-cl catalina es-cl-catalinaneural"><td>es-CL</td><td>Catalina</td><td>жен</td><td><code>es-CL-CatalinaNeural</code></td></tr>
+<tr data-s="es-cl lorenzo es-cl-lorenzoneural"><td>es-CL</td><td>Lorenzo</td><td>муж</td><td><code>es-CL-LorenzoNeural</code></td></tr>
+<tr data-s="es-co salome es-co-salomeneural"><td>es-CO</td><td>Salome</td><td>жен</td><td><code>es-CO-SalomeNeural</code></td></tr>
+<tr data-s="es-co gonzalo es-co-gonzaloneural"><td>es-CO</td><td>Gonzalo</td><td>муж</td><td><code>es-CO-GonzaloNeural</code></td></tr>
+<tr data-s="es-cr maria es-cr-marianeural"><td>es-CR</td><td>Maria</td><td>жен</td><td><code>es-CR-MariaNeural</code></td></tr>
+<tr data-s="es-cr juan es-cr-juanneural"><td>es-CR</td><td>Juan</td><td>муж</td><td><code>es-CR-JuanNeural</code></td></tr>
+<tr data-s="es-cu belkys es-cu-belkysneural"><td>es-CU</td><td>Belkys</td><td>жен</td><td><code>es-CU-BelkysNeural</code></td></tr>
+<tr data-s="es-cu manuel es-cu-manuelneural"><td>es-CU</td><td>Manuel</td><td>муж</td><td><code>es-CU-ManuelNeural</code></td></tr>
+<tr data-s="es-do ramona es-do-ramonaneural"><td>es-DO</td><td>Ramona</td><td>жен</td><td><code>es-DO-RamonaNeural</code></td></tr>
+<tr data-s="es-do emilio es-do-emilioneural"><td>es-DO</td><td>Emilio</td><td>муж</td><td><code>es-DO-EmilioNeural</code></td></tr>
+<tr data-s="es-ec andrea es-ec-andreaneural"><td>es-EC</td><td>Andrea</td><td>жен</td><td><code>es-EC-AndreaNeural</code></td></tr>
+<tr data-s="es-ec luis es-ec-luisneural"><td>es-EC</td><td>Luis</td><td>муж</td><td><code>es-EC-LuisNeural</code></td></tr>
+<tr data-s="es-es elvira es-es-elviraneural"><td>es-ES</td><td>Elvira</td><td>жен</td><td><code>es-ES-ElviraNeural</code></td></tr>
+<tr data-s="es-es ximena es-es-ximenaneural"><td>es-ES</td><td>Ximena</td><td>жен</td><td><code>es-ES-XimenaNeural</code></td></tr>
+<tr data-s="es-es alvaro es-es-alvaroneural"><td>es-ES</td><td>Alvaro</td><td>муж</td><td><code>es-ES-AlvaroNeural</code></td></tr>
+<tr data-s="es-gq teresa es-gq-teresaneural"><td>es-GQ</td><td>Teresa</td><td>жен</td><td><code>es-GQ-TeresaNeural</code></td></tr>
+<tr data-s="es-gq javier es-gq-javierneural"><td>es-GQ</td><td>Javier</td><td>муж</td><td><code>es-GQ-JavierNeural</code></td></tr>
+<tr data-s="es-gt marta es-gt-martaneural"><td>es-GT</td><td>Marta</td><td>жен</td><td><code>es-GT-MartaNeural</code></td></tr>
+<tr data-s="es-gt andres es-gt-andresneural"><td>es-GT</td><td>Andres</td><td>муж</td><td><code>es-GT-AndresNeural</code></td></tr>
+<tr data-s="es-hn karla es-hn-karlaneural"><td>es-HN</td><td>Karla</td><td>жен</td><td><code>es-HN-KarlaNeural</code></td></tr>
+<tr data-s="es-hn carlos es-hn-carlosneural"><td>es-HN</td><td>Carlos</td><td>муж</td><td><code>es-HN-CarlosNeural</code></td></tr>
+<tr data-s="es-mx dalia es-mx-dalianeural"><td>es-MX</td><td>Dalia</td><td>жен</td><td><code>es-MX-DaliaNeural</code></td></tr>
+<tr data-s="es-mx jorge es-mx-jorgeneural"><td>es-MX</td><td>Jorge</td><td>муж</td><td><code>es-MX-JorgeNeural</code></td></tr>
+<tr data-s="es-ni yolanda es-ni-yolandaneural"><td>es-NI</td><td>Yolanda</td><td>жен</td><td><code>es-NI-YolandaNeural</code></td></tr>
+<tr data-s="es-ni federico es-ni-federiconeural"><td>es-NI</td><td>Federico</td><td>муж</td><td><code>es-NI-FedericoNeural</code></td></tr>
+<tr data-s="es-pa margarita es-pa-margaritaneural"><td>es-PA</td><td>Margarita</td><td>жен</td><td><code>es-PA-MargaritaNeural</code></td></tr>
+<tr data-s="es-pa roberto es-pa-robertoneural"><td>es-PA</td><td>Roberto</td><td>муж</td><td><code>es-PA-RobertoNeural</code></td></tr>
+<tr data-s="es-pe camila es-pe-camilaneural"><td>es-PE</td><td>Camila</td><td>жен</td><td><code>es-PE-CamilaNeural</code></td></tr>
+<tr data-s="es-pe alex es-pe-alexneural"><td>es-PE</td><td>Alex</td><td>муж</td><td><code>es-PE-AlexNeural</code></td></tr>
+<tr data-s="es-pr karina es-pr-karinaneural"><td>es-PR</td><td>Karina</td><td>жен</td><td><code>es-PR-KarinaNeural</code></td></tr>
+<tr data-s="es-pr victor es-pr-victorneural"><td>es-PR</td><td>Victor</td><td>муж</td><td><code>es-PR-VictorNeural</code></td></tr>
+<tr data-s="es-py tania es-py-tanianeural"><td>es-PY</td><td>Tania</td><td>жен</td><td><code>es-PY-TaniaNeural</code></td></tr>
+<tr data-s="es-py mario es-py-marioneural"><td>es-PY</td><td>Mario</td><td>муж</td><td><code>es-PY-MarioNeural</code></td></tr>
+<tr data-s="es-sv lorena es-sv-lorenaneural"><td>es-SV</td><td>Lorena</td><td>жен</td><td><code>es-SV-LorenaNeural</code></td></tr>
+<tr data-s="es-sv rodrigo es-sv-rodrigoneural"><td>es-SV</td><td>Rodrigo</td><td>муж</td><td><code>es-SV-RodrigoNeural</code></td></tr>
+<tr data-s="es-us paloma es-us-palomaneural"><td>es-US</td><td>Paloma</td><td>жен</td><td><code>es-US-PalomaNeural</code></td></tr>
+<tr data-s="es-us alonso es-us-alonsoneural"><td>es-US</td><td>Alonso</td><td>муж</td><td><code>es-US-AlonsoNeural</code></td></tr>
+<tr data-s="es-uy valentina es-uy-valentinaneural"><td>es-UY</td><td>Valentina</td><td>жен</td><td><code>es-UY-ValentinaNeural</code></td></tr>
+<tr data-s="es-uy mateo es-uy-mateoneural"><td>es-UY</td><td>Mateo</td><td>муж</td><td><code>es-UY-MateoNeural</code></td></tr>
+<tr data-s="es-ve paola es-ve-paolaneural"><td>es-VE</td><td>Paola</td><td>жен</td><td><code>es-VE-PaolaNeural</code></td></tr>
+<tr data-s="es-ve sebastian es-ve-sebastianneural"><td>es-VE</td><td>Sebastian</td><td>муж</td><td><code>es-VE-SebastianNeural</code></td></tr>
+<tr data-s="et-ee anu et-ee-anuneural"><td>et-EE</td><td>Anu</td><td>жен</td><td><code>et-EE-AnuNeural</code></td></tr>
+<tr data-s="et-ee kert et-ee-kertneural"><td>et-EE</td><td>Kert</td><td>муж</td><td><code>et-EE-KertNeural</code></td></tr>
+<tr data-s="fa-ir dilara fa-ir-dilaraneural"><td>fa-IR</td><td>Dilara</td><td>жен</td><td><code>fa-IR-DilaraNeural</code></td></tr>
+<tr data-s="fa-ir farid fa-ir-faridneural"><td>fa-IR</td><td>Farid</td><td>муж</td><td><code>fa-IR-FaridNeural</code></td></tr>
+<tr data-s="fi-fi noora fi-fi-nooraneural"><td>fi-FI</td><td>Noora</td><td>жен</td><td><code>fi-FI-NooraNeural</code></td></tr>
+<tr data-s="fi-fi harri fi-fi-harrineural"><td>fi-FI</td><td>Harri</td><td>муж</td><td><code>fi-FI-HarriNeural</code></td></tr>
+<tr data-s="fil-ph blessica fil-ph-blessicaneural"><td>fil-PH</td><td>Blessica</td><td>жен</td><td><code>fil-PH-BlessicaNeural</code></td></tr>
+<tr data-s="fil-ph angelo fil-ph-angeloneural"><td>fil-PH</td><td>Angelo</td><td>муж</td><td><code>fil-PH-AngeloNeural</code></td></tr>
+<tr data-s="fr-be charline fr-be-charlineneural"><td>fr-BE</td><td>Charline</td><td>жен</td><td><code>fr-BE-CharlineNeural</code></td></tr>
+<tr data-s="fr-be gerard fr-be-gerardneural"><td>fr-BE</td><td>Gerard</td><td>муж</td><td><code>fr-BE-GerardNeural</code></td></tr>
+<tr data-s="fr-ca sylvie fr-ca-sylvieneural"><td>fr-CA</td><td>Sylvie</td><td>жен</td><td><code>fr-CA-SylvieNeural</code></td></tr>
+<tr data-s="fr-ca antoine fr-ca-antoineneural"><td>fr-CA</td><td>Antoine</td><td>муж</td><td><code>fr-CA-AntoineNeural</code></td></tr>
+<tr data-s="fr-ca jean fr-ca-jeanneural"><td>fr-CA</td><td>Jean</td><td>муж</td><td><code>fr-CA-JeanNeural</code></td></tr>
+<tr data-s="fr-ca thierry fr-ca-thierryneural"><td>fr-CA</td><td>Thierry</td><td>муж</td><td><code>fr-CA-ThierryNeural</code></td></tr>
+<tr data-s="fr-ch ariane fr-ch-arianeneural"><td>fr-CH</td><td>Ariane</td><td>жен</td><td><code>fr-CH-ArianeNeural</code></td></tr>
+<tr data-s="fr-ch fabrice fr-ch-fabriceneural"><td>fr-CH</td><td>Fabrice</td><td>муж</td><td><code>fr-CH-FabriceNeural</code></td></tr>
+<tr data-s="fr-fr denise fr-fr-deniseneural"><td>fr-FR</td><td>Denise</td><td>жен</td><td><code>fr-FR-DeniseNeural</code></td></tr>
+<tr data-s="fr-fr eloise fr-fr-eloiseneural"><td>fr-FR</td><td>Eloise</td><td>жен</td><td><code>fr-FR-EloiseNeural</code></td></tr>
+<tr data-s="fr-fr viviennemultilingual fr-fr-viviennemultilingualneural"><td>fr-FR</td><td>VivienneMultilingual</td><td>жен</td><td><code>fr-FR-VivienneMultilingualNeural</code></td></tr>
+<tr data-s="fr-fr henri fr-fr-henrineural"><td>fr-FR</td><td>Henri</td><td>муж</td><td><code>fr-FR-HenriNeural</code></td></tr>
+<tr data-s="fr-fr remymultilingual fr-fr-remymultilingualneural"><td>fr-FR</td><td>RemyMultilingual</td><td>муж</td><td><code>fr-FR-RemyMultilingualNeural</code></td></tr>
+<tr data-s="ga-ie orla ga-ie-orlaneural"><td>ga-IE</td><td>Orla</td><td>жен</td><td><code>ga-IE-OrlaNeural</code></td></tr>
+<tr data-s="ga-ie colm ga-ie-colmneural"><td>ga-IE</td><td>Colm</td><td>муж</td><td><code>ga-IE-ColmNeural</code></td></tr>
+<tr data-s="gl-es sabela gl-es-sabelaneural"><td>gl-ES</td><td>Sabela</td><td>жен</td><td><code>gl-ES-SabelaNeural</code></td></tr>
+<tr data-s="gl-es roi gl-es-roineural"><td>gl-ES</td><td>Roi</td><td>муж</td><td><code>gl-ES-RoiNeural</code></td></tr>
+<tr data-s="gu-in dhwani gu-in-dhwanineural"><td>gu-IN</td><td>Dhwani</td><td>жен</td><td><code>gu-IN-DhwaniNeural</code></td></tr>
+<tr data-s="gu-in niranjan gu-in-niranjanneural"><td>gu-IN</td><td>Niranjan</td><td>муж</td><td><code>gu-IN-NiranjanNeural</code></td></tr>
+<tr data-s="he-il hila he-il-hilaneural"><td>he-IL</td><td>Hila</td><td>жен</td><td><code>he-IL-HilaNeural</code></td></tr>
+<tr data-s="he-il avri he-il-avrineural"><td>he-IL</td><td>Avri</td><td>муж</td><td><code>he-IL-AvriNeural</code></td></tr>
+<tr data-s="hi-in swara hi-in-swaraneural"><td>hi-IN</td><td>Swara</td><td>жен</td><td><code>hi-IN-SwaraNeural</code></td></tr>
+<tr data-s="hi-in madhur hi-in-madhurneural"><td>hi-IN</td><td>Madhur</td><td>муж</td><td><code>hi-IN-MadhurNeural</code></td></tr>
+<tr data-s="hr-hr gabrijela hr-hr-gabrijelaneural"><td>hr-HR</td><td>Gabrijela</td><td>жен</td><td><code>hr-HR-GabrijelaNeural</code></td></tr>
+<tr data-s="hr-hr srecko hr-hr-sreckoneural"><td>hr-HR</td><td>Srecko</td><td>муж</td><td><code>hr-HR-SreckoNeural</code></td></tr>
+<tr data-s="hu-hu noemi hu-hu-noemineural"><td>hu-HU</td><td>Noemi</td><td>жен</td><td><code>hu-HU-NoemiNeural</code></td></tr>
+<tr data-s="hu-hu tamas hu-hu-tamasneural"><td>hu-HU</td><td>Tamas</td><td>муж</td><td><code>hu-HU-TamasNeural</code></td></tr>
+<tr data-s="id-id gadis id-id-gadisneural"><td>id-ID</td><td>Gadis</td><td>жен</td><td><code>id-ID-GadisNeural</code></td></tr>
+<tr data-s="id-id ardi id-id-ardineural"><td>id-ID</td><td>Ardi</td><td>муж</td><td><code>id-ID-ArdiNeural</code></td></tr>
+<tr data-s="is-is gudrun is-is-gudrunneural"><td>is-IS</td><td>Gudrun</td><td>жен</td><td><code>is-IS-GudrunNeural</code></td></tr>
+<tr data-s="is-is gunnar is-is-gunnarneural"><td>is-IS</td><td>Gunnar</td><td>муж</td><td><code>is-IS-GunnarNeural</code></td></tr>
+<tr data-s="it-it elsa it-it-elsaneural"><td>it-IT</td><td>Elsa</td><td>жен</td><td><code>it-IT-ElsaNeural</code></td></tr>
+<tr data-s="it-it isabella it-it-isabellaneural"><td>it-IT</td><td>Isabella</td><td>жен</td><td><code>it-IT-IsabellaNeural</code></td></tr>
+<tr data-s="it-it diego it-it-diegoneural"><td>it-IT</td><td>Diego</td><td>муж</td><td><code>it-IT-DiegoNeural</code></td></tr>
+<tr data-s="it-it giuseppemultilingual it-it-giuseppemultilingualneural"><td>it-IT</td><td>GiuseppeMultilingual</td><td>муж</td><td><code>it-IT-GiuseppeMultilingualNeural</code></td></tr>
+<tr data-s="iu-cans-ca ca-siqiniq iu-cans-ca-siqiniqneural"><td>iu-Cans-CA</td><td>CA-Siqiniq</td><td>жен</td><td><code>iu-Cans-CA-SiqiniqNeural</code></td></tr>
+<tr data-s="iu-cans-ca ca-taqqiq iu-cans-ca-taqqiqneural"><td>iu-Cans-CA</td><td>CA-Taqqiq</td><td>муж</td><td><code>iu-Cans-CA-TaqqiqNeural</code></td></tr>
+<tr data-s="iu-latn-ca ca-siqiniq iu-latn-ca-siqiniqneural"><td>iu-Latn-CA</td><td>CA-Siqiniq</td><td>жен</td><td><code>iu-Latn-CA-SiqiniqNeural</code></td></tr>
+<tr data-s="iu-latn-ca ca-taqqiq iu-latn-ca-taqqiqneural"><td>iu-Latn-CA</td><td>CA-Taqqiq</td><td>муж</td><td><code>iu-Latn-CA-TaqqiqNeural</code></td></tr>
+<tr data-s="ja-jp nanami ja-jp-nanamineural"><td>ja-JP</td><td>Nanami</td><td>жен</td><td><code>ja-JP-NanamiNeural</code></td></tr>
+<tr data-s="ja-jp keita ja-jp-keitaneural"><td>ja-JP</td><td>Keita</td><td>муж</td><td><code>ja-JP-KeitaNeural</code></td></tr>
+<tr data-s="jv-id siti jv-id-sitineural"><td>jv-ID</td><td>Siti</td><td>жен</td><td><code>jv-ID-SitiNeural</code></td></tr>
+<tr data-s="jv-id dimas jv-id-dimasneural"><td>jv-ID</td><td>Dimas</td><td>муж</td><td><code>jv-ID-DimasNeural</code></td></tr>
+<tr data-s="ka-ge eka ka-ge-ekaneural"><td>ka-GE</td><td>Eka</td><td>жен</td><td><code>ka-GE-EkaNeural</code></td></tr>
+<tr data-s="ka-ge giorgi ka-ge-giorgineural"><td>ka-GE</td><td>Giorgi</td><td>муж</td><td><code>ka-GE-GiorgiNeural</code></td></tr>
+<tr data-s="kk-kz aigul kk-kz-aigulneural"><td>kk-KZ</td><td>Aigul</td><td>жен</td><td><code>kk-KZ-AigulNeural</code></td></tr>
+<tr data-s="kk-kz daulet kk-kz-dauletneural"><td>kk-KZ</td><td>Daulet</td><td>муж</td><td><code>kk-KZ-DauletNeural</code></td></tr>
+<tr data-s="km-kh sreymom km-kh-sreymomneural"><td>km-KH</td><td>Sreymom</td><td>жен</td><td><code>km-KH-SreymomNeural</code></td></tr>
+<tr data-s="km-kh piseth km-kh-pisethneural"><td>km-KH</td><td>Piseth</td><td>муж</td><td><code>km-KH-PisethNeural</code></td></tr>
+<tr data-s="kn-in sapna kn-in-sapnaneural"><td>kn-IN</td><td>Sapna</td><td>жен</td><td><code>kn-IN-SapnaNeural</code></td></tr>
+<tr data-s="kn-in gagan kn-in-gaganneural"><td>kn-IN</td><td>Gagan</td><td>муж</td><td><code>kn-IN-GaganNeural</code></td></tr>
+<tr data-s="ko-kr sunhi ko-kr-sunhineural"><td>ko-KR</td><td>SunHi</td><td>жен</td><td><code>ko-KR-SunHiNeural</code></td></tr>
+<tr data-s="ko-kr hyunsumultilingual ko-kr-hyunsumultilingualneural"><td>ko-KR</td><td>HyunsuMultilingual</td><td>муж</td><td><code>ko-KR-HyunsuMultilingualNeural</code></td></tr>
+<tr data-s="ko-kr injoon ko-kr-injoonneural"><td>ko-KR</td><td>InJoon</td><td>муж</td><td><code>ko-KR-InJoonNeural</code></td></tr>
+<tr data-s="lo-la keomany lo-la-keomanyneural"><td>lo-LA</td><td>Keomany</td><td>жен</td><td><code>lo-LA-KeomanyNeural</code></td></tr>
+<tr data-s="lo-la chanthavong lo-la-chanthavongneural"><td>lo-LA</td><td>Chanthavong</td><td>муж</td><td><code>lo-LA-ChanthavongNeural</code></td></tr>
+<tr data-s="lt-lt ona lt-lt-onaneural"><td>lt-LT</td><td>Ona</td><td>жен</td><td><code>lt-LT-OnaNeural</code></td></tr>
+<tr data-s="lt-lt leonas lt-lt-leonasneural"><td>lt-LT</td><td>Leonas</td><td>муж</td><td><code>lt-LT-LeonasNeural</code></td></tr>
+<tr data-s="lv-lv everita lv-lv-everitaneural"><td>lv-LV</td><td>Everita</td><td>жен</td><td><code>lv-LV-EveritaNeural</code></td></tr>
+<tr data-s="lv-lv nils lv-lv-nilsneural"><td>lv-LV</td><td>Nils</td><td>муж</td><td><code>lv-LV-NilsNeural</code></td></tr>
+<tr data-s="mk-mk marija mk-mk-marijaneural"><td>mk-MK</td><td>Marija</td><td>жен</td><td><code>mk-MK-MarijaNeural</code></td></tr>
+<tr data-s="mk-mk aleksandar mk-mk-aleksandarneural"><td>mk-MK</td><td>Aleksandar</td><td>муж</td><td><code>mk-MK-AleksandarNeural</code></td></tr>
+<tr data-s="ml-in sobhana ml-in-sobhananeural"><td>ml-IN</td><td>Sobhana</td><td>жен</td><td><code>ml-IN-SobhanaNeural</code></td></tr>
+<tr data-s="ml-in midhun ml-in-midhunneural"><td>ml-IN</td><td>Midhun</td><td>муж</td><td><code>ml-IN-MidhunNeural</code></td></tr>
+<tr data-s="mn-mn yesui mn-mn-yesuineural"><td>mn-MN</td><td>Yesui</td><td>жен</td><td><code>mn-MN-YesuiNeural</code></td></tr>
+<tr data-s="mn-mn bataa mn-mn-bataaneural"><td>mn-MN</td><td>Bataa</td><td>муж</td><td><code>mn-MN-BataaNeural</code></td></tr>
+<tr data-s="mr-in aarohi mr-in-aarohineural"><td>mr-IN</td><td>Aarohi</td><td>жен</td><td><code>mr-IN-AarohiNeural</code></td></tr>
+<tr data-s="mr-in manohar mr-in-manoharneural"><td>mr-IN</td><td>Manohar</td><td>муж</td><td><code>mr-IN-ManoharNeural</code></td></tr>
+<tr data-s="ms-my yasmin ms-my-yasminneural"><td>ms-MY</td><td>Yasmin</td><td>жен</td><td><code>ms-MY-YasminNeural</code></td></tr>
+<tr data-s="ms-my osman ms-my-osmanneural"><td>ms-MY</td><td>Osman</td><td>муж</td><td><code>ms-MY-OsmanNeural</code></td></tr>
+<tr data-s="mt-mt grace mt-mt-graceneural"><td>mt-MT</td><td>Grace</td><td>жен</td><td><code>mt-MT-GraceNeural</code></td></tr>
+<tr data-s="mt-mt joseph mt-mt-josephneural"><td>mt-MT</td><td>Joseph</td><td>муж</td><td><code>mt-MT-JosephNeural</code></td></tr>
+<tr data-s="my-mm nilar my-mm-nilarneural"><td>my-MM</td><td>Nilar</td><td>жен</td><td><code>my-MM-NilarNeural</code></td></tr>
+<tr data-s="my-mm thiha my-mm-thihaneural"><td>my-MM</td><td>Thiha</td><td>муж</td><td><code>my-MM-ThihaNeural</code></td></tr>
+<tr data-s="nb-no pernille nb-no-pernilleneural"><td>nb-NO</td><td>Pernille</td><td>жен</td><td><code>nb-NO-PernilleNeural</code></td></tr>
+<tr data-s="nb-no finn nb-no-finnneural"><td>nb-NO</td><td>Finn</td><td>муж</td><td><code>nb-NO-FinnNeural</code></td></tr>
+<tr data-s="ne-np hemkala ne-np-hemkalaneural"><td>ne-NP</td><td>Hemkala</td><td>жен</td><td><code>ne-NP-HemkalaNeural</code></td></tr>
+<tr data-s="ne-np sagar ne-np-sagarneural"><td>ne-NP</td><td>Sagar</td><td>муж</td><td><code>ne-NP-SagarNeural</code></td></tr>
+<tr data-s="nl-be dena nl-be-denaneural"><td>nl-BE</td><td>Dena</td><td>жен</td><td><code>nl-BE-DenaNeural</code></td></tr>
+<tr data-s="nl-be arnaud nl-be-arnaudneural"><td>nl-BE</td><td>Arnaud</td><td>муж</td><td><code>nl-BE-ArnaudNeural</code></td></tr>
+<tr data-s="nl-nl colette nl-nl-coletteneural"><td>nl-NL</td><td>Colette</td><td>жен</td><td><code>nl-NL-ColetteNeural</code></td></tr>
+<tr data-s="nl-nl fenna nl-nl-fennaneural"><td>nl-NL</td><td>Fenna</td><td>жен</td><td><code>nl-NL-FennaNeural</code></td></tr>
+<tr data-s="nl-nl maarten nl-nl-maartenneural"><td>nl-NL</td><td>Maarten</td><td>муж</td><td><code>nl-NL-MaartenNeural</code></td></tr>
+<tr data-s="pl-pl zofia pl-pl-zofianeural"><td>pl-PL</td><td>Zofia</td><td>жен</td><td><code>pl-PL-ZofiaNeural</code></td></tr>
+<tr data-s="pl-pl marek pl-pl-marekneural"><td>pl-PL</td><td>Marek</td><td>муж</td><td><code>pl-PL-MarekNeural</code></td></tr>
+<tr data-s="ps-af latifa ps-af-latifaneural"><td>ps-AF</td><td>Latifa</td><td>жен</td><td><code>ps-AF-LatifaNeural</code></td></tr>
+<tr data-s="ps-af gulnawaz ps-af-gulnawazneural"><td>ps-AF</td><td>GulNawaz</td><td>муж</td><td><code>ps-AF-GulNawazNeural</code></td></tr>
+<tr data-s="pt-br francisca pt-br-franciscaneural"><td>pt-BR</td><td>Francisca</td><td>жен</td><td><code>pt-BR-FranciscaNeural</code></td></tr>
+<tr data-s="pt-br thalitamultilingual pt-br-thalitamultilingualneural"><td>pt-BR</td><td>ThalitaMultilingual</td><td>жен</td><td><code>pt-BR-ThalitaMultilingualNeural</code></td></tr>
+<tr data-s="pt-br antonio pt-br-antonioneural"><td>pt-BR</td><td>Antonio</td><td>муж</td><td><code>pt-BR-AntonioNeural</code></td></tr>
+<tr data-s="pt-pt raquel pt-pt-raquelneural"><td>pt-PT</td><td>Raquel</td><td>жен</td><td><code>pt-PT-RaquelNeural</code></td></tr>
+<tr data-s="pt-pt duarte pt-pt-duarteneural"><td>pt-PT</td><td>Duarte</td><td>муж</td><td><code>pt-PT-DuarteNeural</code></td></tr>
+<tr data-s="ro-ro alina ro-ro-alinaneural"><td>ro-RO</td><td>Alina</td><td>жен</td><td><code>ro-RO-AlinaNeural</code></td></tr>
+<tr data-s="ro-ro emil ro-ro-emilneural"><td>ro-RO</td><td>Emil</td><td>муж</td><td><code>ro-RO-EmilNeural</code></td></tr>
+<tr data-s="ru-ru svetlana ru-ru-svetlananeural"><td>ru-RU</td><td>Svetlana</td><td>жен</td><td><code>ru-RU-SvetlanaNeural</code></td></tr>
+<tr data-s="ru-ru dmitry ru-ru-dmitryneural"><td>ru-RU</td><td>Dmitry</td><td>муж</td><td><code>ru-RU-DmitryNeural</code></td></tr>
+<tr data-s="si-lk thilini si-lk-thilinineural"><td>si-LK</td><td>Thilini</td><td>жен</td><td><code>si-LK-ThiliniNeural</code></td></tr>
+<tr data-s="si-lk sameera si-lk-sameeraneural"><td>si-LK</td><td>Sameera</td><td>муж</td><td><code>si-LK-SameeraNeural</code></td></tr>
+<tr data-s="sk-sk viktoria sk-sk-viktorianeural"><td>sk-SK</td><td>Viktoria</td><td>жен</td><td><code>sk-SK-ViktoriaNeural</code></td></tr>
+<tr data-s="sk-sk lukas sk-sk-lukasneural"><td>sk-SK</td><td>Lukas</td><td>муж</td><td><code>sk-SK-LukasNeural</code></td></tr>
+<tr data-s="sl-si petra sl-si-petraneural"><td>sl-SI</td><td>Petra</td><td>жен</td><td><code>sl-SI-PetraNeural</code></td></tr>
+<tr data-s="sl-si rok sl-si-rokneural"><td>sl-SI</td><td>Rok</td><td>муж</td><td><code>sl-SI-RokNeural</code></td></tr>
+<tr data-s="so-so ubax so-so-ubaxneural"><td>so-SO</td><td>Ubax</td><td>жен</td><td><code>so-SO-UbaxNeural</code></td></tr>
+<tr data-s="so-so muuse so-so-muuseneural"><td>so-SO</td><td>Muuse</td><td>муж</td><td><code>so-SO-MuuseNeural</code></td></tr>
+<tr data-s="sq-al anila sq-al-anilaneural"><td>sq-AL</td><td>Anila</td><td>жен</td><td><code>sq-AL-AnilaNeural</code></td></tr>
+<tr data-s="sq-al ilir sq-al-ilirneural"><td>sq-AL</td><td>Ilir</td><td>муж</td><td><code>sq-AL-IlirNeural</code></td></tr>
+<tr data-s="sr-rs sophie sr-rs-sophieneural"><td>sr-RS</td><td>Sophie</td><td>жен</td><td><code>sr-RS-SophieNeural</code></td></tr>
+<tr data-s="sr-rs nicholas sr-rs-nicholasneural"><td>sr-RS</td><td>Nicholas</td><td>муж</td><td><code>sr-RS-NicholasNeural</code></td></tr>
+<tr data-s="su-id tuti su-id-tutineural"><td>su-ID</td><td>Tuti</td><td>жен</td><td><code>su-ID-TutiNeural</code></td></tr>
+<tr data-s="su-id jajang su-id-jajangneural"><td>su-ID</td><td>Jajang</td><td>муж</td><td><code>su-ID-JajangNeural</code></td></tr>
+<tr data-s="sv-se sofie sv-se-sofieneural"><td>sv-SE</td><td>Sofie</td><td>жен</td><td><code>sv-SE-SofieNeural</code></td></tr>
+<tr data-s="sv-se mattias sv-se-mattiasneural"><td>sv-SE</td><td>Mattias</td><td>муж</td><td><code>sv-SE-MattiasNeural</code></td></tr>
+<tr data-s="sw-ke zuri sw-ke-zurineural"><td>sw-KE</td><td>Zuri</td><td>жен</td><td><code>sw-KE-ZuriNeural</code></td></tr>
+<tr data-s="sw-ke rafiki sw-ke-rafikineural"><td>sw-KE</td><td>Rafiki</td><td>муж</td><td><code>sw-KE-RafikiNeural</code></td></tr>
+<tr data-s="sw-tz rehema sw-tz-rehemaneural"><td>sw-TZ</td><td>Rehema</td><td>жен</td><td><code>sw-TZ-RehemaNeural</code></td></tr>
+<tr data-s="sw-tz daudi sw-tz-daudineural"><td>sw-TZ</td><td>Daudi</td><td>муж</td><td><code>sw-TZ-DaudiNeural</code></td></tr>
+<tr data-s="ta-in pallavi ta-in-pallavineural"><td>ta-IN</td><td>Pallavi</td><td>жен</td><td><code>ta-IN-PallaviNeural</code></td></tr>
+<tr data-s="ta-in valluvar ta-in-valluvarneural"><td>ta-IN</td><td>Valluvar</td><td>муж</td><td><code>ta-IN-ValluvarNeural</code></td></tr>
+<tr data-s="ta-lk saranya ta-lk-saranyaneural"><td>ta-LK</td><td>Saranya</td><td>жен</td><td><code>ta-LK-SaranyaNeural</code></td></tr>
+<tr data-s="ta-lk kumar ta-lk-kumarneural"><td>ta-LK</td><td>Kumar</td><td>муж</td><td><code>ta-LK-KumarNeural</code></td></tr>
+<tr data-s="ta-my kani ta-my-kanineural"><td>ta-MY</td><td>Kani</td><td>жен</td><td><code>ta-MY-KaniNeural</code></td></tr>
+<tr data-s="ta-my surya ta-my-suryaneural"><td>ta-MY</td><td>Surya</td><td>муж</td><td><code>ta-MY-SuryaNeural</code></td></tr>
+<tr data-s="ta-sg venba ta-sg-venbaneural"><td>ta-SG</td><td>Venba</td><td>жен</td><td><code>ta-SG-VenbaNeural</code></td></tr>
+<tr data-s="ta-sg anbu ta-sg-anbuneural"><td>ta-SG</td><td>Anbu</td><td>муж</td><td><code>ta-SG-AnbuNeural</code></td></tr>
+<tr data-s="te-in shruti te-in-shrutineural"><td>te-IN</td><td>Shruti</td><td>жен</td><td><code>te-IN-ShrutiNeural</code></td></tr>
+<tr data-s="te-in mohan te-in-mohanneural"><td>te-IN</td><td>Mohan</td><td>муж</td><td><code>te-IN-MohanNeural</code></td></tr>
+<tr data-s="th-th premwadee th-th-premwadeeneural"><td>th-TH</td><td>Premwadee</td><td>жен</td><td><code>th-TH-PremwadeeNeural</code></td></tr>
+<tr data-s="th-th niwat th-th-niwatneural"><td>th-TH</td><td>Niwat</td><td>муж</td><td><code>th-TH-NiwatNeural</code></td></tr>
+<tr data-s="tr-tr emel tr-tr-emelneural"><td>tr-TR</td><td>Emel</td><td>жен</td><td><code>tr-TR-EmelNeural</code></td></tr>
+<tr data-s="tr-tr ahmet tr-tr-ahmetneural"><td>tr-TR</td><td>Ahmet</td><td>муж</td><td><code>tr-TR-AhmetNeural</code></td></tr>
+<tr data-s="uk-ua polina uk-ua-polinaneural"><td>uk-UA</td><td>Polina</td><td>жен</td><td><code>uk-UA-PolinaNeural</code></td></tr>
+<tr data-s="uk-ua ostap uk-ua-ostapneural"><td>uk-UA</td><td>Ostap</td><td>муж</td><td><code>uk-UA-OstapNeural</code></td></tr>
+<tr data-s="ur-in gul ur-in-gulneural"><td>ur-IN</td><td>Gul</td><td>жен</td><td><code>ur-IN-GulNeural</code></td></tr>
+<tr data-s="ur-in salman ur-in-salmanneural"><td>ur-IN</td><td>Salman</td><td>муж</td><td><code>ur-IN-SalmanNeural</code></td></tr>
+<tr data-s="ur-pk uzma ur-pk-uzmaneural"><td>ur-PK</td><td>Uzma</td><td>жен</td><td><code>ur-PK-UzmaNeural</code></td></tr>
+<tr data-s="ur-pk asad ur-pk-asadneural"><td>ur-PK</td><td>Asad</td><td>муж</td><td><code>ur-PK-AsadNeural</code></td></tr>
+<tr data-s="uz-uz madina uz-uz-madinaneural"><td>uz-UZ</td><td>Madina</td><td>жен</td><td><code>uz-UZ-MadinaNeural</code></td></tr>
+<tr data-s="uz-uz sardor uz-uz-sardorneural"><td>uz-UZ</td><td>Sardor</td><td>муж</td><td><code>uz-UZ-SardorNeural</code></td></tr>
+<tr data-s="vi-vn hoaimy vi-vn-hoaimyneural"><td>vi-VN</td><td>HoaiMy</td><td>жен</td><td><code>vi-VN-HoaiMyNeural</code></td></tr>
+<tr data-s="vi-vn namminh vi-vn-namminhneural"><td>vi-VN</td><td>NamMinh</td><td>муж</td><td><code>vi-VN-NamMinhNeural</code></td></tr>
+<tr data-s="zh-cn xiaoxiao zh-cn-xiaoxiaoneural"><td>zh-CN</td><td>Xiaoxiao</td><td>жен</td><td><code>zh-CN-XiaoxiaoNeural</code></td></tr>
+<tr data-s="zh-cn xiaoyi zh-cn-xiaoyineural"><td>zh-CN</td><td>Xiaoyi</td><td>жен</td><td><code>zh-CN-XiaoyiNeural</code></td></tr>
+<tr data-s="zh-cn yunjian zh-cn-yunjianneural"><td>zh-CN</td><td>Yunjian</td><td>муж</td><td><code>zh-CN-YunjianNeural</code></td></tr>
+<tr data-s="zh-cn yunxi zh-cn-yunxineural"><td>zh-CN</td><td>Yunxi</td><td>муж</td><td><code>zh-CN-YunxiNeural</code></td></tr>
+<tr data-s="zh-cn yunxia zh-cn-yunxianeural"><td>zh-CN</td><td>Yunxia</td><td>муж</td><td><code>zh-CN-YunxiaNeural</code></td></tr>
+<tr data-s="zh-cn yunyang zh-cn-yunyangneural"><td>zh-CN</td><td>Yunyang</td><td>муж</td><td><code>zh-CN-YunyangNeural</code></td></tr>
+<tr data-s="zh-cn-liaoning liaoning-xiaobei zh-cn-liaoning-xiaobeineural"><td>zh-CN-liaoning</td><td>liaoning-Xiaobei</td><td>жен</td><td><code>zh-CN-liaoning-XiaobeiNeural</code></td></tr>
+<tr data-s="zh-cn-shaanxi shaanxi-xiaoni zh-cn-shaanxi-xiaonineural"><td>zh-CN-shaanxi</td><td>shaanxi-Xiaoni</td><td>жен</td><td><code>zh-CN-shaanxi-XiaoniNeural</code></td></tr>
+<tr data-s="zh-hk hiugaai zh-hk-hiugaaineural"><td>zh-HK</td><td>HiuGaai</td><td>жен</td><td><code>zh-HK-HiuGaaiNeural</code></td></tr>
+<tr data-s="zh-hk hiumaan zh-hk-hiumaanneural"><td>zh-HK</td><td>HiuMaan</td><td>жен</td><td><code>zh-HK-HiuMaanNeural</code></td></tr>
+<tr data-s="zh-hk wanlung zh-hk-wanlungneural"><td>zh-HK</td><td>WanLung</td><td>муж</td><td><code>zh-HK-WanLungNeural</code></td></tr>
+<tr data-s="zh-tw hsiaochen zh-tw-hsiaochenneural"><td>zh-TW</td><td>HsiaoChen</td><td>жен</td><td><code>zh-TW-HsiaoChenNeural</code></td></tr>
+<tr data-s="zh-tw hsiaoyu zh-tw-hsiaoyuneural"><td>zh-TW</td><td>HsiaoYu</td><td>жен</td><td><code>zh-TW-HsiaoYuNeural</code></td></tr>
+<tr data-s="zh-tw yunjhe zh-tw-yunjheneural"><td>zh-TW</td><td>YunJhe</td><td>муж</td><td><code>zh-TW-YunJheNeural</code></td></tr>
+<tr data-s="zu-za thando zu-za-thandoneural"><td>zu-ZA</td><td>Thando</td><td>жен</td><td><code>zu-ZA-ThandoNeural</code></td></tr>
+<tr data-s="zu-za themba zu-za-thembaneural"><td>zu-ZA</td><td>Themba</td><td>муж</td><td><code>zu-ZA-ThembaNeural</code></td></tr>
+</tbody></table>
+<div class="meta">Пресеты VoiceDeck: de-f/de-m, en-us-f/m, en-gb-f/m, ru-f/m. Полное имя для CLI — из колонки ShortName.</div>
+</main>
+<script>
+"use strict";
+const q=document.getElementById("q"),rows=[...document.querySelectorAll("#rows tr")],count=document.getElementById("count");
+function apply(){const s=q.value.trim().toLowerCase();let n=0;for(const r of rows){const ok=!s||r.dataset.s.includes(s);r.style.display=ok?"":"none";if(ok)n++}count.textContent="Показано: "+n+" из "+rows.length}
+q.oninput=apply;apply();
+document.getElementById("theme").onclick=()=>{const t=document.documentElement;t.dataset.theme=t.dataset.theme==="dark"?"light":"dark";try{localStorage.setItem("vd-theme",t.dataset.theme)}catch(e){}};
+</script>
+</body>
+</html>
